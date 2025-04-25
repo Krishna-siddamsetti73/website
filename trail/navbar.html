@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Renewable Energy Portfolio</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #f3f3f3;
+    }
+
+    .main-section {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 400px;
+      width: 100%;
+      padding: 10px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .info-card {
+      width: 500px;
+      height: 200px;
+      padding: 15px;
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      transition: all 0.3s ease;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .info-card h5 {
+      color: #333;
+      font-size: 18px;
+      margin-bottom: 15px;
+      border-bottom: 2px solid #f5b111;
+      padding-bottom: 8px;
+    }
+
+    .info-card p {
+      color: #666;
+      font-size: 14px;
+      line-height: 1.6;
+      flex-grow: 1;
+    }
+
+    .menu-container {
+      position: relative;
+      padding: 10px;
+    }
+
+    .menu-btn {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      color: white;
+      font-size: 32px;
+      border: none;
+      cursor: pointer;
+      z-index: 10;
+    }
+
+    .icon {
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      background: none;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .menu-icon {
+      transition: all 0.3s ease;
+    }
+
+    .icon:hover .menu-icon {
+      width: 80px!important;
+      height: 80px !important;
+      cursor: pointer;
+    }
+
+    .ripple {
+      position: absolute;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.5);
+      transform: scale(0);
+      animation: ripple 0.6s ease-out forwards;
+    }
+
+    @keyframes ripple {
+      to {
+        transform: scale(4);
+        opacity: 0;
+      }
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-20px); }
+      100% { transform: translateY(0); }
+    }
+
+    .enlarged {
+      transition: all 0.5s ease;
+    }
+
+    @media (max-width: 1200px) {
+      .main-section {
+        flex-direction: column;
+        height: auto;
+      }
+      .info-card {
+        width: 350px;
+        height: 100px;
+        margin-bottom: 20px;
+        margin-left: 30px;
+      }
+      .menu-container {
+        margin-right: 0;
+        margin-top: 20px;
+        margin-left: -500px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<section class="main-section" style="width: 1200px; padding: 10px; justify-content:space-around;">
+  <div class="info-card" id="info-card">
+    <h5>services at sunanda renewables</h5>
+    <p>Our solar power solutions harness the sun's energy to provide sustainable electricity for homes and businesses. With cutting-edge technology and efficient panels, we maximize energy production while minimizing environmental impact.</p>
+  </div>
+
+  <div class="menu-container">
+    <button id="menu-btn" class="menu-btn">
+      <img src="menuicon.png" alt="Menu Icon" style="width: 80px; height: 100px; border-radius: 50%;">
+    </button>
+    <div class="icon" data-title="Solar Power Solutions" data-description="Our solar power solutions harness the sun's energy to provide sustainable electricity for homes and businesses. With cutting-edge technology and efficient panels, we maximize energy production while minimizing environmental impact.">
+      <img class="menu-icon" src="solarpowerpanel.png" alt="Solar Power" style="height: 30px; width: 30px; animation: float 3s ease-in-out infinite;">
+    </div>
+    <div class="icon" data-title="Battery Energy Storage Systems" data-description="Our BESS solutions provide reliable power storage capabilities to complement renewable energy sources. These systems ensure continuous power supply during peak hours or outages, enhancing grid stability and energy efficiency.">
+      <img class="menu-icon" src="bessservice-removebg-preview.png" alt="BESS Service" style="height: 30px; width: 30px; animation: float 3s ease-in-out infinite;">
+    </div>
+    <div class="icon" data-title="Wind Power Generation" data-description="Harnessing the power of wind, our turbines generate clean electricity with minimal environmental impact. Our wind power plants are strategically located to maximize energy production while integrating seamlessly with local landscapes.">
+      <img class="menu-icon" src="windpowerplant.png" alt="Wind Power" style="height: 30px; width: 30px; animation: float 3s ease-in-out infinite;">
+    </div>
+    <div class="icon" data-title="Maintenance & Support Services" data-description="Our comprehensive maintenance and support services ensure optimal performance of your renewable energy systems. With regular inspections, timely repairs, and 24/7 monitoring, we maximize system efficiency and lifespan.">
+      <img class="menu-icon" src="maintainanceandsupport.png" alt="Maintenance and Support" style="height: 30px; width: 30px; animation: float 3s ease-in-out infinite;">
+    </div>
+    <div class="icon" data-title="Green Energy Solutions" data-description="Our integrated green energy solutions combine multiple renewable technologies to create customized, sustainable power systems. We design and implement eco-friendly energy solutions that reduce carbon footprints while meeting diverse energy needs.">
+      <img class="menu-icon" src="image.png" alt="Green Energy Solutions" style="height: 30px; width: 30px; animation: float 3s ease-in-out infinite;">
+    </div>
+  </div>
+</section>
+
+<audio id="pop-sound" src="pop-cartoon-328167.mp3"></audio>
+
+<script>
+  const button = document.getElementById('menu-btn');
+  const icons = document.querySelectorAll('.icon');
+  const popSound = document.getElementById('pop-sound');
+  const infoCard = document.getElementById('info-card');
+  let isOpen = false;
+  let enlargementInterval;
+  let currentIconIndex = 0;
+
+  updateInfoCard(0);
+
+  button.addEventListener('click', () => {
+    const count = icons.length;
+    const startAngle = -180;
+    const endAngle = 0;
+    const radii = [110, 125, 100, 110, 120, 100];
+
+    isOpen = !isOpen;
+
+    icons.forEach((icon, i) => {
+      const angle = startAngle - ((startAngle - endAngle) / (count - 1)) * i;
+      const rad = angle * (Math.PI / 180);
+      const radius = radii[i % radii.length];
+      const x = Math.cos(rad) * radius;
+      const y = Math.sin(rad) * radius;
+
+      if (isOpen) {
+        icon.style.opacity = 1;
+        icon.style.pointerEvents = 'auto';
+        gsap.to(icon, {
+          x: x,
+          y: y,
+          rotate: 360,
+          duration: 1,
+          ease: "elastic.out(1, 0.4)",
+          onStart: () => {
+            popSound.currentTime = 0;
+            popSound.play();
+          },
+          onComplete: () => createRipple(icon)
+        });
+
+        icon.onclick = function() {
+          const indexClicked = Array.from(icons).indexOf(this);
+          updateInfoCard(indexClicked);
+        };
+      } else {
+        gsap.to(icon, {
+          x: 0,
+          y: 0,
+          rotate: 0,
+          duration: 0.6,
+          ease: "power2.inOut",
+          onComplete: () => {
+            icon.style.opacity = 0;
+            icon.style.pointerEvents = 'none';
+          }
+        });
+        clearInterval(enlargementInterval);
+        resetAllIconSizes();
+      }
+    });
+
+    if (isOpen) {
+      startEnlargementCycle();
+    } else {
+      clearInterval(enlargementInterval);
+      resetAllIconSizes();
+    }
+  });
+  // Scroll Event Listener
+window.addEventListener('scroll', () => {
+  const section = document.querySelector('.main-section');
+  const sectionTop = section.getBoundingClientRect().top;
+  
+  // Trigger when section is ~150px from the top
+  if (sectionTop < 150 && !isOpen) {
+    button.click();  // Trigger the same radial menu animation
+  }
+  
+  // Optional: Close when section is out of view
+  if (sectionTop > window.innerHeight && isOpen) {
+    button.click();
+  }
+});
+
+
+  function updateInfoCard(index) {
+    const title = icons[index].dataset.title;
+    const description = icons[index].dataset.description;
+    infoCard.querySelector('h5').innerText = title;
+    infoCard.querySelector('p').innerText = description;
+  }
+
+  function createRipple(icon) {
+    const ripple = document.createElement('span');
+    ripple.classList.add('ripple');
+    ripple.style.left = '50%';
+    ripple.style.top = '50%';
+    icon.appendChild(ripple);
+    setTimeout(() => ripple.remove(), 600);
+  }
+
+  function startEnlargementCycle() {
+    resetAllIconSizes();
+    currentIconIndex = 0;
+    enlargeIcon(currentIconIndex);
+    updateInfoCard(currentIconIndex);
+
+    enlargementInterval = setInterval(() => {
+      resetIconSize(currentIconIndex);
+      currentIconIndex = (currentIconIndex + 1) % icons.length;
+      enlargeIcon(currentIconIndex);
+      updateInfoCard(currentIconIndex);
+    }, 2000);
+  }
+
+  function enlargeIcon(index) {
+    if (!isOpen) return;
+    const iconImg = icons[index].querySelector('.menu-icon');
+    if (iconImg) {
+      iconImg.classList.add('enlarged');
+      iconImg.style.width = "50px";
+      iconImg.style.height = "50px";
+    }
+  }
+
+  function resetIconSize(index) {
+    const iconImg = icons[index].querySelector('.menu-icon');
+    if (iconImg) {
+      iconImg.classList.remove('enlarged');
+      iconImg.style.width = "30px";
+      iconImg.style.height = "30px";
+    }
+  }
+
+  function resetAllIconSizes() {
+    icons.forEach(icon => {
+      const iconImg = icon.querySelector('.menu-icon');
+      if (iconImg) {
+        iconImg.style.width = "30px";
+        iconImg.style.height = "30px";
+      }
+    });
+  }
+</script>
+
+</body>
+</html>

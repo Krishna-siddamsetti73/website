@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sunanda Renewable</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <link rel="icon" href="assets\logocropped-removebg-preview.png" type="image/png" style="height: 100; width: 60;" />
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="aboutus.css"/>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light px-4 fixed-top shadow-sm" id="mainNavbar">
+  <a class="navbar-brand" href="#">
+    <img src="assets/logo_light_mode-removebg-preview.png" alt="Sunanda Logo" height="70" width="140" />
+  </a>
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item ms-3">
+       <a class="nav-link" href="index.html" style="position: relative; color: white;" id="homeLink">Home</a>
+      </li>
+      <li class="nav-item ms-3">
+        <a class="nav-link fw-bold" href="aboutus.html" style="position: relative; color: white;" id="aboutLink">About us</a>  </li>
+      <li class="nav-item ms-3">
+       <a class="nav-link" href="projects.html" style="position: relative; color: white;" id="portfolioLink">Portfolio</a>
+      </li>
+      <li class="nav-item ms-3">
+       <a class="nav-link" href="services.html" style="position: relative; color: white;" id="servicesLink">Services</a>
+      </li>
+      <li class="nav-item ms-3">
+       <a class="nav-link" href="getintouch.html" style="position: relative; color: white;" id="contactLink">Get in touch</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<script>
+  window.addEventListener('scroll', function () {
+    const navbar = document.getElementById('mainNavbar');
+    const links = document.querySelectorAll('.nav-link');
+    if (window.scrollY > 80) {
+      navbar.style.backgroundColor = 'white';
+      links.forEach(link => link.style.color = 'black');
+    } else {
+      navbar.style.backgroundColor = 'transparent';
+      links.forEach(link => link.style.color = 'white');
+    }
+  });
+</script>
+
+<!-- Main Content -->
+<div class="container-fluid">
+  <!-- Banner -->
+  <!-- Full-Screen Banner -->
+<div class="mb-5">
+  <img src="assets\aboutuslast.jpg" class="img-fluid w-100" alt="Banner" style="height: 500px; object-fit: cover; width: 100%; position: absolute; top: 0; left: 0;">
+</div>
+
+<!-- Creating for Future -->
+<div class="mt-5 pt-5">
+  <h4 class="section-heading" style="margin-top: 460px;">Creating for Future</h4>
+  <h3 style="color: #45844B;">
+    At Sunanda Renewable Energy Pvt. Ltd., we are building the future of power — clean, sustainable, and smart.
+  </h3>
+  <p>
+     We specialize in generating electricity through renewable sources like solar and wind energy, delivering it seamlessly to our clients using government-authorized transmission lines.
+Unlike traditional setups, our process requires no space or infrastructure at the client’s site. We take care of everything — from the initial deal to power generation and transmission — ensuring a hassle-free, reliable energy solution for businesses, industries, and communities.
+  </p>
+</div>
+
+<!-- Solar Images -->
+<div class="d-flex justify-content-center align-items-center" style="height: 100vh; margin-top: -45px;">
+  <div class="row text-center">
+    <div class="col-6 mx-auto">
+      <img src="assets\solar3dcarousel.jpg" class="img-fluid" alt="Solar Panel 2" style="height: 359px; width: 1535px;" />
+    </div>
+  </div>
+</div>
+
+<!-- 3D Execution Process -->
+<div class="container">
+  <h4 class="execution-title" style="margin-top: -30px; color: #45844B;">⚙ Our Execution Process</h4>
+  <p class="execution-subtitle">
+    <h5 style="color: #45844B;">Our Process</h5>
+We begin every renewable energy project with a detailed requirement evaluation to understand your energy needs and sustainability goals. After this, we handle all government licensing, ensuring full regulatory compliance before moving into the design and construction of customized solar or renewable energy systems.
+
+ <h5 style="color: #45844B;margin-top: 15px;">From Testing to Partnership </h5>
+<p>Once built, each system undergoes thorough testing and commissioning to ensure peak performance. We finalize the project with a Power Purchase Agreement (PPA), establishing a long-term energy partnership that delivers reliable, clean power tailored to your needs.
+</p>
+</p>
+  <div class="void">
+    <div class="crop">
+      <ul id="card-list" style="--count: 6;">
+        <li>
+          <div class="card">
+            <a href="">
+              <span class="model-name">Monitoring & Support</span>
+              <span>Ongoing system monitoring and maintenance support</span>
+            </a>
+          </div>
+        </li>
+        <li>
+          <div class="card">
+            <a href="">
+              <span class="model-name">Testing & Commissioning</span>
+              <span>Ensuring systems run efficiently before going live</span>
+            </a>
+          </div>
+        </li>
+        <li>
+          <div class="card">
+            <a href="">
+              <span class="model-name">Design & Construction</span>
+              <span>Executing the solar or renewable infrastructure setup</span>
+            </a>
+          </div>
+        </li>
+        <li>
+          <div class="card">
+            <a href="">
+              <span class="model-name">Government Licensing</span>
+              <span>Obtaining required permits and approvals</span>
+            </a>
+          </div>
+        </li>
+        <li>
+          <div class="card">
+            <a href="">
+              <span class="model-name">PPA Signing</span>
+              <span>Signing the Power Purchase Agreement to proceed</span>
+            </a>
+          </div>
+        </li>
+        <li>
+          <div class="card">
+            <a href="">
+              <span class="model-name">Requirement Evaluation</span>
+              <span>Understanding the client's renewable energy needs & goals</span>
+            </a>
+          </div>
+        </li>
+      </ul>
+      <div class="last-circle"></div>
+      <div class="second-circle"></div>
+      <div class="center-circle"></div>
+    </div>
+  </div>
+</div>
+
+<div class="blocks-container" style="margin-top: -200px; margin-bottom: 70px;">
+  <div class="info-block">
+    <div class="block-content">
+      <h2><strong>Our Mission</strong></h2>
+      <p>
+        To accelerate India's transition to clean energy by providing accessible renewable power through innovation,
+        integrity, and long-term sustainability.
+      </p>
+      <p>🌿 Decrease Fossil Fuel Usage</p>
+      <p>🌍 Promote Sustainable Energy</p>
+      <p>🔗 Build Long-Term Partnerships</p>
+      <p>💰 Increase Cost Savings on Energy</p>
+    </div>
+  </div>
+  
+  <div class="info-block" >
+    <div class="block-content">
+      <h2><strong>Our Vision</strong></h2>
+      <p>
+        To inspire innovation, empower communities, and create meaningful impact through technology.
+      </p>
+      <p>🔒 Prioritize trust, transparency, and integrity in everything we do.</p>
+      <p>🤝 Foster inclusivity and accessibility in every solution we build.</p>
+      <p>🔗 Build Long-Term Partnerships</p>
+      <p>🚀 Drive innovation through technology and forward-thinking solutions</p>
+    </div>
+  </div>
+</div>
+
+<!-- Updated Footer -->
+<footer class="footer text-white" style="background-color: #264653; margin-left: -10px;">
+  <div class="container py-5">
+    <div class="row">
+      <!-- Logo & Address -->
+      <div class="col-md-4 mb-4">
+        <img src="assets\footerlogo.png" alt="Sunanda Logo" style="height: 40px;">
+        <p class="mt-3">
+          SUNANDA RENEWABLE ENERGY PVT. LTD.
+          Hyderabad, Telangana, India
+        </p>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="col-md-4 mb-4">
+        <h6>Quick Links</h6>
+        <ul class="list-unstyled">
+          <li><a href="index.html" class="text-white text-decoration-none">Home</a></li>
+          <li><a href="services.html" class="text-white text-decoration-none">Services</a></li>
+          <li><a href="projects.html" class="text-white text-decoration-none">Projects</a></li>
+          <li><a href="getintouch.html" class="text-white text-decoration-none">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <!-- Location -->
+      <div class="col-md-4 mb-4">
+        <h6 style="cursor: pointer;" onclick="window.open('https://www.google.com/maps/place/BRK+News/@17.4132142,78.4466732,17z/data=!4m10!1m2!2m1!1sBRK+News+3rd+floor+sunanda+renewables!3m6!1s0x3bcb9709de06d0f7:0x10f19c0aed828e66!8m2!3d17.4132091!4d78.4492481!15sCiVCUksgTmV3cyAzcmQgZmxvb3Igc3VuYW5kYSByZW5ld2FibGVzkgENbWVkaWFfY29tcGFueeABAA!16s%2Fg%2F11v5vyc6n0?entry=ttu','_blank')">CORPORATE  OFFICE</h6>
+        <p>
+          8-2-626/2, Block-b, 3rd Floor,<br>
+          Brk Building, Banjara Hills, <br>
+          Hyderabad, Telangana, India, 500034.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bottom Strip -->
+  <div class="text-center py-3" style="background-color: #1f3b4d;">
+    <small>&copy; 2025 Sunanda Renewable Pvt. Ltd. | <a href="#" class="text-warning text-decoration-none">Contact Us</a></small>
+    <div class="mt-2">
+      <a href="#" class="text-white me-2"><i class="bi bi-facebook"></i></a>
+      <a href="#" class="text-white me-2"><i class="bi bi-instagram"></i></a>
+      <a href="#" class="text-white"><i class="bi bi-linkedin"></i></a>
+    </div>
+  </div>
+</footer>
+
+<!-- Bootstrap Icons CDN -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

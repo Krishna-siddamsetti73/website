@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sunanda Renewable - Services</title>
+  <link rel="icon" href="assets\logocropped-removebg-preview.png" type="image/png" style="height: 100; width: 60;" />
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="services.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+   
+</head>
+<body>
+    <!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light px-4 fixed-top shadow-sm" id="mainNavbar">
+    <a class="navbar-brand" href="#">
+      <img src="assets/logo_light_mode-removebg-preview.png" alt="Sunanda Logo" height="70" width="140" />
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item ms-3">
+         <a class="nav-link" href="index.html" style="position: relative; color: white;" id="homeLink">Home</a>
+        </li>
+        <li class="nav-item ms-3">
+          <a class="nav-link" href="aboutus.html" style="position: relative; color: white;" id="aboutLink">About us</a>  </li>
+        <li class="nav-item ms-3">
+         <a class="nav-link" href="projects.html" style="position: relative; color: white;" id="portfolioLink">Portfolio</a>
+        </li>
+        <li class="nav-item ms-3">
+         <a class="nav-link fw-bold" href="services.html" style="position: relative; color: white;" id="servicesLink">Services</a>
+        </li>
+        <li class="nav-item ms-3">
+         <a class="nav-link" href="getintouch.html" style="position: relative; color: white;" id="contactLink">Get in touch</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  
+  <script>
+    window.addEventListener('scroll', function () {
+      const navbar = document.getElementById('mainNavbar');
+      const links = document.querySelectorAll('.nav-link');
+      if (window.scrollY > 80) {
+        navbar.style.backgroundColor = 'white';
+        links.forEach(link => link.style.color = 'black');
+      } else {
+        navbar.style.backgroundColor = 'transparent';
+        links.forEach(link => link.style.color = 'white');
+      }
+    }); </script>
+
+  <!-- Hero Section -->
+  <section class="services-header">
+    <h1>Our Services</h1>
+  </section>
+  <section class="main-section" style="width: 1200px; padding: 10px; justify-content:space-around;">
+    <div class="info-card" id="info-card">
+      <h5>services at sunanda renewables</h5>
+      <p>Our solar power solutions harness the sun's energy to provide sustainable electricity for homes and businesses. With cutting-edge technology and efficient panels, we maximize energy production while minimizing environmental impact.</p>
+    </div>
+  
+    <div class="menu-container">
+      <button id="menu-btn" class="menu-btn">
+        <img src="menuicon.png" alt="Menu Icon" style="width: 80px; height: 100px; border-radius: 50%;">
+      </button>
+      <div class="icon" data-title="Solar Power Solutions" data-description="Our solar power solutions harness the sun's energy to provide sustainable electricity for homes and businesses. With cutting-edge technology and efficient panels, we maximize energy production while minimizing environmental impact.">
+        <img class="menu-icon" src="solarpowerpanel-removebg-preview.png" alt="Solar Power" style="height: 50px; width: 50px; animation: float 3s ease-in-out infinite;">
+      </div>
+      <div class="icon" data-title="Battery Energy Storage Systems" data-description="Our BESS solutions provide reliable power storage capabilities to complement renewable energy sources. These systems ensure continuous power supply during peak hours or outages, enhancing grid stability and energy efficiency.">
+        <img class="menu-icon" src="bessservice-removebg-preview.png" alt="BESS Service" style="height: 50px; width: 50px; animation: float 3s ease-in-out infinite;">
+      </div>
+      <div class="icon" data-title="Wind Power Generation" data-description="Harnessing the power of wind, our turbines generate clean electricity with minimal environmental impact. Our wind power plants are strategically located to maximize energy production while integrating seamlessly with local landscapes.">
+        <img class="menu-icon" src="windpowerplant.png" alt="Wind Power" style="height: 50px; width: 50px; animation: float 3s ease-in-out infinite;">
+      </div>
+      <div class="icon" data-title="Maintenance & Support Services" data-description="Our comprehensive maintenance and support services ensure optimal performance of your renewable energy systems. With regular inspections, timely repairs, and 24/7 monitoring, we maximize system efficiency and lifespan.">
+        <img class="menu-icon" src="maintainanceandsupport.png" alt="Maintenance and Support" style="height: 50px; width: 50px; animation: float 3s ease-in-out infinite;">
+      </div>
+      <div class="icon" data-title="Green Energy Solutions" data-description="Our integrated green energy solutions combine multiple renewable technologies to create customized, sustainable power systems. We design and implement eco-friendly energy solutions that reduce carbon footprints while meeting diverse energy needs.">
+        <img class="menu-icon" src="image.png" alt="Green Energy Solutions" style="height: 50px; width: 50px; animation: float 3s ease-in-out infinite;">
+      </div>
+    </div>
+  </section>
+  
+  <audio id="pop-sound" src="pop-cartoon-328167.mp3"></audio>
+  
+ 
+  
+  <section class="py-5 bg-white text-center">
+    <div class="container">
+      <h2 class="mb-5 fw-bold text-success animate_animated animate_fadeInDown">Why Go Renewable?</h2>
+      <div class="row g-4 justify-content-center">
+  
+        <!-- Card Template -->
+        <div class="col-6 col-md-4 col-lg-2 animate_animated animate_fadeInUp">
+          <div class="p-3 renewable-card rounded bg-light h-100">
+            <div class="display-5 icon-green">🌍</div>
+            <h5 class="mt-2 text-success">Environment</h5>
+            <p class="text-muted small">Cut emissions and protect the planet.</p>
+          </div>
+        </div>
+  
+        <div class="col-6 col-md-4 col-lg-2 animate_animated animate_fadeInUp" style="animation-delay: 0.1s;">
+          <div class="p-3 renewable-card rounded bg-light h-100">
+            <div class="display-5 icon-green">💸</div>
+            <h5 class="mt-2 text-success">Economic</h5>
+            <p class="text-muted small">Save money with clean energy.</p>
+          </div>
+        </div>
+  
+        <div class="col-6 col-md-4 col-lg-2 animate_animated animate_fadeInUp" style="animation-delay: 0.2s;">
+          <div class="p-3 renewable-card rounded bg-light h-100">
+            <div class="display-5 icon-green">⚡</div>
+            <h5 class="mt-2 text-success">Security</h5>
+            <p class="text-muted small">Depend less on fossil fuels.</p>
+          </div>
+        </div>
+  
+        <div class="col-6 col-md-4 col-lg-2 animate_animated animate_fadeInUp" style="animation-delay: 0.3s;">
+          <div class="p-3 renewable-card rounded bg-light h-100">
+            <div class="display-5 icon-green">🏡</div>
+            <h5 class="mt-2 text-success">Health</h5>
+            <p class="text-muted small">Breathe cleaner, live better.</p>
+          </div>
+        </div>
+  
+        <div class="col-6 col-md-4 col-lg-2 animate_animated animate_fadeInUp" style="animation-delay: 0.4s;">
+          <div class="p-3 renewable-card rounded bg-light h-100">
+            <div class="display-5 icon-green">🔮</div>
+            <h5 class="mt-2 text-success">Future</h5>
+            <p class="text-muted small">Build a sustainable tomorrow.</p>
+          </div>
+        </div>
+  
+      </div>
+    </div>
+  </section>
+  
+
+  <!-- Footer -->
+<!-- Updated Footer -->
+<footer class="footer text-white" style="background-color: #264653;">
+  <div class="container py-5">
+    <div class="row">
+      <!-- Logo & Address -->
+      <div class="col-md-4 mb-4">
+        <img src="assets\footerlogo.png" alt="Sunanda Logo" style="height: 40px;">
+        <p class="mt-3">
+          SUNANDA RENEWABLE ENERGY PVT. LTD.
+          Hyderabad, Telangana, India
+        </p>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="col-md-4 mb-4">
+        <h6>Quick Links</h6>
+        <ul class="list-unstyled">
+          <li><a href="index.html" class="text-white text-decoration-none">Home</a></li>
+          <li><a href="services.html" class="text-white text-decoration-none">Services</a></li>
+          <li><a href="projects.html" class="text-white text-decoration-none">Projects</a></li>
+          <li><a href="getintouch.html" class="text-white text-decoration-none">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <!-- Location -->
+      <div class="col-md-4 mb-4">
+        <h6 style="cursor: pointer;" onclick="window.open('https://www.google.com/maps/place/BRK+News/@17.4132142,78.4466732,17z/data=!4m10!1m2!2m1!1sBRK+News+3rd+floor+sunanda+renewables!3m6!1s0x3bcb9709de06d0f7:0x10f19c0aed828e66!8m2!3d17.4132091!4d78.4492481!15sCiVCUksgTmV3cyAzcmQgZmxvb3Igc3VuYW5kYSByZW5ld2FibGVzkgENbWVkaWFfY29tcGFueeABAA!16s%2Fg%2F11v5vyc6n0?entry=ttu','_blank')">CORPORATE  OFFICE</h6>
+        <p>
+          8-2-626/2, Block-b, 3rd Floor,<br>
+          Brk Building, Banjara Hills, <br>
+          Hyderabad, Telangana, India, 500034.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bottom Strip -->
+  <div class="text-center py-3" style="background-color: #1f3b4d;">
+    <small>&copy; 2025 Sunanda Renewable Pvt. Ltd. | <a href="#" class="text-warning text-decoration-none">Contact Us</a></small>
+    <div class="mt-2">
+      <a href="#" class="text-white me-2"><i class="bi bi-facebook"></i></a>
+      <a href="#" class="text-white me-2"><i class="bi bi-instagram"></i></a>
+      <a href="#" class="text-white"><i class="bi bi-linkedin"></i></a>
+    </div>
+  </div>
+</footer>
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+ <script>const button = document.getElementById('menu-btn');
+  const icons = document.querySelectorAll('.icon');
+  const popSound = document.getElementById('pop-sound');
+  const infoCard = document.getElementById('info-card');
+  let isOpen = false;
+  let enlargementInterval;
+  let currentIconIndex = 0;
+
+  updateInfoCard(0);
+
+  button.addEventListener('click', () => {
+    const count = icons.length;
+    const startAngle = -180;
+    const endAngle = 0;
+    const radii = [110, 125, 100, 110, 120, 100];
+
+    isOpen = !isOpen;
+
+    icons.forEach((icon, i) => {
+      const angle = startAngle - ((startAngle - endAngle) / (count - 1)) * i;
+      const rad = angle * (Math.PI / 180);
+      const radius = radii[i % radii.length];
+      const x = Math.cos(rad) * radius;
+      const y = Math.sin(rad) * radius;
+
+      if (isOpen) {
+        icon.style.opacity = 1;
+        icon.style.pointerEvents = 'auto';
+        gsap.to(icon, {
+          x: x,
+          y: y,
+          rotate: 360,
+          duration: 1,
+          ease: "elastic.out(1, 0.4)",
+          onStart: () => {
+            popSound.currentTime = 0;
+            popSound.play();
+          },
+          onComplete: () => createRipple(icon)
+        });
+
+        icon.onclick = function() {
+          const indexClicked = Array.from(icons).indexOf(this);
+          updateInfoCard(indexClicked);
+        };
+      } else {
+        gsap.to(icon, {
+          x: 0,
+          y: 0,
+          rotate: 0,
+          duration: 0.6,
+          ease: "power2.inOut",
+          onComplete: () => {
+            icon.style.opacity = 0;
+            icon.style.pointerEvents = 'none';
+          }
+        });
+        clearInterval(enlargementInterval);
+        resetAllIconSizes();
+      }
+    });
+
+    if (isOpen) {
+      startEnlargementCycle();
+    } else {
+      clearInterval(enlargementInterval);
+      resetAllIconSizes();
+    }
+  });
+  // Scroll Event Listener
+window.addEventListener('scroll', () => {
+  const section = document.querySelector('.main-section');
+  const sectionTop = section.getBoundingClientRect().top;
+  
+  // Trigger when section is ~150px from the top
+  if (sectionTop < 150 && !isOpen) {
+    button.click();  // Trigger the same radial menu animation
+  }
+  
+  // Optional: Close when section is out of view
+  if (sectionTop > window.innerHeight && isOpen) {
+    button.click();
+  }
+});
+
+
+  function updateInfoCard(index) {
+    const title = icons[index].dataset.title;
+    const description = icons[index].dataset.description;
+    infoCard.querySelector('h5').innerText = title;
+    infoCard.querySelector('p').innerText = description;
+  }
+
+  function createRipple(icon) {
+    const ripple = document.createElement('span');
+    ripple.classList.add('ripple');
+    ripple.style.left = '50%';
+    ripple.style.top = '50%';
+    icon.appendChild(ripple);
+    setTimeout(() => ripple.remove(), 600);
+  }
+
+  function startEnlargementCycle() {
+    resetAllIconSizes();
+    currentIconIndex = 0;
+    enlargeIcon(currentIconIndex);
+    updateInfoCard(currentIconIndex);
+
+    enlargementInterval = setInterval(() => {
+      resetIconSize(currentIconIndex);
+      currentIconIndex = (currentIconIndex + 1) % icons.length;
+      enlargeIcon(currentIconIndex);
+      updateInfoCard(currentIconIndex);
+    }, 2000);
+  }
+
+  function enlargeIcon(index) {
+    if (!isOpen) return;
+    const iconImg = icons[index].querySelector('.menu-icon');
+    if (iconImg) {
+      iconImg.classList.add('enlarged');
+      iconImg.style.width = "90px";
+      iconImg.style.height = "90px";
+    }
+  }
+
+  function resetIconSize(index) {
+    const iconImg = icons[index].querySelector('.menu-icon');
+    if (iconImg) {
+      iconImg.classList.remove('enlarged');
+      iconImg.style.width = "50px";
+      iconImg.style.height = "50px";
+    }
+  }
+
+  function resetAllIconSizes() {
+    icons.forEach(icon => {
+      const iconImg = icon.querySelector('.menu-icon');
+      if (iconImg) {
+        iconImg.style.width = "50px";
+        iconImg.style.height = "50px";
+      }
+    });
+  }</script>
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
