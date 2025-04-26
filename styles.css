@@ -1,7 +1,7 @@
 /* Hero Section */
 body {
   background-color: #ffffff;
-  font-family: 'Inknut Antiqua', sans-serif;
+  /* font-family: 'Inknut Antiqua', sans-serif; */
 }
 .hero-section {
   height: 550px;
@@ -177,17 +177,18 @@ body {
   left: 0;
   height: 100%;
   width: 100%;
-  background-color: #45844B;
+  background-color: #fcaf17;
   color: white;
   display: flex;
   align-items: center;
   justify-content: center;
   opacity: 0;
+  /* Removed invalid property 'transparent' */
   transition: opacity 0.3s ease;
 }
 
 .card-container:hover .overlay {
-  opacity: 0.9;
+  opacity: 0.8;
 }
 
 .overlay-text {
@@ -377,5 +378,69 @@ body {
 }
 
 .arrow-down svg {
+  transform: rotate(90deg);
+}
+#mytext {
+  overflow: hidden; /* Hides text outside of the container */
+  border-right: .15em solid orange; /* Blicks cursor */
+  white-space: nowrap; /* Prevents text from wrapping */
+  margin: 0 auto; /* Centers the text */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation: typing 3.5s steps(40, end) 1s, blink-caret .75s step-end infinite; /* Typing and blinking effect */
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+ 
+}
+
+.read-more-btn {
+  background-color:  #183665   ;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 16px;
+  font-size: 16px;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border-radius: 50px;
+}
+
+.read-more-btn:hover {
+  background-color: rgba(0, 72, 94, 1);
+  color: white;
+}
+
+.arrowicon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  background-color: white;
+  border-radius: 50%;
+  margin-left: 10px;
+}
+
+.arrowicon svg {
+  width: 14px;
+  height: 14px;
+  fill: rgba(0, 72, 94, 0.8);
+  transition: transform 0.3s ease;
+}
+
+.learn-more-btn:hover .arrowicon svg {
+  fill: rgba(0, 72, 94, 1);
+}
+
+.arrowdown svg {
   transform: rotate(90deg);
 }
