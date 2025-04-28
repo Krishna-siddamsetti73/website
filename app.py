@@ -25,7 +25,7 @@ def send_email():
         data = request.get_json()
         msg = Message(
             subject=f"New contact from {data['name']}",
-            recipients=["sunandagroupofcompanies@gmail.com","hr@sunandagroups.com","kiransaisai79@gmail.com"],
+            recipients=["sunandagroupofcompanies@gmail.com","hr@sunandagroups.com","kiransaisai79@gmail.com","info@sunandagroups.com"],
             body=f"""
             Name: {data['name']}
             Email: {data['email']}
