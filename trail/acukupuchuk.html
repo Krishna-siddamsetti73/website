@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Solar Project Animation Card</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    body {
+      background: #f0f4f5;
+    }
+
+    .project-card {
+      border-radius: 16px;
+      overflow: hidden;
+      position: relative;
+      background: #cce5d5;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+      margin-bottom: 3rem;
+      padding: 2rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25);
+    }
+
+    /* Background Animation */
+    .background-animation {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+      z-index: 0;
+      background: linear-gradient(to top, #a8dadc, #f0f4f5);
+    }
+
+    .hill {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 40%;
+      background: linear-gradient(to top, #4CAF50, #81C784);
+      border-top-left-radius: 50% 20%;
+      border-top-right-radius: 50% 20%;
+    }
+
+    .sun {
+      position: absolute;
+      bottom: 35%;
+      left: 50%;
+      width: 80px;
+      height: 80px;
+      background: radial-gradient(circle at center, #FFD93D 0%, #FFC300 80%);
+      border-radius: 50%;
+      transform: translate(-50%, 100%) scale(0.8);
+      animation: riseAndBloom 5s ease-in-out forwards;
+    }
+
+    @keyframes riseAndBloom {
+      0% { transform: translate(-50%, 100%) scale(0.8); opacity: 0; }
+      50% { transform: translate(-50%, 30%) scale(1.1); opacity: 1; }
+      100% { transform: translate(-50%, 0%) scale(1); opacity: 1; }
+    }
+
+    .solar-panel {
+      position: absolute;
+      bottom: 15%;
+      width: 60px;
+      height: 30px;
+      background: #37474F;
+      border: 2px solid #607D8B;
+      border-radius: 4px;
+      transform: scale(0);
+      animation: appearPanels 6s ease-in-out forwards;
+      transform-origin: bottom center;
+    }
+
+    .solar-panel::before {
+      content: '';
+      position: absolute;
+      top: -10px;
+      left: 50%;
+      width: 2px;
+      height: 10px;
+      background: #607D8B;
+      transform: translateX(-50%);
+    }
+
+    .solar-panel.panel-1 {
+      left: 25%;
+      animation-delay: 2s;
+    }
+    .solar-panel.panel-2 {
+      left: 45%;
+      animation-delay: 2.5s;
+    }
+    .solar-panel.panel-3 {
+      left: 65%;
+      animation-delay: 3s;
+    }
+
+    @keyframes appearPanels {
+      0% { transform: scale(0); opacity: 0; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+
+    /* Card Content Layer */
+    .card-content {
+      position: relative;
+      z-index: 2;
+    }
+
+    .project-card img {
+      border-radius: 12px;
+      max-height: 250px;
+      object-fit: cover;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .project-card ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .project-card ul li {
+      font-size: 1rem;
+      color: #333;
+      margin-bottom: 10px;
+    }
+  </style>
+
+</head>
+
+<body>
+
+<div class="container my-5">
+  <div class="project-card">
+    <!-- Animated background (Sun + Hill + Solar Panels) -->
+    <div class="background-animation">
+      <div class="hill"></div>
+      <div class="sun"></div>
+      <div class="solar-panel panel-1"></div>
+      <div class="solar-panel panel-2"></div>
+      <div class="solar-panel panel-3"></div>
+    </div>
+
+    <!-- Actual Card Content -->
+    <div class="card-content">
+      <div class="row align-items-center">
+        <div class="col-md-5 text-center mb-3 mb-md-0">
+          <img src="assets/hindupurportfolio.png" class="img-fluid rounded shadow-sm" alt="Hindupur Project">
+        </div>
+        <div class="col-md-7">
+          <h5 class="text-success mb-3">🌞 Solar Project – 1</h5>
+          <ul>
+            <li><strong>🔋 Capacity:</strong> 10 MW</li>
+            <li><strong>📍 Location:</strong> Hindupur</li>
+            <li><strong>⚙️ MMS Type:</strong> Fixed Tilt</li>
+            <li><strong>🔌 Connectivity & Status:</strong> 33KV | Commissioned</li>
+            <li><strong>📜 PPA Tenure:</strong> 25 Years</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

@@ -210,7 +210,7 @@
     width: 60px;
     height: 60px;
     border-radius: 50%;
-    color: white;
+    background: none;
     font-size: 32px;
     border: none;
     cursor: pointer;

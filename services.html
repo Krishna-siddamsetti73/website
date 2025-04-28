@@ -13,46 +13,73 @@
 </head>
 <body>
     <!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-light px-4 fixed-top shadow-sm" id="mainNavbar">
-    <a class="navbar-brand" href="#">
-      <img src="assets/logo_light_mode-removebg-preview.png" alt="Sunanda Logo" height="70" width="140" />
-    </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item ms-3">
-         <a class="nav-link" href="index.html" style="position: relative; color: white;" id="homeLink">Home</a>
-        </li>
-        <li class="nav-item ms-3">
-          <a class="nav-link" href="aboutus.html" style="position: relative; color: white;" id="aboutLink">About us</a>  </li>
-        <li class="nav-item ms-3">
-         <a class="nav-link" href="projects.html" style="position: relative; color: white;" id="portfolioLink">Portfolio</a>
-        </li>
-        <li class="nav-item ms-3">
-         <a class="nav-link fw-bold" href="services.html" style="position: relative; color: white;" id="servicesLink">Services</a>
-        </li>
-        <li class="nav-item ms-3">
-         <a class="nav-link" href="getintouch.html" style="position: relative; color: white;" id="contactLink">Get in touch</a>
-        </li>
-      </ul>
-    </div>
-  </nav>
-  
-  <script>
-    window.addEventListener('scroll', function () {
-      const navbar = document.getElementById('mainNavbar');
-      const links = document.querySelectorAll('.nav-link');
-      if (window.scrollY > 80) {
-        navbar.style.backgroundColor = 'white';
-        links.forEach(link => link.style.color = 'black');
-      } else {
-        navbar.style.backgroundColor = 'transparent';
-        links.forEach(link => link.style.color = 'white');
-      }
-    }); </script>
-
+    <nav class="navbar navbar-expand-lg navbar-light px-4" id="mainNavbar" style="height: 70px; border-bottom-left-radius: 30px; border-bottom-right-radius: 30px; background-color: transparent; transition: background-color 0.3s;">
+      <a class="navbar-brand" href="index.html">
+        <img src="WhatsApp_Image_2025-04-28_at_14.34.16_90ad2c9c-removebg-preview.png" alt="Transparent Logo" height="65" width="200" id="transparentLogo" style="display: none;" />
+        <img src="image-removebg-preview (1).png" alt="Sunanda Logo" height="85" width="200" id="mainLogo" />
+       
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item ms-3">
+            <a class="nav-link fw-bold" href="index.html" style="position: relative; color: white;" id="homeLink">Home</a>
+          </li>
+          <li class="nav-item ms-3">
+            <a class="nav-link" href="aboutus.html" style="position: relative; color: white;" id="aboutLink">About us</a>
+          </li>
+          <li class="nav-item ms-3">
+            <a class="nav-link" href="projects.html" style="position: relative; color: white;" id="portfolioLink">Portfolio</a>
+          </li>
+          <li class="nav-item ms-3">
+            <a class="nav-link" href="services.html" style="position: relative; color: white;" id="servicesLink">Services</a>
+          </li>
+          <li class="nav-item ms-3">
+            <a class="nav-link" href="getintouch.html" style="position: relative; color: white;" id="contactLink">Get in touch</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    
+    <script>
+      window.addEventListener('scroll', function () {
+        const navbar = document.getElementById('mainNavbar');
+        const homeLink = document.getElementById('homeLink');
+        const servicesLink = document.getElementById('servicesLink');
+        const portfolioLink = document.getElementById('portfolioLink');
+        const aboutLink = document.getElementById('aboutLink');
+        const contactLink = document.getElementById('contactLink');
+        const links = [homeLink, servicesLink, portfolioLink, aboutLink, contactLink];
+        const mainLogo = document.getElementById('mainLogo');
+        const transparentLogo = document.getElementById('transparentLogo');
+    
+        if (window.scrollY > 80) {
+          navbar.style.backgroundColor = 'white';
+          links.forEach(link => {
+            link.style.color = 'black';
+            link.style.transition = 'color 0.3s ease-in-out';
+          });
+          mainLogo.style.display = 'block';
+          transparentLogo.style.display = 'none';
+        } else {
+          navbar.style.backgroundColor = 'transparent';
+          links.forEach(link => {
+            link.style.color = 'white';
+            link.style.transition = 'color 0.3s ease-in-out';
+          });
+          mainLogo.style.display = 'none';
+          transparentLogo.style.display = 'block';
+        }
+      });
+    </script>
+    
+    <script>
+       // Make the navbar sticky
+       document.querySelector('.navbar').classList.add('fixed-top', 'shadow-sm');
+    </script>
+    
   <!-- Hero Section -->
   <section class="services-header">
     <h1>Our Services</h1>
@@ -77,11 +104,9 @@
         <img class="menu-icon" src="windpowerplant.png" alt="Wind Power" style="height: 50px; width: 50px; animation: float 3s ease-in-out infinite;">
       </div>
       <div class="icon" data-title="Maintenance & Support Services" data-description="Our comprehensive maintenance and support services ensure optimal performance of your renewable energy systems. With regular inspections, timely repairs, and 24/7 monitoring, we maximize system efficiency and lifespan.">
-        <img class="menu-icon" src="maintainanceandsupport.png" alt="Maintenance and Support" style="height: 50px; width: 50px; animation: float 3s ease-in-out infinite;">
+        <img class="menu-icon" src="image.png" alt="Maintenance and Support" style="height: 50px; width: 50px; animation: float 3s ease-in-out infinite;">
       </div>
-      <div class="icon" data-title="Green Energy Solutions" data-description="Our integrated green energy solutions combine multiple renewable technologies to create customized, sustainable power systems. We design and implement eco-friendly energy solutions that reduce carbon footprints while meeting diverse energy needs.">
-        <img class="menu-icon" src="image.png" alt="Green Energy Solutions" style="height: 50px; width: 50px; animation: float 3s ease-in-out infinite;">
-      </div>
+      
     </div>
   </section>
   
@@ -147,7 +172,7 @@
     <div class="row">
       <!-- Logo & Address -->
       <div class="col-md-4 mb-4">
-        <img src="assets\footerlogo.png" alt="Sunanda Logo" style="height: 40px;">
+        <img src="WhatsApp_Image_2025-04-28_at_14.34.16_90ad2c9c-removebg-preview.png" alt="Sunanda Logo" style="height: 65px; width: 200px; margin-left: -10px;">
         <p class="mt-3">
           SUNANDA RENEWABLE ENERGY PVT. LTD.
           Hyderabad, Telangana, India

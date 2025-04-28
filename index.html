@@ -8,10 +8,13 @@
    <link rel="stylesheet" href="styles.css" />
    <link rel="icon" href="assets\logocropped-removebg-preview.png" type="image/png" style="height: 100; width: 60;" />
 </head>
-<body>
+<body >
+  
 <nav class="navbar navbar-expand-lg navbar-light px-4" id="mainNavbar" style="height: 70px; border-bottom-left-radius: 30px; border-bottom-right-radius: 30px; background-color: transparent; transition: background-color 0.3s;">
-  <a class="navbar-brand" href="#">
-    <img src="assets\logo_light_mode-removebg-preview.png" alt="Sunanda Logo" height="65" width="178" />
+  <a class="navbar-brand" href="index.html">
+    <img src="WhatsApp_Image_2025-04-28_at_14.34.16_90ad2c9c-removebg-preview.png" alt="Transparent Logo" height="65" width="200" id="transparentLogo" style="display: none;" />
+    <img src="image-removebg-preview (1).png" alt="Sunanda Logo" height="85" width="200" id="mainLogo" />
+   
   </a>
   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
     <span class="navbar-toggler-icon"></span>
@@ -19,18 +22,19 @@
   <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
     <ul class="navbar-nav">
       <li class="nav-item ms-3">
-       <a class="nav-link fw-bold" href="index.html" style="position: relative; color: white;" id="homeLink">Home</a>
+        <a class="nav-link fw-bold" href="index.html" style="position: relative; color: white;" id="homeLink">Home</a>
       </li>
       <li class="nav-item ms-3">
-        <a class="nav-link" href="aboutus.html" style="position: relative; color: white;" id="aboutLink">About us</a>  </li>
-      <li class="nav-item ms-3">
-       <a class="nav-link" href="projects.html" style="position: relative; color: white;" id="portfolioLink">Portfolio</a>
+        <a class="nav-link" href="aboutus.html" style="position: relative; color: white;" id="aboutLink">About us</a>
       </li>
       <li class="nav-item ms-3">
-       <a class="nav-link" href="services.html" style="position: relative; color: white;" id="servicesLink">Services</a>
+        <a class="nav-link" href="projects.html" style="position: relative; color: white;" id="portfolioLink">Portfolio</a>
       </li>
       <li class="nav-item ms-3">
-       <a class="nav-link" href="getintouch.html" style="position: relative; color: white;" id="contactLink">Get in touch</a>
+        <a class="nav-link" href="services.html" style="position: relative; color: white;" id="servicesLink">Services</a>
+      </li>
+      <li class="nav-item ms-3">
+        <a class="nav-link" href="getintouch.html" style="position: relative; color: white;" id="contactLink">Get in touch</a>
       </li>
     </ul>
   </div>
@@ -45,19 +49,25 @@
     const aboutLink = document.getElementById('aboutLink');
     const contactLink = document.getElementById('contactLink');
     const links = [homeLink, servicesLink, portfolioLink, aboutLink, contactLink];
-   
+    const mainLogo = document.getElementById('mainLogo');
+    const transparentLogo = document.getElementById('transparentLogo');
+
     if (window.scrollY > 80) {
       navbar.style.backgroundColor = 'white';
       links.forEach(link => {
         link.style.color = 'black';
         link.style.transition = 'color 0.3s ease-in-out';
       });
+      mainLogo.style.display = 'block';
+      transparentLogo.style.display = 'none';
     } else {
       navbar.style.backgroundColor = 'transparent';
       links.forEach(link => {
         link.style.color = 'white';
         link.style.transition = 'color 0.3s ease-in-out';
       });
+      mainLogo.style.display = 'none';
+      transparentLogo.style.display = 'block';
     }
   });
 </script>
@@ -199,7 +209,7 @@
           </p>
           <p style="font-weight: 800;  font-family:'Instrument Sans'; color: white;">
             <!-- Sunanda Renewable Energy Pvt. Ltd. is committed to driving the global shift toward clean, sustainable power. We believe in the future of renewable energy and specialize in generating electricity through reliable sources like solar power and wind energy. -->
-            Our energy transition model focuses on delivering clean power from our renewable energy plants directly to our clients via government-affiliated electrical lines, ensuring seamless and eco-friendly energy distribution. Backed by a strong vision for a greener tomorrow, we empower individuals, industries, and communities to embrace renewable energy solutions that are both efficient and environmentally responsible.
+            Our Energy transition model focuses on delivering clean power from our renewable energy plants directly to our clients via government-affiliated electrical lines, ensuring seamless and eco-friendly energy distribution. Backed by a strong vision for a greener tomorrow, we empower individuals, industries, and communities to embrace renewable energy solutions that are both efficient and environmentally responsible.
           </p>
           <button id="readMoreBtn" class="read-more-btn">
             Read More
@@ -217,7 +227,7 @@
     </div>
   </section>
 
-  <!-- <section class="why-choose-section slide-up-section">
+  <section class="why-choose-section slide-up-section">
     <div class="container">
       <div class="text-center mb-5">
         <h2>Why choose us?</h2>
@@ -273,65 +283,234 @@
         </div>
       </div>
     </div>
-  </section> -->
-  <div class="card slide-in-section" style="margin: 60px; border-radius: 15px; overflow: hidden; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);">
-    <section style="height: 500px; width: 100%; background-image: url('assets/Solar_Investment__Anlageoptionen_&_worauf_zu_achten_ist___EEA[1].jpg'); background-size: cover; background-position: center; display: flex; align-items: center; justify-content: center; position: relative;">
-      <div style="display: flex; justify-content: space-around; width: 100%; padding: 0 20px;">
-        <div class="slide-in-card" style="background-color: rgba(0, 0, 0, 0.6); color: white; padding: 20px; border-radius: 10px; width: 22%; text-align: center;">
-          <h4>Card 1</h4>
-          <p>Content for card 1</p>
-        </div>
-        <div class="slide-in-card" style="background-color: rgba(0, 0, 0, 0.6); color: white; padding: 20px; border-radius: 10px; width: 22%; text-align: center;">
-          <h4>Card 2</h4>
-          <p>Content for card 2</p>
-        </div>
-        <div class="slide-in-card" style="background-color: rgba(0, 0, 0, 0.6); color: white; padding: 20px; border-radius: 10px; width: 22%; text-align: center;">
-          <h4>Card 3</h4>
-          <p>Content for card 3</p>
-        </div>
-        <div class="slide-in-card" style="background-color: rgba(0, 0, 0, 0.6); color: white; padding: 20px; border-radius: 10px; width: 22%; text-align: center;">
-          <h4>Card 4</h4>
-          <p>Content for card 4</p>
-        </div>
+  </section> 
+ <!-- <div class="container text-center my-5">
+    <h2 class="fw-bold">Why choose us ?</h2>
+  </div>
+  
+   <div class="container choose-us-container">
+    <div class="choose-box">
+      <div class="choose-overlay">
+        <h5>Blueprinted</h5>
+        <p>We are committed to providing a seamless, end-to-end green energy supply by building and operating our own renewable power plants. By delivering clean electricity through government-allotted transmission lanes, we ensure that sustainable energy is available to all.</p>
       </div>
-    </section>
+    </div>
+    <div class="choose-box">
+      <div class="choose-overlay">
+        <h5>Zero Space Hassle</h5>
+        <p>Once operational, we efficiently transmit clean electricity through government-allotted lanes, ensuring a smooth, hassle-free green energy supply. With our streamlined approach, you can enjoy reliable, sustainable power without the complexity</p>
+      </div>
+    </div>
+    <div class="choose-box">
+      <div class="choose-overlay">
+        <h5>Eco Efficient</h5>
+        <p>Unlock up to 30% savings on your energy costs with our cutting-edge sustainable solutions.
+          Sunanda’s EcoEfficient technology ensures smart power usage with minimal waste.
+          Choose a greener path that’s both cost-effective and future-ready.
+          </p>
+      </div>
+    </div>
+    <div class="choose-box">
+      <div class="choose-overlay">
+        <h5>GreenCred</h5>
+        <p>Earn valuable GreenCred with every step toward sustainability.
+          Our renewable energy solutions help boost your green building certification scores.
+          Build smarter, cleaner, and greener — with measurable environmental impact.
+          </p>
+      </div>
+    </div>
+  </div>
+  
+   Bootstrap 5 JS -->
+  <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  
+ Custom JS for Auto Hover
+  <script>
+    const boxes = document.querySelectorAll('.choose-box');
+    let current = 0;
+  
+    function autoHover() {
+      boxes.forEach(box => box.classList.remove('active-hover'));
+      boxes[current].classList.add('active-hover');
+      current = (current + 1) % boxes.length;
+    }
+  
+    setInterval(autoHover, 2000); // Every 2 seconds
+  </script>  -->
+
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+
+
+<div class="container text-center my-5">
+  <h2 class="fw-bold">Why Choose Us ?</h2>
+</div>
+
+<div class="container choose-us-container">
+  <!-- Blueprinted -->
+  <div class="choose-box">
+    <div class="choose-overlay">
+      <h5>Blueprinted</h5>
+    </div>
+    <div class="choose-info">
+      <div class="info-title">Blueprinted</div>
+      "We are committed to providing a seamless, end-to-end green energy supply by building and operating our own renewable power plants. By delivering clean electricity through government-allotted transmission lanes, we ensure that sustainable energy is available to all."
+    </div>
   </div>
 
-  <style>
-    .slide-in-section {
-      opacity: 0;
-      transform: translateX(-100%);
-      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  <!-- Zero Space Hassle -->
+  <div class="choose-box">
+    <div class="choose-overlay">
+      <h5>Zero Space Hassle</h5>
+    </div>
+    <div class="choose-info">
+      <div class="info-title">Zero Space Hassle</div>
+      At Sunanda Renewable Energy Pvt. Ltd., clients receive clean electricity directly from our off-site solar and wind power plants through government-authorized transmission lines — no space needed at your location.
+    </div>
+  </div>
+
+  <!-- Eco Efficient -->
+  <div class="choose-box">
+    <div class="choose-overlay">
+      <h5>Eco Efficient</h5>
+    </div>
+    <div class="choose-info">
+      <div class="info-title">Eco Efficient</div>
+      Unlock up to 30% savings on your energy costs with our cutting-edge sustainable solutions. Sunanda’s EcoEfficient technology ensures smart power usage with minimal waste. Choose a greener path that’s both cost-effective and future-ready.
+    </div>
+  </div>
+
+  <!-- GreenCred -->
+  <div class="choose-box">
+    <div class="choose-overlay">
+      <h5>GreenCred</h5>
+    </div>
+    <div class="choose-info">
+      <div class="info-title">GreenCred</div>
+      Earn valuable GreenCred with every step toward sustainability.
+      Our renewable energy solutions help boost your green building certification scores.
+      Build smarter, cleaner, and greener — with measurable environmental impact.
+    </div>
+  </div>
+</div>
+
+<style>
+  body {
+    background: #f0f0f0;
+  }
+
+  .choose-us-container {
+    background: url('assets/solarwhychooseus.jpg') no-repeat center center/cover;
+    height: 400px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+  }
+
+  .choose-box {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    animation: autoOverlay 5s infinite;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+  }
+
+  @keyframes autoOverlay {
+    0%, 80% {
+      transform: scale(1);
     }
-
-    .slide-in-section.visible {
-      opacity: 1;
-      transform: translateX(0);
+    50% {
+      transform: scale(1.1);
     }
-  </style>
+  }
 
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const slideInSection = document.querySelector(".slide-in-section");
+  .choose-overlay, .choose-info {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    text-align: center;
+    font-size: 1.1rem;
+    flex-direction: column;
+  }
 
-      function handleScroll() {
-        const sectionPosition = slideInSection.getBoundingClientRect().top;
-        const screenPosition = window.innerHeight / 1.3;
+  .choose-box:hover {
+    animation-play-state: paused;
+    transform: scale(1.1);
+  }
 
-        if (sectionPosition < screenPosition) {
-          slideInSection.classList.add("visible");
-        }
-      }
+  .choose-box:hover .choose-overlay {
+    opacity: 0;
+  }
 
-      window.addEventListener("scroll", handleScroll);
-    });
-  </script>
+  .choose-box:hover .choose-info {
+    opacity: 1;
+    background: #183665;
+    border-radius: 20px;
+    animation: fadeIn 1s ease forwards;
+  }
+
+  .choose-overlay h5 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #fff;
+  }
+
+  .info-title {
+    background-color: #FFD700; /* Yellow background */
+    color: black; /* Black text */
+    font-weight: bold;
+    padding: 6px 12px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+  }
+
+  @keyframes fadeIn {
+    0% { opacity: 0; transform: scale(0.9); }
+    100% { opacity: 1; transform: scale(1); }
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .choose-us-container {
+      flex-direction: column;
+      height: auto;
+    }
+    .choose-box {
+      height: 300px;
+    }
+  }
+</style>
+
+<!-- Bootstrap 5 JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
 
   <!-- BESS Section -->
-  <div class="card mb-4" style="border-radius: 15px; overflow: hidden; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); height: 400px; width: 1080px;
-   margin-left: 65px;">
+  <div class="card mb-4" style="border-radius: 15px; overflow: hidden; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); height: 600px; width: 1130px;
+   margin-left: 65px; margin-top: 40px;" >
     <div class="container py-4">
-      <h1 class="page-title text-center">Smart energy storage system</h1>
+      <h1 class="page-title text-center">Smart Energy Storage System</h1>
       <div class="storage-container" style="margin-left: -15px;">
         <div class="row">
           <div class="col-md-6">
@@ -409,7 +588,7 @@
     <div class="row">
       <!-- Logo & Address -->
       <div class="col-md-4 mb-4">
-        <img src="assets\footerlogo.png" alt="Sunanda Logo" style="height: 40px;">
+        <img src="WhatsApp_Image_2025-04-28_at_14.34.16_90ad2c9c-removebg-preview.png" alt="Sunanda Logo" style="height: 70px; width: 200px; margin-top:-20px; margin-left: -20px;" />
         <p class="mt-3">
           SUNANDA RENEWABLE ENERGY PVT. LTD.
           Hyderabad, Telangana, India
