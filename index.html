@@ -353,153 +353,58 @@
   <div class="choose-box">
     <div class="choose-overlay">
       <h5>Blueprinted</h5>
+      <p>We are committed to providing a seamless, end-to-end green energy supply by building and operating our own renewable power plants. By delivering clean electricity through government-allotted transmission lanes, we ensure that sustainable energy is available to all.
+      </p>
     </div>
-    <div class="choose-info">
-      <div class="info-title">Blueprinted</div>
-      "We are committed to providing a seamless, end-to-end green energy supply by building and operating our own renewable power plants. By delivering clean electricity through government-allotted transmission lanes, we ensure that sustainable energy is available to all."
-    </div>
+   
   </div>
 
   <!-- Zero Space Hassle -->
   <div class="choose-box">
     <div class="choose-overlay">
       <h5>Zero Space Hassle</h5>
+      <p>At Sunanda Renewable Energy Pvt. Ltd., clients receive clean electricity directly from our off-site solar and wind power plants through government-authorized transmission lines — no space needed at your location.
+      </p>
     </div>
-    <div class="choose-info">
-      <div class="info-title">Zero Space Hassle</div>
-      At Sunanda Renewable Energy Pvt. Ltd., clients receive clean electricity directly from our off-site solar and wind power plants through government-authorized transmission lines — no space needed at your location.
-    </div>
+   
   </div>
 
   <!-- Eco Efficient -->
   <div class="choose-box">
     <div class="choose-overlay">
       <h5>Eco Efficient</h5>
+      <p> Unlock up to 30% savings on your energy costs with our cutting-edge sustainable solutions. Sunanda’s EcoEfficient technology ensures smart power usage with minimal waste. Choose a greener path that’s both cost-effective and future-ready.
+      </p>
     </div>
-    <div class="choose-info">
-      <div class="info-title">Eco Efficient</div>
-      Unlock up to 30% savings on your energy costs with our cutting-edge sustainable solutions. Sunanda’s EcoEfficient technology ensures smart power usage with minimal waste. Choose a greener path that’s both cost-effective and future-ready.
-    </div>
+    
   </div>
 
   <!-- GreenCred -->
   <div class="choose-box">
     <div class="choose-overlay">
       <h5>GreenCred</h5>
+      <p>Earn valuable GreenCred with every step toward sustainability.
+        Our renewable energy solutions help boost your green building certification scores.
+        Build smarter, cleaner, and greener — with measurable environmental impact. </p>
     </div>
-    <div class="choose-info">
-      <div class="info-title">GreenCred</div>
-      Earn valuable GreenCred with every step toward sustainability.
-      Our renewable energy solutions help boost your green building certification scores.
-      Build smarter, cleaner, and greener — with measurable environmental impact.
-    </div>
+   
   </div>
 </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
-<style>
-  body {
-    background: #f0f0f0;
+<!-- Custom JS for Auto Hover -->
+<script>
+  const boxes = document.querySelectorAll('.choose-box');
+  let current = 0;
+
+  function autoHover() {
+    boxes.forEach(box => box.classList.remove('active-hover'));
+    boxes[current].classList.add('active-hover');
+    current = (current + 1) % boxes.length;
   }
 
-  .choose-us-container {
-    background: url('assets/solarwhychooseus.jpg') no-repeat center center/cover;
-    height: 400px;
-    position: relative;
-    overflow: hidden;
-    display: flex;
-  }
-
-  .choose-box {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    overflow: hidden;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    cursor: pointer;
-    transition: transform 0.5s ease, opacity 0.5s ease;
-    animation: autoOverlay 5s infinite;
-    transform-style: preserve-3d;
-    perspective: 1000px;
-  }
-
-  @keyframes autoOverlay {
-    0%, 80% {
-      transform: scale(1);
-    }
-    50% {
-      transform: scale(1.1);
-    }
-  }
-
-  .choose-overlay, .choose-info {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.5);
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    opacity: 0;
-    transition: opacity 0.5s ease;
-    text-align: center;
-    font-size: 1.1rem;
-    flex-direction: column;
-  }
-
-  .choose-box:hover {
-    animation-play-state: paused;
-    transform: scale(1.1);
-  }
-
-  .choose-box:hover .choose-overlay {
-    opacity: 0;
-  }
-
-  .choose-box:hover .choose-info {
-    opacity: 1;
-    background: #183665;
-    border-radius: 20px;
-    animation: fadeIn 1s ease forwards;
-  }
-
-  .choose-overlay h5 {
-    font-size: 1.8rem;
-    font-weight: bold;
-    color: #fff;
-  }
-
-  .info-title {
-    background-color: #FFD700; /* Yellow background */
-    color: black; /* Black text */
-    font-weight: bold;
-    padding: 6px 12px;
-    border-radius: 10px;
-    margin-bottom: 15px;
-    font-size: 1.2rem;
-  }
-
-  @keyframes fadeIn {
-    0% { opacity: 0; transform: scale(0.9); }
-    100% { opacity: 1; transform: scale(1); }
-  }
-
-  /* Responsive */
-  @media (max-width: 768px) {
-    .choose-us-container {
-      flex-direction: column;
-      height: auto;
-    }
-    .choose-box {
-      height: 300px;
-    }
-  }
-</style>
+  setInterval(autoHover, 2000); // Every 2 seconds
+</script>
 
 <!-- Bootstrap 5 JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>

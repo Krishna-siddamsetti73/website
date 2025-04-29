@@ -73,6 +73,15 @@
     <div class="card" style="--i: 4;"></div>
     <div class="card" style="--i: 5;"></div>
   </div>
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+
+  <model-viewer 
+    src="windmill.glb" 
+    alt="A 3D model of an astronaut" 
+    auto-rotate 
+    camera-controls 
+    style="width: 100%; height: 400px; margin-top: 20px;">
+  </model-viewer>
 
   <script>
     const cards = document.querySelectorAll('.card');
