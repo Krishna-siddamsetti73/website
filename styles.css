@@ -526,3 +526,122 @@ body {
 .choose-us-container:hover {
   animation-play-state: paused;
 }
+
+ /* General Styles */
+ body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Navbar */
+#mainNavbar {
+  height: 70px;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  background-color: transparent;
+  transition: background-color 0.3s;
+}
+
+#mainLogo, #transparentLogo {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Hero Section */
+.hero-section img {
+  width: 100%;
+  height: auto;
+}
+
+.hero-text {
+  max-width: 90%;
+  margin: auto;
+  text-align: center;
+}
+
+/* 3D Carousel */
+.d3-carousel-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.d3-carousel-item {
+  flex: 1 1 300px;
+  max-width: 300px;
+  text-align: center;
+}
+
+.d3-carousel-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* About Section */
+.about-section .row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.about-section .col-md-7, .about-section .col-md-3 {
+  flex: 1 1 100%;
+  max-width: 100%;
+}
+
+.about-section img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Why Choose Us Section */
+.why-choose-section .row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.why-choose-section .col-md-3 {
+  flex: 1 1 300px;
+  max-width: 300px;
+}
+
+.card-container {
+  height: auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.card-container img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 20px;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .hero-text h1 {
+    font-size: 1.5rem;
+  }
+
+  .d3-carousel-container {
+    flex-direction: column;
+  }
+
+  .about-section .row {
+    flex-direction: column;
+  }
+
+  .why-choose-section .row {
+    flex-direction: column;
+  }
+}
