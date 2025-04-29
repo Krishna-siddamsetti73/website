@@ -16,9 +16,15 @@ body {
   object-fit: cover;
   height: 100%;
 }
-
+@font-face {
+  font-family: 'Araboto Black 400';
+  src: url('animation/Araboto Black 400.ttf');
+}
 .hero-text {
   color: white;
+  font-family: 'Araboto Black 400';
+ 
+
   
 }
 
@@ -219,12 +225,14 @@ body {
   padding: left 50px;right: 50px;
   max-width: 850px;
   margin: 0 auto;
+  
 }
 
 .storage-image {
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(to right, rgb(203, 203, 108), rgb(143, 143, 247));
 }
 
 .storage-info {
@@ -449,33 +457,14 @@ body {
   transform: rotate(90deg);
 }
 
- /* Container */
- .choose-us-container {
-  background: url('assets/slideshow1.png') no-repeat center center/cover;
-  height: 400px;
+.choose-us-container {
+  background: url('assets/solarwhychooseus.jpg') no-repeat center center/cover;
+  height: 80vh;
   position: relative;
   overflow: hidden;
   display: flex;
-  border-radius: 15px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
-  animation: zoomBackground 10s infinite alternate ease-in-out;
-  transform-style: preserve-3d;
 }
 
-/* Image breathing zoom effect */
-/* @keyframes zoomBackground {
-  0% {
-    transform: scale(1) rotateX(0deg) rotateY(0deg);
-  }
-  50% {
-    transform: scale(1.1) rotateX(5deg) rotateY(5deg);
-  }
-  100% {
-    transform: scale(1) rotateX(0deg) rotateY(0deg);
-  }
-} */
-
-/* Card Box */
 .choose-box {
   flex: 1;
   display: flex;
@@ -483,48 +472,85 @@ body {
   align-items: center;
   position: relative;
   overflow: hidden;
-  transition: all 0.5s ease;
-  cursor: pointer;
   border: 1px solid rgba(255, 255, 255, 0.2);
-  z-index: 1;
+  cursor: pointer;
+  transition: all 0.5s ease;
+  animation: hoverAnimation 8s infinite linear;
+  transform-style: preserve-3d;
+  perspective: 1000px;
 }
 
-/* Overlay */
-.choose-overlay {
+@keyframes hoverAnimation {
+  0% { transform: rotateY(0deg); }
+  50% { transform: rotateY(10deg); }
+  100% { transform: rotateY(0deg); }
+}
+
+.choose-overlay, .choose-info {
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.6);
-  opacity: 0;
-  transition: all 3s ease;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 20px;
+  opacity: 0;
+  transition: all 0.5s ease;
+  text-align: center;
+  font-size: 1.1rem;
+  flex-direction: column;
+}
+
+.choose-box:hover {
+  animation-play-state: paused;
+}
+
+.choose-box:hover .choose-overlay {
+  opacity: 0;
+}
+
+.choose-box:hover .choose-info {
+  opacity: 1;
+  background: #183665   ;
+  border-radius: 20px;
+  animation: fadeIn 1s ease forwards;
 }
 
 .choose-overlay h5 {
-  color: #fff;
+  font-size: 1.8rem;
   font-weight: bold;
-  text-align: top center;
-  font-size: 1.5rem;
-  transition: transform 0.5s ease;
+  color: #fff;
 }
 
-/* Active Hover */
-.active-hover .choose-overlay {
-  opacity: 1;
-  background: #fcaf17;
+.info-title {
+background-color: #FFD700; /* Yellow background */
+color: black; /* Black text */
+font-weight: bold;
+padding: 6px 12px;
+border-radius: 10px;
+margin-bottom: 15px;
+font-size: 1.2rem;
 }
 
-.active-hover .choose-overlay h5 {
-  transform: scale(1.2);
+
+
+
+@keyframes fadeIn {
+  100% { opacity: 0; transform: scale(0.9); }
+  100% { opacity: 1; transform: scale(1); }
 }
-.choose-overlay :hover{
-  animation-play-state: paused;
-}
-/* Pause animation on hover */
-.choose-us-container:hover {
-  animation-play-state: paused;
+
+/* Responsive */
+@media (max-width: 768px) {
+  .choose-us-container {
+    flex-direction: column;
+    height: auto;
+  }
+  .choose-box {
+    height: 300px;
+  }
 }

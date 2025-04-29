@@ -76,13 +76,13 @@
 </script>
 
   <!-- Hero Section -->
-  <section class="hero-section text-white position-relative" style="margin-top: 0px; width: 100%;">
+  <section class="hero-section text-white position-relative" style="margin-top: 0vh; width: 100%;">
     <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000">
       <div class="carousel-inner">
       <div class="carousel-item active">
-        <img src="assets\dnkjan.jpg" class="img-fluid w-100" alt="Solar panels" />
-        <div id="mytext" class="hero-text"></div>
-        <h1>What makes us different from other Renewable <br>Companies...</h1>
+        <img src="assets\bannerslide1.jpg" class="img-fluid w-100" alt="Solar panels" />
+        <div id="mytext" class="hero-text d-flex flex-column justify-content-center align-items-center position-absolute text-center" style="height: 100%; top: 0; left: 0; right: 0; bottom: 0; margin-top:-30vh; z-index: 10; ">
+        <h1><strong>What makes us different from other Renewable <br>Companies...</strong></h1>
         <button class="btn btn-warning mt-3" style="background-color: #01709E; color: white; border: none; width: 150px;" onclick="window.location.href='aboutus.html';">Learn More</button>
         </div>
       </div>
@@ -95,10 +95,13 @@
         </div>
       </div>
       <div class="carousel-item">
-        <img src="assets\WhatsApp Image 2025-04-26 at 17.00.25_ac7c5575.jpg" class="img-fluid w-100" alt="Solar installation" />
-        <div id="mytext" class="hero-text">
-        <h1>What are our core offerings? <br>for a Greener Tomorrow</h1>
-        <button class="btn btn-warning mt-3" style="background-color: #01709E; color: white; border: none; width: 150px;" onclick="window.location.href='aboutus.html';">Get Started</button>
+        <video class="img-fluid w-100" autoplay muted loop style="object-fit: cover; object-position: top; margin-top: -40vh;">
+          <source src="animation\bannervideotry.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <div id="mytext" class="hero-text d-flex flex-column justify-content-center align-items-center position-absolute text-center" style="height: 100%; top: 0; left: 0; right: 0; bottom: 0; margin-top:0; z-index: 10;">
+          <h1>What are our core offerings? <br>for a Greener Tomorrow</h1>
+          <button class="btn btn-warning mt-3" style="background-color: #01709E; color: white; border: none; width: 150px;" onclick="window.location.href='aboutus.html';">Get Started</button>
         </div>
       </div>
       </div>
@@ -107,7 +110,7 @@
   <!-- 3D Carousel Section -->
   <body >
   <section class="py-5 text-center">
-    <div class="container"style="max-height: 150px;" >
+    <div class="container"style="max: height 30vh;" >
       <h1 style="color: #183665; font-family: 'Inknut Antiqua', serif; font-weight: 800;  ">Our Solutions </h1>
       <style>
         @font-face {
@@ -116,7 +119,7 @@
         }
       </style>
     </div>
-      <div class="d3-carousel-container"style="max-height: 80px; margin-top: 150px;">
+      <div class="d3-carousel-container"style="max-height: 60vh; ">
         <div class="d3-carousel-item left animate__animated" id="item1">
           <img src="assets\windmill3dcarousel.jpg" alt="Wind Turbines">
           <div class="overlay">
@@ -188,8 +191,8 @@
  
 
   <!-- About Section -->
-  <section class="about-section py-5" style="margin-top: 130px; ">
-    <div style="text-align: center; margin-top: -20px;">
+  <section class="about-section py-5" >
+    <div style="text-align: center; margin-top: 0.5vh;">
       <h1 style="color: #183665; font-family: 'Inknut Antiqua', serif; font-weight: 800;  margin-top: -20px;">Who we are ?</h1>
       <style>
         @font-face {
@@ -229,28 +232,109 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
 
+  <div class="container text-center my-5">
+    <h1 style="color: #183665; font-family: 'Inknut Antiqua', serif; font-weight: 800;  ">Why Choose Us..?? </h1>
+      <style>
+        @font-face {
+          font-family: 'Inknut Antiqua';
+          src: url('animation/InknutAntiqua-ExtraBold.ttf') format('truetype');
+        }
+      </style>
+  </div>
+  
+  <div class="container choose-us-container ">
+    <!-- Blueprinted -->
+    <div class="choose-box">
+      <div class="choose-overlay">
+        <h5>Blueprinted</h5>
+      </div>
+  
+      <div class="choose-info">
+        <div class="info-title">Blueprinted</div>
+        "We are committed to providing a seamless, end-to-end green energy supply by building and operating our own renewable power plants. By delivering clean electricity through government-allotted transmission lanes, we ensure that sustainable energy is available to all."
+      </div>
+    </div>
+  
+    <!-- Zero Space Hassle -->
+    <div class="choose-box">
+      <div class="choose-overlay">
+        <h5>Zero Space Hassle</h5>
+      </div>
+      <div class="choose-info">
+        <div class="info-title">Zero Space Hassle</div>
+        At Sunanda Renewable Energy Pvt. Ltd., clients receive clean electricity directly from our off-site solar and wind power plants through government-authorized transmission lines — no space needed at your location.
+      </div>
+    </div>
+  
+    <!-- Eco Efficient -->
+    <div class="choose-box">
+      <div class="choose-overlay">
+        <h5>Eco Efficient</h5>
+      </div>
+      <div class="choose-info">
+        <div class="info-title">Eco Efficient</div>
+        Unlock up to 30% savings on your energy costs with our cutting-edge sustainable solutions. Sunanda’s EcoEfficient technology ensures smart power usage with minimal waste. Choose a greener path that’s both cost-effective and future-ready.
+      </div>
+    </div>
+  
+    <!-- GreenCred -->
+    <div class="choose-box">
+      <div class="choose-overlay">
+        <h5>GreenCred</h5>
+      </div>
+    
+        <div class="choose-info">
+          <div class="info-title">GreenCred</div>
+  
+          Earn valuable GreenCred with every step toward sustainability.
+          Our renewable energy solutions help boost your green building certification scores.
+          Build smarter, cleaner, and greener — with measurable environmental impact.
+          
+      </div>
+    </div>
+  </div>
+  
+  <div class="choose-box">
+    <div class="choose-overlay">
+      <h5>GreenCred</h5>
+    </div>
+    <div class="choose-info">
+      <div class="info-title">GreenCred</div>
+      Earn GreenCred with every green step...
+    </div>
+  </div>
+  
+  
+  <!-- Bootstrap 5 JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
-
-
-
-<!-- Bootstrap 5 JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
-
+<!-- 
+  <h1 style="color: #183665; font-family: 'Inknut Antiqua', serif; font-weight: 800;  ">Smart Energy Storage System</h1>
+  <style>
+    @font-face {
+      font-family: 'Inknut Antiqua';
+      src: url('animation/InknutAntiqua-ExtraBold.ttf') format('truetype');
+    } -->
+    
 
   <!-- BESS Section -->
-  <div class="card mb-4" style="border-radius: 15px; overflow: hidden; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); height: 600px; margin-left: 5%; margin-right: 5%;">
+  <div class="card mb-4" style="border-radius: 15px; overflow: hidden; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); height: 600px; margin-left: 5%; margin-right: 5%; margin-top:5vh;">
     <div class="container py-4">
-      <h1 class="page-title text-center">Smart Energy Storage System</h1>
+      <h1 class="page-title text-center" style="color: #183665; font-family: 'Inknut Antiqua', serif; font-weight: 800;  ">Smart Energy Storage System</h1>
+      <style>
+        @font-face {
+          font-family: 'Inknut Antiqua';
+          src: url('animation/InknutAntiqua-ExtraBold.ttf') format('truetype');
+        }</style>
       <div class="storage-container" style="margin-left: 10px; margin-right: 10px;">
         <div class="row">
           <div class="col-md-6">
             <div class="storage-image">
-              <img src="assets\bessidne.png" alt="Smart Energy Storage System" class="img-fluid" />
+              <img src="assets\beesreplace.png" alt="Smart Energy Storage System" class="img-fluid" />
             </div>
           </div>
           <div class="col-md-6">
-            <div class="storage-info" style="margin-left: 5vh; margin-right: -40vh;">
+            <div class="storage-info" style="margin-left: 5vh; margin-right: -20vh;">
               <p><strong>BESS (Battery Energy Storage System)</strong> allows us to store excess energy generated from solar and wind sources during peak production hours and supply it when demand is high.</p>
               <p>This ensures consistent power delivery, supports grid stability, and helps clients enjoy uninterrupted green energy — day and night.</p>
               <div class="d-flex flex-column align-items-center">
