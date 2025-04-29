@@ -3,11 +3,13 @@ body {
   background-color: #183665;
   background: url('animation/WhatsApp Video 2025-01-29 at 15.39.18.mp4') ;
   background-attachment: fixed;
+
   /* font-family: 'Inknut Antiqua', sans-serif; */
 }
 .hero-section {
-  height: 550px;
+  height: 80vh;
   overflow: hidden;
+  width: 100%;
 }
 
 .hero-section img {
@@ -17,7 +19,7 @@ body {
 
 .hero-text {
   color: white;
-  margin-top: -70px;
+  
 }
 
 /* Navigation */
@@ -214,7 +216,7 @@ body {
 }
 
 .storage-container {
-  padding: 40px 20px;
+  padding: left 50px;right: 50px;
   max-width: 850px;
   margin: 0 auto;
 }
