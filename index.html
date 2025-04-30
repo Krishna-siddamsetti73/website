@@ -81,7 +81,7 @@
       <div class="carousel-inner">
       <div class="carousel-item active">
         <img src="assets\bannerslide1.jpg" class="img-fluid w-100" alt="Solar panels" style="object-fit: cover; object-position: top; margin-top: 0;" />
-        <div id="mytext" class="hero-text d-flex flex-column justify-content-center align-items-center position-absolute text-center" style="height: 100%; top: -30vh; left: 0; right: 0; bottom: 0; margin: top 0; z-index: 10; ">
+        <div id="mytext" class="hero-text d-flex flex-column justify-content-center align-items-center position-absolute text-center" style="height: 100%; top: 0vh; left: 0; right: 0; bottom: 0; margin: top 0; z-index: 10; ">
         <h1><strong>What makes us different from other Renewable <br>Companies...</strong></h1>
         <button class="btn btn-warning mt-3" style="background-color: #01709E; color: white; border: none; width: 150px;" onclick="window.location.href='aboutus.html';">Learn More</button>
         </div>
@@ -91,9 +91,9 @@
        
          <img src="assets\slide1deppika.png" class="img-fluid w-100" alt="Solar farm" style="object-fit: cover; object-position: top; margin-top: 0vh;">
        
-       <div id="mytext" class="hero-text d-flex flex-column justify-content-center align-items-center position-absolute text-center" style="height: 100%; top:-30vh ; left: 0; right: 0; bottom: 0; margin-top:0 ; z-index: 10; ">
-          <strong> <h1>What benefits does Renewable Energy offer
-            <br>to customers?</h1></strong>
+      <div id="mytext" class="hero-text d-flex flex-column justify-content-center align-items-center position-absolute text-center" style="height: 100%; top: 0vh; left: 0; right: 0; bottom: 0; margin-top: 0; z-index: 10;">
+         <strong><h1>What benefits does Renewable Energy offer
+           <br>to customers?</h1></strong>
           <button class="btn btn-warning mt-3" style="background-color: #01709E; color: white; border: none; width: 150px;" onclick="window.location.href='aboutus.html';">Learn More</button>
           </div>
       </div>
@@ -114,7 +114,7 @@
   <body >
   <section class="py-5 text-center">
     <div class="container"style="max: height 30vh;" >
-      <h1 style="color: #183665; font-family: 'Araboto Bold 400', serif; font-weight: 800;  ">Our Solutions </h1>
+      <h1 style="color: #183665; font-family: 'Araboto Bold 400', serif; font-weight: 800; margin-top: 8vh; margin-bottom: 4vh; ">Our Solutions </h1>
       <style>
         @font-face {
           font-family: 'Araboto Bold 400';
@@ -196,7 +196,7 @@
   <!-- About Section -->
   <section class="about-section py-5" >
     <div style="text-align: center; margin-top: 0.5vh;">
-      <h1 style="color: #183665; font-family: 'Araboto Bold 400', serif; font-weight: 800;  margin-top: -15vh;">Who we are ?</h1>
+      <h1 style="color: #183665; font-family: 'Araboto Bold 400', serif; font-weight: 800;  margin-top: -8vh; margin-bottom: 4vh;">Who we are ?</h1>
       <style>
         @font-face {
           font-family: 'Araboto Bold 400';
@@ -311,91 +311,51 @@
   <!-- Bootstrap 5 JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
-<!-- 
-  <h1 style="color: #183665; font-family: 'Inknut Antiqua', serif; font-weight: 800;  ">Smart Energy Storage System</h1>
-  <style>
-    @font-face {
-      font-family: 'Inknut Antiqua';
-      src: url('animation/InknutAntiqua-ExtraBold.ttf') format('truetype');
-    } -->
-    
-
-  <!-- BESS Section -->
-  <div class="card mb-4" style="border-radius: 15px; overflow: hidden; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); height: 600px; margin-left: 5%; margin-right: 5%; margin-top:5vh;">
-    <div class="container py-4">
-      <div style="display: flex; justify-content: center; margin-left: 38.8%;">
-        <h1 class="page-title text-center" style="color: #183665; font-family: 'Araboto Bold 400', serif; font-weight: 800;">Smart Energy Storage System</h1>
-      </div><style>
-        @font-face {
-          font-family: 'Araboto Bold 400';
-          src: url('animation/Araboto Bold 400.ttf') format('truetype');
-        }</style>
-      <div class="storage-container" style="margin-left: 10px; margin-right: 10px;">
-        <div class="row">
-          <div class="col-md-6">
-            <div class="storage-image">
-              <img src="animation\61ee0edf-fe87-4756-898d-142ff51f41bc[1].jpg" alt="Smart Energy Storage System" class="img-fluid" />
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="storage-info" style="margin-left: 5vh;">
-              <p><strong>BESS (Battery Energy Storage System)</strong> allows us to store excess energy generated from solar and wind sources during peak production hours and supply it when demand is high.</p>
-              <p>This ensures consistent power delivery, supports grid stability, and helps clients enjoy uninterrupted green energy — day and night.</p>
-              <div class="d-flex flex-column align-items-center">
-                <button id="learnMoreBtn" class="learn-more-btn">
-                  Learn more
-                  <span class="arrow-icon" id="arrowIcon">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                      <path d="M8.59,16.59L13.17,12L8.59,7.41L10,6l6,6l-6,6L8.59,16.59z" />
-                    </svg>
-                  </span>
-                </button>
-                <img id="arrowDownImage" src="animation\Untitled video - Made with Clipchamp.gif" alt="Arrow Down" style="display: none; margin-top: 20px;" />
-              </div>
-            </div>
-          </div>
+  <div class="container" id="hoverContainer" style="transition: background-color 0.3s; height: auto; width: 100vw; display: flex; justify-content: center; align-items: center;"><section style="margin: left 5%; display: flex; justify-content: space-around; justify-items: flex-start; margin-right: 5%; margin-top: 8%;" id="hoverSection">
+      <div class="row" id="rowbess">
+        <div class="col-md-7">
+          <img src="animation\61ee0edf-fe87-4756-898d-142ff51f41bc[1].jpg" alt="Smart Energy Storage System" class="img-fluid" id="storageimas" />
+          <style>
+          #storageimas {
+            border-radius: 5%;
+            width: 80vh;
+            height: 80vh;
+            max-width: 80vh;
+            margin-left: 5vw;
+            margin-bottom: 5vh;
+          }
+          </style>
+        </div>
+        
+        <div class="col-md-4" style="margin-top: calc(3vh + 2%);">
+          <h1 style="color: #183665; font-family: 'Araboto Bold 400', serif; font-weight: 600;">Smart Energy Storage System</h1>
+          <style>
+            @font-face {
+              font-family: 'Araboto Bold 400';
+              src: url('animation/Araboto Bold 400.ttf') format('truetype');
+            }
+          </style>
+          <p style="text-align: justify;"><strong>BESS (Battery Energy Storage System)</strong> allows us to store excess energy generated from solar and wind sources during peak production hours and supply it when demand is high.
+             This ensures consistent power delivery, supports grid stability, and helps clients enjoy uninterrupted green energy — day and night.</p>
+          <div class="d-flex flex-column align-items-center"></div>
+          <button id="learnMoreBtn" class="learn-more-btn">
+            Learn more
+            <span class="arrow-icon" id="arrowIcon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M8.59,16.59L13.17,12L8.59,7.41L10,6l6,6l-6,6L8.59,16.59z" />
+              </svg>
+            </span>
+          </button>
         </div>
       </div>
-    </div>
+    </section>
   </div>
-<script>
-  const learnMoreBtn = document.getElementById('learnMoreBtn');
-  const arrowIcon = document.getElementById('arrowIcon');
-  const arrowDownImage = document.getElementById('arrowDownImage');
-  let timeoutId = null;
-  let isArrowDown = false;
 
-  learnMoreBtn.addEventListener('click', function() {
-      // Clear any existing timeout
-      if (timeoutId) {
-          clearTimeout(timeoutId);
-          timeoutId = null;
-      }
-
-      if (!isArrowDown) {
-          // Rotate arrow down
-          arrowIcon.classList.add('arrow-down');
-          isArrowDown = true;
-          arrowDownImage.style.display = 'block';
-
-          // Set timeout to revert after 15 seconds
-          timeoutId = setTimeout(function() {
-              arrowIcon.classList.remove('arrow-down');
-              isArrowDown = false;
-              arrowDownImage.style.display = 'none';
-              timeoutId = null;
-          }, 15000);
-      } else {
-          // If already down, revert immediately
-          arrowIcon.classList.remove('arrow-down');
-          isArrowDown = false;
-          arrowDownImage.style.display = 'none';
-      }
-  });
-</script>
-</body>
-<!-- Bootstrap JS Bundle with Popper -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <style>
+    #hoverContainer:hover {
+      background-color: #F6F7C4;
+    }
+  </style>
 
 
 <footer class="footer text-white" style="background-color: #264653; width: 100%;">
