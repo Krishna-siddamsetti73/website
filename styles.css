@@ -127,9 +127,9 @@ body {
   gap: 1rem;
 }
 
-.why-choose-section {
+/* .why-choose-section {
   padding: 80px 0;
-}
+} */
 
 .feature-card {
   background-color: #fff;
@@ -459,10 +459,16 @@ body {
 
 .choose-us-container {
   background: url('assets/solarwhychooseus.jpg') no-repeat center center/cover;
-  height: 80vh;
+  height: 61vh;
   position: relative;
   overflow: hidden;
   display: flex;
+  border-radius: 15px;
+  overflow: hidden; 
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  margin-right: 5%;
+  margin-left: 5%;
+  margin-top:5vh;
 }
 
 .choose-box {
