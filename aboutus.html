@@ -86,13 +86,19 @@
 
   <!-- Banner -->
   <!-- Full-Screen Banner -->
-<div class="mb-5">
-  <img src="aboutus3.mp4" class="img-fluid w-100" alt="Banner" style="height: 500px; object-fit: cover; width: 100%; position: absolute; top: 0; left: 0;">
+<div class="mb-5 position-relative" style="height: 500px; overflow: hidden;">
+  <video class="img-fluid w-100" autoplay muted loop style="height: 500px; object-fit: cover; width: 100%; position: absolute; top: 0; left: 0;">
+    <source src="aboutus3.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <div class="position-absolute text-white" style="top: 50%; left: 5%; transform: translateY(-50%); z-index: 1;">
+    <h1 style="font-size: 3.5rem; font-weight: bold;">About us</h1>
+    <p style="font-size: 0.7rem;">We specialize in cutting-edge renewable energy systems—including advanced BESS <br> and solar power  solutions—driving sustainability forward with reliable,<br> scalable technologies for a greener tomorrow..</p>
+  </div>
 </div>
- 
 <!-- Creating for Future -->
-<div class="mt-5 pt-5" style="margin-left: 50px; margin-right: 50px;">
-  <div class="row align-items-center">
+<div class="mt-5 pt-5" style="margin-left: 50px; margin-right: 50px; margin-top: -500px;">
+  <div class="row align-items-center" style="margin-top: -560px;">
     <div class="col-md-6">
       <h4 class="section-heading" style="color: #183665; font-family: 'Inknut Antiqua', serif; font-weight: 800; margin-top: 460px;">Creating for Future</h4>
       <h3 style="color: #fcaf17;"></h3>
@@ -239,20 +245,24 @@ We begin every renewable energy project with a detailed requirement evaluation t
         To accelerate India's transition to clean energy by providing accessible renewable power through innovation,
         integrity, and long-term sustainability.
       </p>
-      <div class="row text-center mt-4">
-        <div class="col-md-6 mb-3">
-          <i class="bi bi-leaf text-success" style="font-size: 2rem;"></i>
+      <div class="row text-center mt-4" style="justify-content: space-around; display: flex;">
+        <div class="col-md-5 mb-3" style="background-color: rgba(24, 54, 101, 0.1); padding: 15px; border-radius: 10px;">
+
+            <i class="bi bi-sun text-warning" style="font-size: 2rem;"></i>
           <h5 class="mt-2">Decrease Fossil Fuel Usage</h5>
         </div>
-        <div class="col-md-6 mb-3">
+        <div class="col-md-5 mb-3" style="background-color: rgba(24, 54, 101, 0.1); padding: 15px; border-radius: 10px;">
+
           <i class="bi bi-globe text-primary" style="font-size: 2rem;"></i>
           <h5 class="mt-2">Promote Sustainable Energy</h5>
         </div>
-        <div class="col-md-6 mb-3">
+        <div class="col-md-5 mb-3" style="background-color: rgba(24, 54, 101, 0.1); padding: 15px; border-radius: 10px;">
+
           <i class="bi bi-link-45deg text-warning" style="font-size: 2rem;"></i>
           <h5 class="mt-2">Build Long-Term Partnerships</h5>
         </div>
-        <div class="col-md-6 mb-3">
+        <div class="col-md-5 mb-3" style="background-color: rgba(24, 54, 101, 0.1); padding: 15px; border-radius: 10px;">
+
           <i class="bi bi-cash-coin text-info" style="font-size: 2rem;"></i>
           <h5 class="mt-2">Increase Cost Savings on Energy</h5>
         </div>
@@ -263,21 +273,21 @@ We begin every renewable energy project with a detailed requirement evaluation t
   <div class="info-block" >
     <div class="block-content">
       <h2><strong>Our Vision</strong></h2>
-      <div class="row text-center">
-        <div class="col-md-6 mb-3"  style="background-color: rgba(24, 54, 101, 0.1); padding: 15px; border-radius: 10px;">
+      <div class="row text-center" style="justify-content: space-around; display: flex;">
+        <div class="col-md-5 mb-3"  style="background-color: rgba(24, 54, 101, 0.1); padding: 15px; border-radius: 10px;">
           <i class="bi bi-lightbulb text-warning" style="font-size: 2rem;"></i>
           <p class="mt-2">To inspire innovation, empower communities, and create meaningful impact through technology.</p>
         </div>
-        <div class="col-md-6 mb-3"  style="background-color: rgba(24, 54, 101, 0.1); padding: 15px; border-radius: 10px;">
+        <div class="col-md-5 mb-3"  style="background-color: rgba(24, 54, 101, 0.1); padding: 15px; border-radius: 10px;">
           <i class="bi bi-shield-lock text-primary" style="font-size: 2rem;"></i>
           <p class="mt-2"> Prioritize trust, transparency, and integrity in everything we do.</p>
         </div>
-        <div class="col-md-6 mb-3"  style="background-color: rgba(24, 54, 101, 0.1); padding: 15px; border-radius: 10px;">
+        <div class="col-md-5 mb-3"  style="background-color: rgba(24, 54, 101, 0.1); padding: 15px; border-radius: 10px;">
           <i class="bi bi-people text-success" style="font-size: 2rem;"></i>
           <p class="mt-2"> Foster inclusivity and accessibility in every solution we build.</p>
         </div>
         
-        <div class="col-md-6 mb-3" style="background-color: rgba(24, 54, 101, 0.1); padding: 15px; border-radius: 10px;">
+        <div class="col-md-5 mb-3" style="background-color: rgba(24, 54, 101, 0.1); padding: 15px; border-radius: 10px;">
           <i class="bi bi-rocket text-info" style="font-size: 2rem;"></i>
           <p class="mt-2"> Drive innovation through technology and forward-thinking solutions</p>
         </div>
