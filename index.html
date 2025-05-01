@@ -8,10 +8,10 @@
    <link rel="stylesheet" href="styles.css" />
    <link rel="icon" href="assets\logocropped-removebg-preview.png" type="image/png" style="height: 100; width: 60;" />
 </head>
-<nav class="navbar navbar-expand-lg navbar-light px-4" id="mainNavbar" style="height: 70px; border-bottom-left-radius: 30px; border-bottom-right-radius: 30px; background-color: transparent; transition: background-color 0.3s; width: 100%;">
+<nav class="navbar navbar-expand-lg navbar-light px-4" id="mainNavbar" style="height:12vh; border-bottom-left-radius: 3vi; border-bottom-right-radius: 3vi; background-color: transparent; transition: background-color 0.3s; width: 100vw">
   <a class="navbar-brand" href="index.html">
-    <img src="WhatsApp_Image_2025-04-28_at_14.34.16_90ad2c9c-removebg-preview.png" alt="Transparent Logo" height="65" width="200" id="transparentLogo" style="display: none;" />
-    <img src="image-removebg-preview (1).png" alt="Sunanda Logo" height="85" width="200" id="mainLogo" />
+    <img src="WhatsApp_Image_2025-04-28_at_14.34.16_90ad2c9c-removebg-preview.png" alt="Transparent Logo" id="transparentLogo" style="display: none; position: absolute; top: 0.05%; left: 1vw; height: calc(100% - 0.1%); padding: 0 1vw;" />
+    <img src="image-removebg-preview (1).png" alt="Sunanda Logo" style="display: none; position: absolute; top: 0.05%; left: 1vw; height: calc(100% - 0.1%); padding: 0 1vw;"  id="mainLogo" />
    
   </a>
   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -78,9 +78,9 @@
   <!-- Hero Section -->
   <section class="hero-section text-white position-relative" style="margin-top: 0vh; width: 100%;">
     <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000">
-      <div class="carousel-inner">
+      <div class="carousel-inner" style="height: 80vh; max-height: 80vh; overflow-y: hidden;">
       <div class="carousel-item active">
-        <img src="assets\bannerslide1.jpg" class="img-fluid w-100" alt="Solar panels" style="object-fit: cover; object-position: top; margin-top: 0;" />
+        <img src="assets\bannerslide1.jpg" class="img-fluid w-100" alt="Solar panels" style="object-fit: cover; object-position: top; margin-top: 0; " />
         <div id="mytext" class="hero-text d-flex flex-column justify-content-center align-items-center position-absolute text-center" style="height: 100%; top: 0vh; left: 0; right: 0; bottom: 0; margin: top 0; z-index: 10; ">
         <h1><strong>What makes us different from other Renewable <br>Companies...</strong></h1>
         <button class="btn btn-warning mt-3" style="background-color: #01709E; color: white; border: none; width: 150px;" onclick="window.location.href='aboutus.html';">Learn More</button>
@@ -99,7 +99,7 @@
       </div>
       <div class="carousel-item">
         <video class="img-fluid w-100" autoplay muted loop style="object-fit: cover; object-position: top; margin-top: 0vh;">
-          <source src="animation\windmillvidebanner.mp4" type="video/mp4">
+          <source src="animation\windmillvideo.webm" type="video/mp4">
           
         </video>
         <div id="mytext" class="hero-text d-flex flex-column justify-content-center align-items-center position-absolute text-center"style="height: 100%; top: -30vh; left: 0; right: 0; bottom: 0; margin: top 0; z-index: 10; ">
@@ -113,8 +113,8 @@
   <!-- 3D Carousel Section -->
   <body >
   <section class="py-5 text-center">
-    <div class="container" style="max: height 30vh;">
-      <h1 style="color: #183665; font-family: 'Araboto Bold 400', serif; font-weight: 800; margin-top: 8vh; margin-bottom: 4vh; ">Our Solutions </h1>
+    <div class="container" style="height:30vh;">
+      <h1 style="color: #183665; font-family: 'Araboto Bold 400', serif; font-weight: 800; margin-top: 8vh; margin-bottom: 1vh; ">Our Solutions </h1>
       <style>
         @font-face {
           font-family: 'Araboto Bold 400';
@@ -205,8 +205,13 @@
       </style>
     </div>
     <div class="container">
-      <div class="row align-items-center" style=" box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); border-radius: 10px; padding: 20px; background-color: #fcaf17;">
-        <div class="col-md-7">
+      <div class="row align-items-center justify-content-between" style="box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); border-radius: 1vi; padding: 5vi; background-color: #fcaf17;">
+       
+    
+        <div class="col-md-6 d-flex justify-content-center">
+          <img src="assets\whoweare.png" class="img-fluid rounded mb-3" alt="Person 1" style="height: 350px; width: 350px;" />
+        </div>
+        <div class="col-md-6">
          <p style="font-weight: 800;  font-family:'Instrument Sans';color: white;">
             Sunanda Renewable Energy Pvt. Ltd. is committed to driving the global shift toward clean, sustainable power. We believe in the future of renewable energy and specialize in generating electricity through reliable sources like solar power and wind energy.
           </p>
@@ -223,9 +228,7 @@
             </span>
         </button>
         </div>
-        <div class="col-md-3 text-center" style="height: 350px; width: 350px;">
-          <img src="assets\whoweare.png" class="img-fluid rounded mb-3" alt="Person 1" style="height: 350px; width: 350px; margin-left: 100px;" />
-        </div>
+        
       </div>
     </div>
   </section>
@@ -245,13 +248,12 @@
       </style>
   </div>
   
-  <div class="container choose-us-container ">
+  <div class="container choose-us-container">
     <!-- Blueprinted -->
     <div class="choose-box">
       <div class="choose-overlay">
         <h5>Blueprinted</h5>
       </div>
-  
       <div class="choose-info">
         <div class="info-title">Blueprinted</div>
         "We are committed to providing a seamless, end-to-end green energy supply by building and operating our own renewable power plants. By delivering clean electricity through government-allotted transmission lanes, we ensure that sustainable energy is available to all."
@@ -285,27 +287,33 @@
       <div class="choose-overlay">
         <h5>GreenCred</h5>
       </div>
-    
-        <div class="choose-info">
-          <div class="info-title">GreenCred</div>
-  
-          Earn valuable GreenCred with every step toward sustainability.
-          Our renewable energy solutions help boost your green building certification scores.
-          Build smarter, cleaner, and greener — with measurable environmental impact.
-          
+      <div class="choose-info">
+        <div class="info-title">GreenCred</div>
+        Earn valuable GreenCred with every step toward sustainability. Our renewable energy solutions help boost your green building certification scores. Build smarter, cleaner, and greener — with measurable environmental impact.
       </div>
     </div>
   </div>
   
-  <div class="choose-box">
-    <div class="choose-overlay">
-      <h5>GreenCred</h5>
-    </div>
-    <div class="choose-info">
-      <div class="info-title">GreenCred</div>
-      Earn GreenCred with every green step...
-    </div>
-  </div>
+  <script>
+    const boxes = document.querySelectorAll('.choose-box');
+    let current = 0;
+  
+    function updateActiveBox() {
+      boxes.forEach((box, index) => {
+        if (index === current) {
+          box.classList.add('active-auto');
+        } else {
+          box.classList.remove('active-auto');
+        }
+      });
+  
+      current = (current + 1) % boxes.length;
+    }
+  
+    // Start cycling
+    updateActiveBox(); // Show first box
+    setInterval(updateActiveBox, 3000); // Change every 3 seconds
+  </script>
   
   
   <!-- Bootstrap 5 JS -->
