@@ -10,7 +10,7 @@
 </head>
 <nav class="navbar navbar-expand-lg navbar-light px-4" id="mainNavbar" style="height:12vh; border-bottom-left-radius: 3vi; border-bottom-right-radius: 3vi; background-color: transparent; transition: background-color 0.3s; width: 100vw">
   <a class="navbar-brand" href="index.html">
-    <img src="WhatsApp_Image_2025-04-28_at_14.34.16_90ad2c9c-removebg-preview.png" alt="Transparent Logo" id="transparentLogo" style="display: none; position: absolute; top: 0.05%; left: 1vw; height: calc(100% - 0.1%); padding: 0 1vw;" />
+    <img src="WhatsApp_Image_2025-04-28_at_14.34.16_90ad2c9c-removebg-preview.png" alt="Transparent Logo" id="transparentLogo" style="display: block; position: absolute; top: 0.05%; left: 1vw; height: calc(100% - 0.1%); padding: 0 1vw;" />
     <img src="image-removebg-preview (1).png" alt="Sunanda Logo" style="display: none; position: absolute; top: 0.05%; left: 1vw; height: calc(100% - 0.1%); padding: 0 1vw;"  id="mainLogo" />
    
   </a>
@@ -82,7 +82,7 @@
       <div class="carousel-item active">
         <img src="assets\bannerslide1.jpg" class="img-fluid w-100" alt="Solar panels" style="object-fit: cover; object-position: top; margin-top: 0; " />
         <div id="mytext" class="hero-text d-flex flex-column justify-content-center align-items-center position-absolute text-center" style="height: 100%; top: 0vh; left: 0; right: 0; bottom: 0; margin: top 0; z-index: 10; ">
-        <h1><strong>What makes us different from other Renewable <br>Companies...</strong></h1>
+        <h1 style="width: fit-content;"><strong>What makes us different from other Renewable <br>Companies...</strong></h1>
         <button class="btn btn-warning mt-3" style="background-color: #01709E; color: white; border: none; width: 150px;" onclick="window.location.href='aboutus.html';">Learn More</button>
         </div>
       </div>
@@ -113,8 +113,8 @@
   <!-- 3D Carousel Section -->
   <body >
   <section class="py-5 text-center">
-    <div class="container" style="height:30vh;">
-      <h1 style="color: #183665; font-family: 'Araboto Bold 400', serif; font-weight: 800; margin-top: 8vh; margin-bottom: 1vh; ">Our Solutions </h1>
+    <div class="container d-flex justify-content-around align-items-center" style="height:30vh;">
+      <h1 style="color: #183665; font-family: 'Araboto Bold 400', serif; font-weight: 800; margin-top: 8vh; margin-bottom: 4vh; ">Our Solutions </h1>
       <style>
         @font-face {
           font-family: 'Araboto Bold 400';
@@ -208,8 +208,8 @@
       <div class="row align-items-center justify-content-between" style="box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); border-radius: 1vi; padding: 5vi; background-color: #fcaf17;">
        
     
-        <div class="col-md-6 d-flex justify-content-center">
-          <img src="assets\whoweare.png" class="img-fluid rounded mb-3" alt="Person 1" style="height: 350px; width: 350px;" />
+        <div class="col-md-6 " style="justify-items: flex-start;">
+          <img src="assets\whoweare.png" class="img-fluid rounded mb-3" alt="Person 1" style="height: 350px; width: 350px; margin-left: 100px;" />
         </div>
         <div class="col-md-6">
          <p style="font-weight: 800;  font-family:'Instrument Sans';color: white;">
@@ -335,14 +335,14 @@
           </style>
         </div>
         
-        <div class="col-md-4" style="margin-top: calc(3vh + 2%);">
+        <div class="col-md-4" style="margin-top: calc(3vh + 2%); justify-items: center; margin-left: 1vh; margin-right: 1vh;">
           <h1 style="color: #183665; font-family: 'Araboto Bold 400', serif; font-weight: 600;">Smart Energy Storage System</h1>
           <style>
             @font-face {
               font-family: 'Araboto Bold 400';
               src: url('animation/Araboto Bold 400.ttf') format('truetype');
             }
-          </style>
+          </style> 
           <p style="text-align: justify;"><strong>BESS (Battery Energy Storage System)</strong> allows us to store excess energy generated from solar and wind sources during peak production hours and supply it when demand is high.
              This ensures consistent power delivery, supports grid stability, and helps clients enjoy uninterrupted green energy — day and night.</p>
           <div class="d-flex flex-column align-items-center"></div>
