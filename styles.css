@@ -1,16 +1,18 @@
-
+.body {
+overflow-x: hidden;
+}
 .hero-section {
   height: 80vh;
   overflow: hidden;
   width: 100%;
 }
-
+ 
 .hero-section img {
   object-fit: cover;
   height: 80vh;
-  width: 100vw;
+  width: 100%;
  overflow-y: hidden;
- overflow-x: hidden;
+ overflow-x: scroll;
 
 }
 @font-face {

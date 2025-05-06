@@ -8,7 +8,8 @@
    <link rel="stylesheet" href="styles.css" />
    <link rel="icon" href="assets\logocropped-removebg-preview.png" type="image/png" style="height: 100; width: 60;" />
 </head>
-<nav class="navbar navbar-expand-lg navbar-light px-4" id="mainNavbar" style="height:12vh; border-bottom-left-radius: 3vi; border-bottom-right-radius: 3vi; background-color: transparent; transition: background-color 0.3s; width: 100vw">
+<body>
+<nav class="navbar navbar-expand-lg navbar-light px-4" id="mainNavbar" style="height:12vh; border-bottom-left-radius: 3vi; border-bottom-right-radius: 3vi; background-color: transparent; transition: background-color 0.3s; width: 100%">
   <a class="navbar-brand" href="index.html">
     <img src="WhatsApp_Image_2025-04-28_at_14.34.16_90ad2c9c-removebg-preview.png" alt="Transparent Logo" id="transparentLogo" style="display: block; position: absolute; top: 0.05%; left: 1vw; height: calc(100% - 0.1%); padding: 0 1vw;" />
     <img src="image-removebg-preview (1).png" alt="Sunanda Logo" style="display: none; position: absolute; top: 0.05%; left: 1vw; height: calc(100% - 0.1%); padding: 0 1vw;"  id="mainLogo" />
@@ -77,12 +78,12 @@
 
   <!-- Hero Section -->
   <section class="hero-section text-white position-relative" style="margin-top: 0vh; width: 100%;">
-    <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000">
-      <div class="carousel-inner" style="height: 80vh; max-height: 80vh; overflow-y: hidden;">
+    <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000" style="height: 80vh; min-height: 80vh; width: 100%; overflow-y: hidden; overflow-x: scroll;">
+      <div class="carousel-inner" style="height: 80vh; min-height: 80vh; overflow-y: hidden; overflow-x:scroll ;">
       <div class="carousel-item active">
         <img src="assets\bannerslide1.jpg" class="img-fluid w-100" alt="Solar panels" style="object-fit: cover; object-position: top; margin-top: 0; " />
         <div id="mytext" class="hero-text d-flex flex-column justify-content-center align-items-center position-absolute text-center" style="height: 100%; top: 0vh; left: 0; right: 0; bottom: 0; margin: top 0; z-index: 10; ">
-        <h1 style="width: fit-content;"><strong>What makes us different from other Renewable <br>Companies...</strong></h1>
+        <h1 style="width: fit-content; font-size: large;"><strong>What makes us different from other Renewable <br>Companies...</strong></h1>
         <button class="btn btn-warning mt-3" style="background-color: #01709E; color: white; border: none; width: 150px;" onclick="window.location.href='aboutus.html';">Learn More</button>
         </div>
       </div>
@@ -464,5 +465,5 @@
         updateCarousel();
     });
   </script>
-
+  </body>
 </html>
