@@ -2,30 +2,38 @@
       font-family: 'Segoe UI', sans-serif;
       background-color: #fff;
     }
-
     .nav-link {
-  color: black;
-  transition: all 0.3s ease;
-}
+      color: black;
+      transition: all 0.3s ease;
+      }
+      
+      .nav-link:not(.fw-bold):hover {
+      color: white;
+      background-color: #F8AF18;
+      border-radius: 5px;
+      padding: 5px 10px;
+      }
+      
+      .nav-link.fw-bold {
+      border-bottom: 3px solid #F8AF18;
+      }
+      
+      .navbar-nav {
+      border-bottom-left-radius: 100px;
+      border-bottom-right-radius: 15px;
+      }
+      .navbar {
+        height: 70px;
+        border-bottom-left-radius: 30px;
+        border-bottom-right-radius: 30px;
+        transition: background-color 0.3s;
+      }
+    
 
-.nav-link:not(.fw-bold):hover {
-  color: white;
-  background-color: #F8AF18;
-  border-radius: 5px;
-  padding: 5px 10px;
-}
-
-.nav-link.fw-bold {
-  border-bottom: 3px solid #F8AF18;
-}
-
-.navbar-nav {
-  border-bottom-left-radius: 100px;
-  border-bottom-right-radius: 15px;
-}
+   
     .services-header {
       background: url('servicesfinal.jpg') no-repeat center center/cover;
-      color: white;
+      color: rgb(246, 243, 243);
       text-align: center;
          padding: 80px 20px;
       position: relative;
