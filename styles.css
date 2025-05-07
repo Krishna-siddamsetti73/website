@@ -19,10 +19,11 @@ overflow-x: hidden;
   font-family: 'Araboto Black 400';
   src: url('animation/Araboto Black 400.ttf');
 }
-.hero-text {
+.text {
   color: white;
   font-family: 'Araboto Black 400';
   font-size-adjust: 0.545;
+  font-size:xx-large;
  
 }
 
