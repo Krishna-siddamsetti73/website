@@ -9,7 +9,7 @@
    <link rel="icon" href="assets\logocropped-removebg-preview.png" type="image/png" style="height: 100; width: 60;" />
 </head>
 <body>
-</button>
+<nav id="mainNavbar" class="navbar navbar-expand-lg navbar-light bg-transparent fixed-top">
 <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
   <ul class="navbar-nav">
     <li class="nav-item ms-3">
@@ -30,4 +30,46 @@
   </ul>
 </div>
 </nav>
+<script>
+  window.addEventListener('scroll', function () {
+    const navbar = document.getElementById('mainNavbar');
+    const homeLink = document.getElementById('homeLink');
+    const servicesLink = document.getElementById('servicesLink');
+    const portfolioLink = document.getElementById('portfolioLink');
+    const aboutLink = document.getElementById('aboutLink');
+    const contactLink = document.getElementById('contactLink');
+    const links = [homeLink, servicesLink, portfolioLink, aboutLink, contactLink];
+    const mainLogo = document.getElementById('mainLogo');
+    const transparentLogo = document.getElementById('transparentLogo');
+
+    if (window.scrollY > 80) {
+      navbar.style.backgroundColor = 'white';
+      links.forEach(link => {
+        link.style.color = 'black';
+        link.style.transition = 'color 0.3s ease-in-out';
+      });
+      mainLogo.style.display = 'block';
+      transparentLogo.style.display = 'none';
+    } else {
+      navbar.style.backgroundColor = 'transparent';
+      links.forEach(link => {
+        link.style.color = 'white';
+        link.style.transition = 'color 0.3s ease-in-out';
+      });
+      mainLogo.style.display = 'none';
+      transparentLogo.style.display = 'block';
+    }
+  });
+</script>
+
+<div class="container-fluid" style="background-color: #f8f9fa;">
+  <div class="position-relative">
+    <div class="text-center position-absolute top-50 start-50 translate-middle" style="z-index: 1; color: white;">
+      <h1>This is Try</h1>
+    </div>
+    <div class="background-image" style="background-image: url('assets/whoweare.png'); height:30vh ; background-size: cover; background-position: center; z-index: 0; width: 100%;">
+    </div>
+  </div>
+    </div>
+ 
 </body>
