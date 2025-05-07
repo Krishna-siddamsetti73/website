@@ -2,9 +2,9 @@
       font-family: 'Segoe UI', sans-serif;
       background-color: #fff;
     }
-    .nav-link {
-      color: black;
+    .nav-link {color: black;
       transition: all 0.3s ease;
+     
       }
       
       .nav-link:not(.fw-bold):hover {
