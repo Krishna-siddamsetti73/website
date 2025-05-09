@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Responsive 3D Carousel with Margins</title>
+  <style>
+    .flex{
+	display: flex;
+}
+.flex_row{
+	display: flex;
+	flex-direction: row;
+}
+
+.flex_column{
+	display: flex;
+	flex-direction: column;
+}
+
+.container{
+	width: 100%;
+	height: auto;
+
+	background-color: #ef5350;
+
+	position: relative;
+	z-index: 4;
+}
+
+#container{
+	width: 400px;
+	height: 400px;
+	margin: 200px auto;
+	/*background: white;*/
+	-webkit-perspective: 2000;
+    -moz-perspective: 2000;
+	perspective: 2000;
+	position: relative;
+}
+
+#carousel{
+	width: 100%;
+	height: auto;
+	margin: 0px; 
+	padding: 0px;
+	position: absolute;
+	transform-style: preserve-3d;
+  	transition: transform 0.5s ease;
+  	transform: rotateY(0deg);
+}
+
+.slide{
+	width: 100%;
+	height: 400px;
+	background-size: cover;
+	position: absolute;
+	background-repeat: no-repeat;
+}
+
+/*cada uno de los divs que contienes las imagenes*/
+#carousel div:nth-child(1){
+	transform: rotateY(0deg) translateZ(346px);
+}
+#imagen_1{
+	opacity: 1;
+}
+#carousel div:nth-child(2){	
+	transform: rotateY(72deg)  translateZ(346px);
+}
+#carousel div:nth-child(3){	
+	transform: rotateY(144deg) translateZ(346px);
+}
+#carousel div:nth-child(4){	
+	transform: rotateY(216deg) translateZ(346px);
+}
+#carousel div:nth-child(5){	
+	transform: rotateY(288deg) translateZ(346px);
+}
+
+.dinamic_container{
+	/*border: 2px solid white;*/
+	margin: auto;
+	width: 100%;
+	height: 20px;
+	position: absolute;
+	bottom: 8%;
+	align-items: center;
+}
+
+
+#dinamic_container{
+	width: 150px;
+	height: 20px;
+	/*position: absolute;
+	bottom: 5%;
+	left: 45%;
+	right: 45%;*/
+	flex-wrap: wrap;
+	align-items: center;
+}
+
+/*circulos*/
+.circle{
+	width: 20px;
+	height: 20px;
+
+	/* Safari 3-4, iOS 1-3.2, Android 1.6- */
+	-webkit-border-radius: 50%; 
+	/* Firefox 1-3.6 */
+	-moz-border-radius: 50%; 
+	/* Opera 10.5, IE 9, Safari 5, Chrome, Firefox 4, iOS 4, Android 2.1+ */
+	border-radius: 50%; 
+
+	/*position: absolute;
+	top: 10px;*/
+	z-index: 2;
+	cursor: pointer;
+	background-color: white;
+	-moz-opacity:0.5;
+	opacity:0.5;
+}
+  </style>
+</head>
+<body>
+
+<!--THIRD CONTAINER-->
+    <div class="flex container" style="background-color: #0288d1">
+		<!--Dinamic Section-->
+		<!--To change the images-->
+		<div class="flex_column dinamic_container">
+			<section id="dinamic_container" class="flex_column">
+			  <div id="first" class="circle"></div>
+			  <div id="second" class="circle"></div>
+			  <div id="third" class="circle"></div>
+			  <div id="fourth" class="circle"></div>
+			  <div id="fifth" class="circle"></div>
+			</section>
+		</div>
+    	<div id="container">
+    		<!-- CAROUSEL -->
+    		<div id="carousel">
+    			<!-- IMAGES -->
+    			<div id="imagen_1" class="slide" style="background-image: url('http://pre06.deviantart.net/16ba/th/pre/f/2014/233/3/9/ganon_fun_by_bumbleton-d7w3v5g.jpg');"></div>
+    			<div class="slide" style="background-image: url('https://i1.wp.com/www.geek-art.net/wp-content/uploads/2010/09/David_Hsu_Yen_link_of_war.jpg');"></div>
+    			<div class="slide" style="background-image: url('http://img06.deviantart.net/fcdd/i/2013/002/f/0/majora_must_die_by_ry_spirit-d31o0vf.jpg');"></div>
+    			<div class="slide" style="background-image: url('http://gamingtrend.com/wp-content/uploads/2015/10/182671-WP_Wii_ZeldaTwilightPrincess_002_1024-620x359.jpg');"></div>
+    			<div class="slide" style="background-image: url('http://media.vandal.net/i/1200x630/43030/the-legend-of-zelda-breath-of-the-wild-2017114203752_1.jpg');"></div>
+    		</div>
+    		
+    	</div>
+    </div>
+<script>
+  $(document).ready(function(){
+	//Function to change the transform property of the carousel 
+    $("#first").click(function(){
+
+    	$("#carousel").css({
+    		"transform": "rotateY(0deg)", 
+    		"transition": "0.6s linear",
+    		"-webkit-transition": "0.6s linear",
+			"-moz-transition": "0.6s linear",
+			"-o-transition": "0.6s linear"
+    	});
+
+    	//Invokes the desvanecer function
+    	desvanecer("#carousel div:nth-child(2)");
+    	desvanecer("#carousel div:nth-child(3)");
+    	desvanecer("#carousel div:nth-child(4)");
+    	desvanecer("#carousel div:nth-child(5)");
+
+    	$("#carousel div:nth-child(1)").css({
+    		"-webkit-opacity": "1",
+    		"-moz-opacity": "1",
+    		"opacity": "1"
+    	});
+
+    	/*console.log("entro");*/
+    });
+
+    $("#second").click(function(){
+
+    	$("#carousel").css({
+    		"transform": "rotateY(-72deg)", 
+    		"transition": "0.6s linear",
+    		"-webkit-transition": "0.6s linear",
+			"-moz-transition": "0.6s linear",
+			"-o-transition": "0.6s linear"
+    	});
+
+    	desvanecer("#carousel div:nth-child(1)");
+    	desvanecer("#carousel div:nth-child(3)");
+    	desvanecer("#carousel div:nth-child(4)");
+    	desvanecer("#carousel div:nth-child(5)");
+
+    	$("#carousel div:nth-child(2)").css({
+    		"-webkit-opacity": "1",
+    		"-moz-opacity": "1",
+    		"opacity": "1"
+    	});
+    });
+
+    $("#third").click(function(){
+
+    	$("#carousel").css({
+    		"transform": "rotateY(-144deg)", 
+    		"transition": "0.6s linear",
+    		"-webkit-transition": "0.6s linear",
+			"-moz-transition": "0.6s linear",
+			"-o-transition": "0.6s linear"
+    	});
+
+    	desvanecer("#carousel div:nth-child(2)");
+    	desvanecer("#carousel div:nth-child(1)");
+    	desvanecer("#carousel div:nth-child(4)");
+    	desvanecer("#carousel div:nth-child(5)");
+
+    	$("#carousel div:nth-child(3)").css({
+    		"-webkit-opacity": "1",
+    		"-moz-opacity": "1",
+    		"opacity": "1"
+    	});
+    });
+
+    $("#fourth").click(function(){
+
+    	$("#carousel").css({
+    		"transform": "rotateY(-216deg)", 
+    		"transition": "0.6s linear",
+    		"-webkit-transition": "0.6s linear",
+			"-moz-transition": "0.6s linear",
+			"-o-transition": "0.6s linear"
+    	});
+
+    	desvanecer("#carousel div:nth-child(2)");
+    	desvanecer("#carousel div:nth-child(3)");
+    	desvanecer("#carousel div:nth-child(1)");
+    	desvanecer("#carousel div:nth-child(5)");
+
+    	$("#carousel div:nth-child(4)").css({
+    		"-webkit-opacity": "1",
+    		"-moz-opacity": "1",
+    		"opacity": "1"
+    	});
+    });
+
+    $("#fifth").click(function(){
+
+    	$("#carousel").css({
+    		"transform": "rotateY(-288deg)", 
+    		"transition": "0.6s linear",
+    		"-webkit-transition": "0.6s linear",
+			"-moz-transition": "0.6s linear",
+			"-o-transition": "0.6s linear"
+    	});
+
+    	desvanecer("#carousel div:nth-child(2)");
+    	desvanecer("#carousel div:nth-child(3)");
+    	desvanecer("#carousel div:nth-child(4)");
+    	desvanecer("#carousel div:nth-child(1)");
+
+    	$("#carousel div:nth-child(5)").css({
+    		"-webkit-opacity": "1",
+    		"-moz-opacity": "1",
+    		"opacity": "1"
+    	});
+    });
+})
+
+//Function that change the property opacity
+//takes an id argument
+function desvanecer(s){
+	$(s).css({
+    		"-webkit-opacity": "0.5",
+    		"-moz-opacity": "0.5",
+    		"opacity": "0.5"
+    });
+}
+</script>
+
+</body>
+</html>
