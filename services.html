@@ -1,441 +1,527 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sunanda Renewable - Services</title>
-  <link rel="icon" href="assets\logocropped-removebg-preview.png" type="image/png" style="height: 100; width: 60;" />
-
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
-    body {
-      font-family: 'Inter', sans-serif;
-    }
-    .section-title {
-      font-size: 1.5rem;
-      font-weight: 600;
-      color: #1f4257;
-      margin-top: 40px;
-    }
-    .solar-icon {
-      font-size: 1.4rem;
-      margin-right: 8px;
-    }
-    .nav-link {
-  color: black;
-  transition: all 0.3s ease;
-}
-
-.nav-link:not(.fw-bold):hover {
-  color: white;
-  background-color: #F8AF18;
-  border-radius: 5px;
-  padding: 5px 10px;
-}
-
-.nav-link.fw-bold {
-  border-bottom: 3px solid #F8AF18;
-}
-
-.navbar-nav {
-  border-bottom-left-radius: 100px;
-  border-bottom-right-radius: 15px;
-}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+    <link rel="icon" href="assets\logocropped-removebg-preview.png" type="image/png" style="height: 100; width: 60;" />
+  
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
     
-  </style>
+    <title>EcoEnergize - Renewable Energy Solutions</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: #ffffff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .nav-link {
+	color: black;
+	transition: all 0.3s ease;
+  }
+  
+  .nav-link:not(.fw-bold):hover {
+	color: white;
+	background-color: #F8AF18;
+	border-radius: 5px;
+	padding: 5px 10px;
+  }
+  
+  .nav-link.fw-bold {
+	border-bottom: 3px solid #F8AF18;
+  }
+  
+  .navbar-nav {
+	border-bottom-left-radius: 100px;
+	border-bottom-right-radius: 15px;
+  }
+  .navbar {
+    height: 70px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    transition: background-color 0.3s;
+  }
+        
+        /* Hero Section */
+        .hero {
+            background-image: url('/api/placeholder/1200/500');
+            background-size: cover;
+            background-position: center;
+            height: 500px;
+            display: flex;
+            /* align-items: center; */
+            position: relative;
+            color: white;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            padding: 0 20px;
+        }
+        
+        .hero h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        
+        /* What We Offer Section */
+        .what-we-offer {
+            padding: 50px 0;
+            background-color: #f9f9f9;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 32px;
+            margin-bottom: 50px;
+            color: #05273a;
+        }
+        
+        .services-container {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+        
+        .service-card {
+            display: flex;
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            /* box-shadow: 0 5px 15px rgba(0,0,0,0.1); */
+        }
+        
+        .service-card:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+        
+        .service-image {
+            flex: 0 0 40%;
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .service-content {
+            flex: 1;
+            padding: 25px;
+        }
+        
+        .service-title {
+            font-size: 24px;
+            margin-bottom: 15px;
+            color: hsla(212, 97%, 23%, 0.467);
+            display: flex;
+            align-items: center;
+        }
+        
+        .service-title .icon {
+            width: 24px;
+            height: 24px;
+            margin-right: 10px;
+            color: #f9a826;
+        }
+        
+        .service-desc {
+            color: #666;
+            margin-bottom: 20px;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 10px 25px;
+            background-color: #f9a826;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 500;
+            transition: background-color 0.3s ease;
+        }
+        
+        .btn:hover {
+            background-color: #e69015;
+        }
+        .card-container {
+      background-color: #121212;
+      border-radius: 1.5rem;
+      position: relative;
+      height: 320px;
+      width: 320px;
+      overflow: hidden;
+      transition: transform 0.3s ease-in-out;
+    }
 
+    .card-container:hover {
+      transform: scale(1.02);
+    }
+
+    .card-container img {
+      position: absolute;
+      object-fit: contain;
+    }
+
+    .title-box {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      color: white;
+      font-weight: 600;
+      font-size: 1.25rem;
+    }
+
+    .img1 { left: 24px; bottom: 60px; width: 112px; height: 112px; }
+    .img2 { left: 80px; bottom: 24px; width: 80px; height: 80px; }
+    .img3 { right: 24px; bottom: 24px; width: 96px; height: 160px; }
+    .img4 { top: 112px; left: 112px; width: 48px; height: 48px; }
+
+    @media (max-width: 576px) {
+      .card-container {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 1 / 1;
+      }
+    }
+        
+        /* Footer */
+        footer {
+            background-color: #2c7873;
+            color: white;
+            padding: 40px 0;
+        }
+        
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        
+        .footer-column {
+            flex: 1;
+            min-width: 250px;
+            margin-bottom: 20px;
+        }
+        
+        .footer-column h3 {
+            margin-bottom: 20px;
+            font-size: 20px;
+        }
+        
+        .footer-column ul {
+            list-style: none;
+        }
+        
+        .footer-column ul li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-column a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-column a:hover {
+            color: #f9a826;
+        }
+        
+        .copyright {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        /* Media Queries */
+        @media (max-width: 768px) {
+            .service-card, .service-card:nth-child(even) {
+                flex-direction: column;
+            }
+            
+            .service-image {
+                height: 200px;
+            }
+        }
+    </style>
 </head>
 <body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light px-4" id="mainNavbar" style="height:12vh; border-bottom-left-radius: 3vi; border-bottom-right-radius: 3vi; background-color: transparent; transition: background-color 0.3s; width: 100%">
-      <a class="navbar-brand" href="index.html">
-        <img src="WhatsApp_Image_2025-04-28_at_14.34.16_90ad2c9c-removebg-preview.png" alt="Transparent Logo" id="transparentLogo" style="display: block; position: absolute; top: 0.05%; left: 1vw; height: calc(100% - 0.1%); padding: 0 1vw;" />
-        <img src="image-removebg-preview (1).png" alt="Sunanda Logo" style="display: none; position: absolute; top: 0.05%; left: 1vw; height:100%; padding: 0 1vw;"  id="mainLogo" />
-       
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item ms-3">
-            <a class="nav-link fw-bold" href="index.html" style="position: relative; color: white;" id="homeLink">Home</a>
-          </li>
-          <li class="nav-item ms-3">
-            <a class="nav-link" href="aboutus.html" style="position: relative; color: white;" id="aboutLink">About us</a>
-          </li>
-          <li class="nav-item ms-3">
-            <a class="nav-link" href="projects.html" style="position: relative; color: white;" id="portfolioLink">Portfolio</a>
-          </li>
-          <li class="nav-item ms-3">
-            <a class="nav-link" href="services.html" style="position: relative; color: white;" id="servicesLink">Services</a>
-          </li>
-          <li class="nav-item ms-3">
-            <a class="nav-link" href="getintouch.html" style="position: relative; color: white;" id="contactLink">Get in touch</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-    
-    <script>
-      window.addEventListener('scroll', function () {
-        const navbar = document.getElementById('mainNavbar');
-        const homeLink = document.getElementById('homeLink');
-        const servicesLink = document.getElementById('servicesLink');
-        const portfolioLink = document.getElementById('portfolioLink');
-        const aboutLink = document.getElementById('aboutLink');
-        const contactLink = document.getElementById('contactLink');
-        const links = [homeLink, servicesLink, portfolioLink, aboutLink, contactLink];
-        const mainLogo = document.getElementById('mainLogo');
-        const transparentLogo = document.getElementById('transparentLogo');
-    
-        if (window.scrollY > 80) {
-          navbar.style.backgroundColor = 'white';
-          links.forEach(link => {
-            link.style.color = 'black';
-            link.style.transition = 'color 0.3s ease-in-out';
-          });
-          mainLogo.style.display = 'block';
-          transparentLogo.style.display = 'none';
-        } else {
-          navbar.style.backgroundColor = 'transparent';
-          links.forEach(link => {
-            link.style.color = 'white';
-            link.style.transition = 'color 0.3s ease-in-out';
-          });
-          mainLogo.style.display = 'none';
-          transparentLogo.style.display = 'block';
-        }
-      });
-    </script>
-    
-    <script>
-       // Make the navbar sticky
-       document.querySelector('.navbar').classList.add('fixed-top', 'shadow-sm');
-    </script>
-    
-  <!-- Hero Section -->
-   <div class="mb-5 position-relative" style="height: 500px; overflow: hidden;">
-  <img src="battery-storage-systems-for-solar-energy[1].jpg" alt="Hero Image" class="img-fluid w-100" style="height: 500px; object-fit: cover; width: 100%; position: absolute; top: 0; left: 0;">
-  <div class="position-absolute text-white" style="top: 50%; left: 5%; transform: translateY(-50%); z-index: 1;">
-    <h1 style="font-size: 3.5rem; font-weight: bold;">Our Services</h1>
-    <p style="font-size: 0.7rem;">We specialize in cutting-edge renewable energy systems—including advanced BESS <br> and solar power  solutions—driving sustainability forward with reliable,<br> scalable technologies for a greener tomorrow..</p>
+  <nav class="navbar navbar-expand-lg navbar-light px-4" id="mainNavbar" style="height:12vh; border-bottom-left-radius: 3vi; border-bottom-right-radius: 3vi; background-color: transparent; transition: background-color 0.3s; width: 100%">
+    <a class="navbar-brand" href="index.html">
+      <img src="WhatsApp_Image_2025-04-28_at_14.34.16_90ad2c9c-removebg-preview.png" alt="Transparent Logo" id="transparentLogo" style="display: block; position: absolute; top: 0.05%; left: 1vw; height: calc(100% - 0.1%); padding: 0 1vw;" />
+      <img src="image-removebg-preview (1).png" alt="Sunanda Logo" style="display: none; position: absolute; top: 0.05%; left: 1vw; height:100%; padding: 0 1vw;"  id="mainLogo" />
+     
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item ms-3">
+          <a class="nav-link " href="index.html" style="position: relative; color: white;" id="homeLink">Home</a>
+        </li>
+        <li class="nav-item ms-3">
+          <a class="nav-link fw-bold" href="aboutus.html" style="position: relative; color: white;" id="aboutLink">About us</a>
+        </li>
+        <li class="nav-item ms-3">
+          <a class="nav-link" href="projects.html" style="position: relative; color: white;" id="portfolioLink">Portfolio</a>
+        </li>
+        <li class="nav-item ms-3">
+          <a class="nav-link" href="services.html" style="position: relative; color: white;" id="servicesLink">Services</a>
+        </li>
+        <li class="nav-item ms-3">
+          <a class="nav-link" href="getintouch.html" style="position: relative; color: white;" id="contactLink">Get in touch</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  
+  <script>
+    window.addEventListener('scroll', function () {
+      const navbar = document.getElementById('mainNavbar');
+      const homeLink = document.getElementById('homeLink');
+      const servicesLink = document.getElementById('servicesLink');
+      const portfolioLink = document.getElementById('portfolioLink');
+      const aboutLink = document.getElementById('aboutLink');
+      const contactLink = document.getElementById('contactLink');
+      const links = [homeLink, servicesLink, portfolioLink, aboutLink, contactLink];
+      const mainLogo = document.getElementById('mainLogo');
+      const transparentLogo = document.getElementById('transparentLogo');
+  
+      if (window.scrollY > 80) {
+        navbar.style.backgroundColor = 'white';
+        links.forEach(link => {
+          link.style.color = 'black';
+          link.style.transition = 'color 0.3s ease-in-out';
+        });
+        mainLogo.style.display = 'block';
+        transparentLogo.style.display = 'none';
+      } else {
+        navbar.style.backgroundColor = 'transparent';
+        links.forEach(link => {
+          link.style.color = 'white';
+          link.style.transition = 'color 0.3s ease-in-out';
+        });
+        mainLogo.style.display = 'none';
+        transparentLogo.style.display = 'block';
+      }
+    });
+  </script>
+  
+  <script>
+     // Make the navbar sticky
+     document.querySelector('.navbar').classList.add('fixed-top', 'shadow-sm');
+  </script>
+  <div class="mb-5 position-relative" style="height: 500px; overflow: hidden;">
+    <img src="WhatsApp Image 2025-05-06 at 16.52.52_c6b7a6f1.jpg" alt="Hero Image" class="img-fluid w-100" style="height: 500px; object-fit: cover; width: 100%; position: absolute; top: 0; left: 0;">
+    <div class="position-absolute text-white" style="top: 50%; left: 5%; transform: translateY(-50%); z-index: 1;">
+      <h1 style="font-size: 3.5rem; font-weight: bold;">Our Services</h1>
+      <p style="font-size: 0.7rem;">We specialize in cutting-edge renewable energy systems—including advanced BESS <br> and solar power  solutions—driving sustainability forward with reliable,<br> scalable technologies for a greener tomorrow..</p>
+    </div>
   </div>
-</div>
-   <!-- Hero Section -->
-
-<body class="bg-light text-black">
   
-
-    <section class="bg-[#ffffff] text-[#000000] min-h-screen p-6 md:p-12">
-      <div class="max-w-7xl mx-auto">
-        <h2 class="text-center font-extrabold text-[20px] md:text-[24px] leading-[28px] mb-6">
-          WHAT WE OFFER
-        </h2>
-        <p class="text-[14px] md:text-[16px] leading-[20px] md:leading-[24px] max-w-4xl mx-auto mb-6">
-          At Sunanda Group of Renewables, we bring over 15 years of expertise in delivering innovative and sustainable renewable energy solutions for industrial clients.
-        </p>
-        <p class="text-[14px] md:text-[16px] leading-[20px] md:leading-[24px] max-w-4xl mx-auto mb-10">
-          We also offer free maintenance and support services, ensuring our clients enjoy a seamless experience. Backed by the Power Purchase Agreement (PPA) terms, you can focus on your operations while we take care of maintenance, so you don’t have to worry.
-        </p>
-  
-        <!-- Cards Section -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 max-w-7xl mx-auto">
-          
-          <!-- Card 1 -->
-          <div class="relative bg-white rounded-lg overflow-hidden shadow-sm group hover:bg-[#0000000] transition-colors duration-300">
-            <img
-              alt="Solar panels under blue sky with clouds"
-              class="w-full h-[160px] object-cover rounded-t-lg transition-transform duration-300 group-hover:scale-105"
-              src="https://storage.googleapis.com/a1aa/image/42688e53-0c0d-414b-7407-c1b9ac98e020.jpg"
-            />
-            <div class="absolute inset-0 bg-[#1f4257] bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-            <div class="p-4 relative z-10">
-              <h3 class="font-extrabold text-[12px] leading-[14px] mb-2 text-Black">Solar Power Solutions</h3>
-              <p class="text-[10px] leading-[12px] text-black">
-                We design and install efficient solar energy systems tailored to residential, commercial, and industrial needs—helping you lower energy costs and carbon footprint.
-              </p>
+    
+    <section class="what-we-offer">
+        <div class="container">
+            <h2 class="section-title">WHAT WE OFFER</h2>
+            
+            <div class="services-container">
+                <!-- Solar Power Solutions -->
+                <div class="service-card">
+                    <div class="service-image" style="background-image: url('WhatsApp Image 2025-05-06 at 16.52.52_c6b7a6f1.jpg');"></div>
+                    <div class="service-content">
+                        <h3 class="service-title">
+                            <span class="icon">⚡</span>
+                            Solar Power Solutions
+                        </h3>
+                        <p class="service-desc">
+                            Our Solar Power Solutions are the ideal clean, renewable energy alternative to traditional electricity sources. We provide everything from initial consultation and site surveying to full system design, installation, and ongoing maintenance. Our advanced solar panel systems maximize efficiency while reducing environmental impact.
+                        </p>
+                        <p class="service-desc">
+                            Whether you're looking for residential rooftop systems, commercial installations, or large-scale solar farms, our expert team delivers tailored solutions to meet your specific energy needs, ensuring optimal performance and maximum return on investment.
+                        </p>
+                        <a href="#" class="btn">Learn More</a>
+                    </div>
+                </div>
+                
+                <!-- Smart Energy Storage System -->
+                <div class="service-card">
+                    <div class="service-image" style="background-image: url('ChatGPT Image Apr 18, 2025, 01_46_48 PM[1].png');"></div>
+                    <div class="service-content">
+                        <h3 class="service-title">
+                            <span class="icon">🔋</span>
+                            Smart Energy Storage System
+                        </h3>
+                        <p class="service-desc">
+                            Maximize the efficiency of your renewable energy setup with our advanced Smart Energy Storage Systems. Our innovative battery technology stores excess energy produced during peak generation times for use when production is low, ensuring continuous power supply regardless of weather conditions.
+                        </p>
+                        <p class="service-desc">
+                            With intelligent monitoring and management software, our storage solutions optimize energy usage, reduce utility costs, and provide backup power during outages, offering complete energy independence and security.
+                        </p>
+                        <a href="#" class="btn">Learn More</a>
+                    </div>
+                </div>
+                
+                <!-- Maintenance & Support Services -->
+                <div class="service-card">
+                    <div class="service-image" style="background-image: url('man-worker-firld-by-solar-panels[1].jpg');"></div>
+                    <div class="service-content">
+                        <h3 class="service-title">
+                            <span class="icon">🛠️</span>
+                            Maintenance & Support Services
+                        </h3>
+                        <p class="service-desc">
+                            Keep your renewable energy systems operating at peak performance with our comprehensive Maintenance & Support Services. Our dedicated team of technicians provides routine inspections, cleaning, repairs, and system upgrades to ensure longevity and optimal energy production.
+                        </p>
+                        <p class="service-desc">
+                            With 24/7 system monitoring, proactive maintenance scheduling, and rapid response to any issues, we help maximize your energy system's lifespan and financial returns while minimizing downtime and unexpected costs.
+                        </p>
+                        <a href="#" class="btn">Learn More</a>
+                    </div>
+                </div>
+                <div class="service-card">
+                  <div class="service-image" style="background-image: url('assets/KOPPAL.png');"></div>
+                  <div class="service-content">
+                      <h3 class="service-title">
+                          <span class="icon">🔋</span>
+                          Smart Energy Storage System
+                      </h3>
+                      <p class="service-desc">
+                          Maximize the efficiency of your renewable energy setup with our advanced Smart Energy Storage Systems. Our innovative battery technology stores excess energy produced during peak generation times for use when production is low, ensuring continuous power supply regardless of weather conditions.
+                      </p>
+                      <p class="service-desc">
+                          With intelligent monitoring and management software, our storage solutions optimize energy usage, reduce utility costs, and provide backup power during outages, offering complete energy independence and security.
+                      </p>
+                      <a href="#" class="btn">Learn More</a>
+                  </div>
+              </div>
             </div>
-          </div>
-  
-          <!-- Card 2 -->
-          <div class="relative bg-white rounded-lg overflow-hidden shadow-sm group">
-            <img
-              alt="Battery storage systems"
-              class="w-full h-[160px] object-cover rounded-t-lg transition-transform duration-300 group-hover:scale-105"
-              src="battery.png"
-            />
-            <div class="absolute inset-0 bg-[#1f4257] bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-            <div class="p-4 relative z-10">
-              <h3 class="font-extrabold text-[12px] leading-[14px] mb-2 text-black">Battery Energy Storage Systems</h3>
-              <p class="text-[10px] leading-[12px] text-black">
-                We provide smart battery systems to store excess solar energy, ensuring energy availability even during power outages or peak demand times.
-              </p>
-            </div>
-          </div>
-  
-          <!-- Card 3 -->
-          <div class="relative bg-white rounded-lg overflow-hidden shadow-sm group">
-            <img
-              alt="Solar maintenance tools"
-              class="w-full h-[160px] object-cover rounded-t-lg transition-transform duration-300 group-hover:scale-105"
-              src="https://storage.googleapis.com/a1aa/image/5760ac4f-ff49-4a08-9b26-75dd174f6dff.jpg"
-            />
-            <div class="absolute inset-0 bg-[#1f4257] bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-            <div class="p-4 relative z-10">
-              <h3 class="font-extrabold text-[12px] leading-[14px] mb-2 text-black">Maintenance & Support Services</h3>
-              <p class="text-[10px] leading-[12px] text-black">
-                Our ongoing support and expert maintenance ensure your solar system runs efficiently with minimal downtime and maximum performance.
-              </p>
-            </div>
-          </div>
-  
-          <!-- Card 4 -->
-          <div class="relative bg-white rounded-lg overflow-hidden shadow-sm group">
-            <img
-              alt="Wind turbines on open land"
-              class="w-full h-[160px] object-cover rounded-t-lg transition-transform duration-300 group-hover:scale-105"
-              src="WIND_TURBINE[1].png"
-            />
-            <div class="absolute inset-0 bg-[#1f4257] bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-            <div class="p-4 relative z-10">
-              <h3 class="font-extrabold text-[12px] leading-[14px] mb-2 text-black capitalize">Wind Power Generation</h3>
-              <p class="text-[10px] leading-[12px] text-black">
-                We also offer wind energy solutions, complementing solar systems to maximize renewable energy production for your facility.
-              </p>
-            </div>
-          </div>
-  
         </div>
-      </div></section>
-  
-    <!-- Section 1: Solar Power Card & Chart -->
-    <div class="container my-5">
-      <div class="card shadow-sm border rounded p-3 mb-5">
-        <div class="row g-4 align-items-center">
-          <div class="col-md-4">
-            <img src="assets\slide1.png" alt="Solar" class="img-fluid card-img-top rounded" />
+    </section>
+
+    <section class="why-choose-us py-5" style="background-color: #fff;">
+      <div class="container py-5">
+        <h2 class="text-center fw-bold text-primary mb-5">Why Go Renewable</h2>
+      
+        <div class="row justify-content-center align-items-start">
+          <!-- 3D Image Block -->
+          <div class="col-md-4 d-flex justify-content-center mb-4 mb-md-0">
+            <div class="card-container">
+              <div class="title-box">
+                WHY GO <br /> RENEWABLE?
+              </div>
+              <img src="https://storage.googleapis.com/a1aa/image/a3dba269-a5d1-4919-1a73-8b456cb87fea.jpg" class="img1" alt="Solar panel" />
+              <img src="https://storage.googleapis.com/a1aa/image/1e89a2b2-e88d-4ac6-60cf-754967f5ebbe.jpg" class="img2" alt="Battery unit" />
+              <img src="https://storage.googleapis.com/a1aa/image/d5e0f804-c0e4-4c51-b6ba-84821aa8540c.jpg" class="img3" alt="Wind turbine" />
+              <img src="https://storage.googleapis.com/a1aa/image/85bdd9d1-4753-4a9a-e919-eda8e23db4d1.jpg" class="img4" alt="Green leaf icon" />
+            </div>
           </div>
+      
+          <!-- Text Content -->
           <div class="col-md-8">
-            <h5 class="fw-bold"><span class="solar-icon">🌞</span>Solar Power Solutions</h5>
-            <p class="mb-0 text-secondary">
-              Our solar power solutions provide clean, reliable, and cost-effective energy for homes, businesses, and industries. We handle everything from system design and permitting to installation and monitoring. By harnessing the power of the sun, you can reduce your electricity bills, lower your carbon footprint, and gain energy independence.
+            <div class="row row-cols-1 row-cols-sm-2 g-4">
+              <div class="col text-center">
+                <img src="environment icon[1].png" alt="Environment icon" class="mb-2" width="40" height="40"/>
+                <h5 class="text-primary fw-semibold">Environment</h5>
+                <p>Renewable energy reduces air and water pollution by replacing fossil fuels. It helps combat climate change and protects natural ecosystems for future generations.</p>
+              </div>
+              <div class="col text-center">
+                <img src="https://storage.googleapis.com/a1aa/image/a45a62f5-9577-430d-92ed-ca6c8a5b0b22.jpg" alt="Economic icon" class="mb-2" width="40" height="40"/>
+                <h5 class="text-primary fw-semibold">Economic</h5>
+                <p>Renewable energy creates jobs, stimulates local economies, and reduces energy price volatility. It also protects businesses from fossil fuel price shocks.</p>
+              </div>
+              <div class="col text-center">
+                <h5 class="fw-bold">Security</h5>
+                <p>Renewable energy reduces dependence on imported fuels and diversifies the energy supply. It enhances energy security by increasing energy resilience and availability.</p>
+              </div>
+              <div class="col text-center">
+                <h5 class="fw-bold">Health</h5>
+                <p>Renewable energy reduces air pollution, leading to fewer respiratory and cardiovascular diseases. Cleaner energy improves overall community health and quality of life.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <footer class="footer text-white" style="background-color: #264653; width: 100%;">
+      <div class="container py-5">
+        <div class="row">
+          <!-- Logo & Address -->
+          <div class="col-md-4 mb-4">
+            <img src="WhatsApp_Image_2025-04-28_at_14.34.16_90ad2c9c-removebg-preview.png" alt="Sunanda Logo" style="height: 70px; width: 200px; margin-top:-20px; margin-left: -20px;" />
+            <p class="mt-3">
+              SUNANDA RENEWABLE ENERGY PVT. LTD.
+              Hyderabad, Telangana, India
+            </p>
+          </div>
+    
+          <!-- Quick Links -->
+          <div class="col-md-4 mb-4">
+            <h6>Quick Links</h6>
+            <ul class="list-unstyled">
+              <li><a href="#" class="text-white text-decoration-none">Home</a></li>
+              <li><a href="services.html" class="text-white text-decoration-none">Services</a></li>
+              <li><a href="projects.html" class="text-white text-decoration-none">Projects</a></li>
+              <li><a href="getintouch.html" class="text-white text-decoration-none">Contact Us</a></li>
+            </ul>
+          </div>
+    
+          <!-- Location -->
+          <div class="col-md-4 mb-4">
+            <h6 style="cursor: pointer;" onclick="window.open('https://www.google.com/maps/place/BRK+News/@17.4132142,78.4466732,17z/data=!4m10!1m2!2m1!1sBRK+News+3rd+floor+sunanda+renewables!3m6!1s0x3bcb9709de06d0f7:0x10f19c0aed828e66!8m2!3d17.4132091!4d78.4492481!15sCiVCUksgTmV3cyAzcmQgZmxvb3Igc3VuYW5kYSByZW5ld2FibGVzkgENbWVkaWFfY29tcGFueeABAA!16s%2Fg%2F11v5vyc6n0?entry=ttu','_blank')">CORPORATE  OFFICE</h6>
+            <p>
+              8-2-626/2, Block-b, 3rd Floor,<br>
+              Brk Building, Banjara Hills, <br>
+              Hyderabad, Telangana, India, 500034.
             </p>
           </div>
         </div>
       </div>
-  
-      <div class="text-center section-title">User Point of Benefits</div>
-      <div class="row align-items-center mt-4">
-        <div class="col-md-6">
-          <canvas id="solarChart" height="280"></canvas>
-        </div>
-        <div class="col-md-6">
-          <p class="text-secondary fs-6">
-            Solar panels can lower electricity bills for households and businesses. While the initial installation cost is high, the long-term savings are substantial.
-          </p>
+    
+      <!-- Bottom Strip -->
+      <div class="text-center py-3" style="background-color: #1f3b4d;">
+        <small>&copy; 2025 Sunanda Renewable Pvt. Ltd. | <a href="#" class="text-warning text-decoration-none">Contact Us</a></small>
+        <div class="mt-2">
+          <a href="#" class="text-white me-2"><i class="bi bi-facebook"></i></a>
+          <a href="#" class="text-white me-2"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="text-white"><i class="bi bi-linkedin"></i></a>
         </div>
       </div>
-    </div>
-  
-    <!-- Section 2: Why Go Renewable -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <div class="max-w-7xl mx-auto px-4 py-10 bg-white">
-      <h2 class="text-center text-[#0B3B61] font-bold text-xl md:text-2xl mb-10">
-        Why Go Renewable
-      </h2>
-      <style>
-        #hoverContainer:hover {
-          background-color: #b0d7ef;
-        }
-      </style>
-      <div class="flex flex-col md:flex-row md:space-x-10 items-center md:items-start">
-        <div class="flex-shrink-0 rounded-3xl overflow-hidden w-72 h-72 md:w-80 md:h-80 bg-[#121212] flex flex-col justify-center items-center relative">
-          <img class="absolute left-6 bottom-10 w-28 h-28 object-contain" src="https://storage.googleapis.com/a1aa/image/a3dba269-a5d1-4919-1a73-8b456cb87fea.jpg" alt="Solar Panel" />
-          <img class="absolute left-20 bottom-6 w-20 h-20 object-contain" src="https://storage.googleapis.com/a1aa/image/1e89a2b2-e88d-4ac6-60cf-754967f5ebbe.jpg" alt="Battery Unit" />
-          <img class="absolute right-6 bottom-6 w-24 h-40 object-contain" src="https://storage.googleapis.com/a1aa/image/d5e0f804-c0e4-4c51-b6ba-84821aa8540c.jpg" alt="Wind Turbine" />
-          <div class="absolute top-6 left-6 text-white text-lg font-semibold leading-tight">
-            WHY GO<br/>RENEWABLE?
-          </div>
-          <img class="absolute left-28 top-28 w-12 h-12 object-contain" src="https://storage.googleapis.com/a1aa/image/85bdd9d1-4753-4a9a-e919-eda8e23db4d1.jpg" alt="Green Leaf" />
-        </div>
-        <div class="flex-1 grid grid-cols-1 sm:grid-cols-2 gap-x-10 gap-y-8 mt-10 md:mt-0 text-sm md:text-base max-w-4xl">
-          <div class="flex flex-col items-center text-center">
-            <img class="mb-2 w-10 h-10" src="environment icon.png" alt="Environment Icon" />
-            <h3 class="font-semibold text-[#0B3B61] mb-1">Environment</h3>
-            <p class="text-[#1A1A1A] max-w-xs">Renewable energy reduces air and water pollution by replacing fossil fuels. It helps combat climate change and protects natural ecosystems for future generations.</p>
-          </div>
-          <div class="flex flex-col items-center text-center">
-            <img class="mb-2 w-10 h-10" src="economic.png" alt="Economic Icon" />
-            <h3 class="font-semibold text-[#0B3B61] mb-1">Economic</h3>
-            <p class="text-[#1A1A1A] max-w-xs">Renewable energy creates jobs, stimulates local economies, and reduces energy price volatility. It also protects businesses from fossil fuel price shocks.</p>
-          </div>
-          <div class="flex flex-col items-center text-center">
-            <img class="mb-2 w-10 h-10" src="security.png" alt="Economic Icon" />
-            <h3 class="font-bold text-black mb-1">Security</h3>
-            <p class="text-[#1A1A1A] max-w-xs">Renewable energy reduces dependence on imported fuels and diversifies the energy supply. It enhances energy security by increasing energy resilience and availability.</p>
-          </div>
-          <div class="flex flex-col items-center text-center">
-            <img class="mb-2 w-10 h-10" src="helth.png" alt="Economic Icon" />
-            <h3 class="font-bold text-black mb-1">Health</h3>
-            <p class="text-[#1A1A1A] max-w-xs">Renewable energy reduces air pollution, leading to fewer respiratory and cardiovascular diseases. Cleaner energy improves overall community health and quality of life.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-   BACK
- 
-  
- 
-  
- 
-
-  <!-- Footer -->
-<!-- Updated Footer -->
-<footer class="footer text-white" style="background-color: #264653; width: 100%; bottom: 0;">
-  <div class="container py-5">
-    <div class="row">
-      <!-- Logo & Address -->
-      <div class="col-md-4 mb-4">
-        <img src="WhatsApp_Image_2025-04-28_at_14.34.16_90ad2c9c-removebg-preview.png" alt="Sunanda Logo" style="height: 65px; width: 200px; margin-left: -10px;">
-        <p class="mt-3">
-          SUNANDA RENEWABLE ENERGY PVT. LTD.
-          Hyderabad, Telangana, India
-        </p>
-      </div>
-
-      <!-- Quick Links -->
-      <div class="col-md-4 mb-4">
-        <h6>Quick Links</h6>
-        <ul class="list-unstyled">
-          <li><a href="index.html" class="text-white text-decoration-none">Home</a></li>
-          <li><a href="services.html" class="text-white text-decoration-none">Services</a></li>
-          <li><a href="projects.html" class="text-white text-decoration-none">Projects</a></li>
-          <li><a href="getintouch.html" class="text-white text-decoration-none">Contact Us</a></li>
-        </ul>
-      </div>
-
-      <!-- Location -->
-      <div class="col-md-4 mb-4">
-        <h6 style="cursor: pointer;" onclick="window.open('https://www.google.com/maps/place/BRK+News/@17.4132142,78.4466732,17z/data=!4m10!1m2!2m1!1sBRK+News+3rd+floor+sunanda+renewables!3m6!1s0x3bcb9709de06d0f7:0x10f19c0aed828e66!8m2!3d17.4132091!4d78.4492481!15sCiVCUksgTmV3cyAzcmQgZmxvb3Igc3VuYW5kYSByZW5ld2FibGVzkgENbWVkaWFfY29tcGFueeABAA!16s%2Fg%2F11v5vyc6n0?entry=ttu','_blank')">CORPORATE  OFFICE</h6>
-        <p>
-          8-2-626/2, Block-b, 3rd Floor,<br>
-          Brk Building, Banjara Hills, <br>
-          Hyderabad, Telangana, India, 500034.
-        </p>
-      </div>
-    </div>
-  </div>
-
-  <!-- Bottom Strip -->
-  <div class="text-center py-3" style="background-color: #1f3b4d;">
-    <small>&copy; 2025 Sunanda Renewable Pvt. Ltd. | <a href="#" class="text-warning text-decoration-none">Contact Us</a></small>
-    <div class="mt-2">
-      <a href="#" class="text-white me-2"><i class="bi bi-facebook"></i></a>
-      <a href="#" class="text-white me-2"><i class="bi bi-instagram"></i></a>
-      <a href="#" class="text-white"><i class="bi bi-linkedin"></i></a>
-    </div>
-  </div>
-</footer>
-  
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-
-  
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
-  <script>
-    const ctx = document.getElementById('solarChart').getContext('2d');
-    new Chart(ctx, {
-      type: 'bar',
-      data: {
-        labels: ['2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020'],
-        datasets: [
-          {
-            label: 'Solar PV',
-            data: [40, 45, 55, 60, 80, 95, 100, 120],
-            backgroundColor: '#f4d03f',
-            borderRadius: 5
-          },
-          {
-            label: 'Wind Power',
-            data: [20, 25, 30, 35, 40, 50, 55, 60],
-            backgroundColor: '#5dade2',
-            borderRadius: 5
-          },
-          {
-            label: 'Hydropower',
-            data: [30, 28, 35, 32, 31, 30, 28, 26],
-            backgroundColor: '#58d68d',
-            borderRadius: 5
-          }
-        ]
-      },
-      options: {
-        responsive: true,
-        plugins: {
-          legend: { position: 'bottom' },
-          title: { display: false }
-        },
-        scales: {
-          y: {
-            beginAtZero: true,
-            title: { display: true, text: 'Gigawatts' }
-          },
-          x: {
-            title: { display: true, text: 'Year' }
-          }
-        }
-      }
-    });
-
-    const cardData = {
-    1: {
-      icon: "🌞",
-      title: "Solar Power Solutions",
-      desc: "Our solar power solutions provide clean, reliable, and cost-effective energy for homes, businesses, and industries. We handle everything from system design and permitting to installation and monitoring.",
-      img: "assets/Solar Investment_ Anlageoptionen & worauf zu achten ist _ EEA[1].jpg"
-    },
-    2: {
-      icon: "🔋",
-      title: "Battery Energy Storage",
-      desc: "Smart battery systems to store excess solar energy for use during outages or peak times.",
-      img: "assets/battery.jpg"
-    },
-    3: {
-      icon: "🛠",
-      title: "Maintenance & Support",
-      desc: "Expert maintenance to ensure minimal downtime and max performance.",
-      img: "assets/maintenance.jpg"
-    },
-    4: {
-      icon: "💨",
-      title: "Wind Power Generation",
-      desc: "Wind energy solutions to complement your solar systems.",
-      img: "assets/wind.jpg"
-    }
-  };
-
-  document.querySelectorAll(".hover-trigger").forEach((card) => {
-    card.addEventListener("mouseenter", () => {
-      const id = card.getAttribute("data-id");
-      const data = cardData[id];
-      if (data) {
-        document.getElementById("hover-title").textContent = data.title;
-        document.getElementById("hover-icon").textContent = data.icon;
-        document.getElementById("hover-desc").textContent = data.desc;
-      }
-    });
-  });
-</script>
-
-  <!-- Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    </footer>
+    
+    
+   
 </body>
-</html> 
+</html>
