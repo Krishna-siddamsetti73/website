@@ -114,6 +114,7 @@
 <nav class="navbar navbar-expand-lg navbar-light px-4" id="mainNavbar" style="height:12vh; border-bottom-left-radius: 3vi; border-bottom-right-radius: 3vi; margin-bottom: 5vh;  background-color: transparent; transition: background-color 0.3s; width: 100%">
   <a class="navbar-brand" href="index.html">
     <img src="image-removebg-preview (1).png" alt="Sunanda Logo" style="display: block; position: absolute; top: 0.05%; left: 1vw; height:100%; padding: 0 1vw;"  id="mainLogo" />
+    <img src="WhatsApp_Image_2025-04-28_at_14.34.16_90ad2c9c-removebg-preview.png" alt="Transparent Logo" id="transparentLogo" style="display: block; position: absolute; top: 0.05%; left: 1vw; height: calc(100% - 1%); padding: 0 1vw;" />
    
   </a>
   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -139,7 +140,37 @@
     </ul>
   </div>
 </nav>
+<script>
+  window.addEventListener('scroll', function () {
+    const navbar = document.getElementById('mainNavbar');
+    const homeLink = document.getElementById('homeLink');
+    const servicesLink = document.getElementById('servicesLink');
+    const portfolioLink = document.getElementById('portfolioLink');
+    const aboutLink = document.getElementById('aboutLink');
+    const contactLink = document.getElementById('contactLink');
+    const links = [homeLink, servicesLink, portfolioLink, aboutLink, contactLink];
+    const mainLogo = document.getElementById('mainLogo');
+    const transparentLogo = document.getElementById('transparentLogo');
 
+    if (window.scrollY > 80) {
+      navbar.style.backgroundColor = 'white';
+      links.forEach(link => {
+        link.style.color = 'black';
+        link.style.transition = 'color 0.3s ease-in-out';
+      });
+      mainLogo.style.display = 'block';
+      transparentLogo.style.display = 'none';
+    } else {
+      navbar.style.backgroundColor = 'transparent';
+      links.forEach(link => {
+        link.style.color = 'white';
+        link.style.transition = 'color 0.3s ease-in-out';
+      });
+      mainLogo.style.display = 'none';
+      transparentLogo.style.display = 'block';
+    }
+  });
+</script>
 
 <script>
    // Make the navbar sticky
