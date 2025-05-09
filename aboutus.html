@@ -249,7 +249,7 @@ We begin every renewable energy project with a detailed requirement evaluation t
   </div>
 </div>
 
-<div class="blocks-container" style="margin-bottom: 10vh;">
+<div class="blocks-container" style="margin-bottom: 10vh;" id="BLINK">
   <div class="info-block" >
     <div class="block-content" style="margin-bottom: 1.5vw;">
       <h2><strong>Our Mission</strong></h2>
@@ -370,11 +370,14 @@ We begin every renewable energy project with a detailed requirement evaluation t
 <script>
   function toggleDesktopContainer() {
    const desktopContainer = document.getElementById('desktop');
+   const blink=document.getElementById('BLINK');
    if (window.innerWidth >= 1000) {
     desktopContainer.style.display = 'block';
+    blink.style.marginTop = '-40vh';
 
    } else {
     desktopContainer.style.display = 'none';
+    blink.style.marginTop = '1vh';
    }
   }
 
