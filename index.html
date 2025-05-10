@@ -353,16 +353,16 @@
           </style>
         </div>
         <div class ="col-sm">
-        <div class="container-fluid" style="margin-top: calc(12vh + 5%); justify-items: center; margin-left: 5vh; margin-right: 1vh;">
+        <div class="container-fluid" id="besstext" style="margin-top: calc(12vh + 5%); justify-items: center; margin-left: 5vh; margin-right: 1vh;">
           <h1 style="color: #183665; font-family: 'Araboto Bold 400', serif; font-weight: 100; ">Energy Storage System</h1>
           <style>
             @font-face {
               font-family: 'Araboto Bold 400';
               src: url('animation/Araboto Bold 400.ttf') format('truetype');
-              font-size: clamp(1vw, 2vw, 1.5rem);
+              font-size: clamp(2vw, 4vw, 1.5rem);
             }
           </style> 
-          <p style="text-align: justify; font-size: clamp(0.5vw,2vw,1.2rem);"><strong>BESS (Battery Energy Storage System)</strong> allows us to store excess energy generated from solar and wind sources during peak production hours and supply it when demand is high.
+          <p style="text-align: justify; font-size: clamp(0.9vw,2vw,1.2rem);"><strong>BESS (Battery Energy Storage System)</strong> allows us to store excess energy generated from solar and wind sources during peak production hours and supply it when demand is high.
              This ensures consistent power delivery, supports grid stability, and helps clients enjoy uninterrupted green energy — day and night.</p>
           
           <button id="readMoreBtn" class="read-more-btn" onclick="window.location.href='services.html';">
@@ -378,6 +378,21 @@
       </div>
     </section>
   </div>
+  <script>
+   function toggleDesktopContainer() {
+   const desktopContainer = document.getElementById('besstext');
+  
+   if (window.innerWidth >= 1000) {
+    desktopContainer.style.marginTop= 'calc(12vh + 5%)'
+desktopContainer.style.marginLeft = '5vh'
+
+   } else {
+    desktopContainer.style.marginTop= 'calc(3vh + 2%)'
+    desktopContainer.style.marginLeft= '1vh'
+   }
+  }
+  window.addEventListener('DOMContentLoaded', toggleDesktopContainer);
+  window.addEventListener('resize', toggleDesktopContainer);</script>
 
   <style>
     #hoverContainer:hover {
