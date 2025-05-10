@@ -11,8 +11,8 @@
 <body >
 <nav class="navbar navbar-expand-lg navbar-light px-4" id="mainNavbar" style="height:15vh; border-bottom-left-radius: 3vi; border-bottom-right-radius: 3vi; background-color: transparent; transition: background-color 0.3s; width: 100%">
   <a class="navbar-brand" href="index.html">
-    <img src="WhatsApp_Image_2025-04-28_at_14.34.16_90ad2c9c-removebg-preview.png" alt="Transparent Logo" id="transparentLogo" style="display: block; position: absolute; top: 0.05%; left: 1vw; height:15vh; width: 43vh; padding: 0 1vw;" />
-    <img src="image-removebg-preview (1).png" alt="Sunanda Logo" style="display: none; position: absolute; top: 0.05%; left: 1vw; height:12vh; padding: 0 1vw;"  id="mainLogo" />
+    <img src="WhatsApp_Image_2025-04-28_at_14.34.16_90ad2c9c-removebg-preview.png" alt="Transparent Logo" id="transparentLogo" style="display: block; position: absolute; top: 0.05%; left: 1vw; height:15vh; width: 50vh; padding: 0 1vw;" />
+    <img src="image-removebg-preview (1).png" alt="Sunanda Logo" style="display: none; position: absolute; top: -0.05%; left: 1vw; height:18vh; width: 47vh; padding: 0 1vw;"  id="mainLogo" />
    
   </a>
   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -21,19 +21,19 @@
   <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
     <ul class="navbar-nav">
       <li class="nav-item ms-3">
-        <a class="nav-link fw-bold" href="index.html" style="position: relative; color: white;" id="homeLink"><h5>Home</h5></a>
+        <a class="nav-link fw-bold" href="index.html" style="position: relative; color: white;" id="homeLink">Home</a>
       </li>
       <li class="nav-item ms-3">
-        <a class="nav-link " href="aboutus.html" style="position: relative; color: white;" id="aboutLink"><h5>About us</h5></a>
+        <a class="nav-link " href="aboutus.html" style="position: relative; color: white;" id="aboutLink">About us</a>
       </li>
       <li class="nav-item ms-3">
-        <a class="nav-link " href="projects.html" style="position: relative; color: white;" id="portfolioLink"><h5>Portfolio</h5></a>
+        <a class="nav-link " href="projects.html" style="position: relative; color: white;" id="portfolioLink">Portfolio</a>
       </li>
       <li class="nav-item ms-3">
-        <a class="nav-link " href="services.html" style="position: relative; color: white;" id="servicesLink"><h5>Services</h5></a>
+        <a class="nav-link " href="services.html" style="position: relative; color: white;" id="servicesLink">Services</a>
       </li>
       <li class="nav-item ms-3">
-        <a class="nav-link " href="getintouch.html" style="position: relative; color: white;" id="contactLink"><h5>Get in touch</h5></a>
+        <a class="nav-link " href="getintouch.html" style="position: relative; color: white;" id="contactLink">Get in touch</a>
       </li>
     </ul>
   </div>
@@ -56,6 +56,7 @@
       links.forEach(link => {
         link.style.color = 'black';
         link.style.transition = 'color 0.3s ease-in-out';
+        link.style.fontFamily='Rowdies-Bold';
       });
       mainLogo.style.display = 'block';
       transparentLogo.style.display = 'none';
@@ -64,13 +65,23 @@
       links.forEach(link => {
         link.style.color = 'white';
         link.style.transition = 'color 0.3s ease-in-out';
+        link.style.fontFamily='Rowdies-Regular';
       });
       mainLogo.style.display = 'none';
       transparentLogo.style.display = 'block';
     }
   });
 </script>
-
+<style>
+        @font-face {
+          font-family: 'Rowdies-Bold';
+          src: url('animation/Rowdies-Bold.ttf') format('truetype');
+        }
+        @font-face{
+          font-family: Rowdies-Regular;
+          src: url('animation/Rowdies-Regular.ttf') format('truetype');
+        }
+</style>
 <script>
    // Make the navbar sticky
    document.querySelector('.navbar').classList.add('fixed-top', 'shadow-sm');
@@ -415,40 +426,50 @@ desktopContainer.style.marginLeft = '5vh'
     <div class="container">
       <div class="row">
         <!-- Solutions -->
-        <div class="col-md-3 mb-4">
-          <img src="" alt="Sunanda Logo" class="footer-logo">
-          <div class="d-flex align-items-center mb-2">
-            <a href="tel:+919542226777"><i class="fas fa-phone fa-lg me-2"></i></a>
+        <div class="col-sm-3 mb-4">
+          <img src="WhatsApp_Image_2025-04-28_at_14.34.16_90ad2c9c-removebg-preview.png" alt="Sunanda Logo" class="footer-logo" style="height: 6vw; width: 16vw; margin-left: -0.5vw; margin-top: -2vh;">
+          <div class="d-flex mb-2">
+            <a href="tel:+919542226777" ><i style="margin-top: 3vh;" class="fas fa-phone fa-lg me-2"></i></a>
             <p class="mb-0 ms-2"><strong>Phone:</strong><br> 040 – 31780099<br> +91 954 222 6777<br></p>
           </div>
-          
+          <div class="d-flex mb-2">
+             <a href="mail: info@sunandagroups.com" ><i style="margin-top: 3vh;" class="fas fa-mail-bulk  fa-lg me-2"></i></a>
+           
           <p><strong>Email:</strong> info@sunandagroup.com</p>
+          </div>
           <!-- <p><strong>Headquarters:</strong><br>8-2-626/2, Block-B, 3rd Floor, BRK Building,<br>Banjara Hills, Hyderabad, Telangana, India, 500034</p> -->
         </div>
 
         <!-- Company -->
-        <div class="col-md-3 mb-4">
-          <h5>QUICK LINKS</h5>
+        <div class="col-sm-3 mb-4">
+          <h5 style="font-style: italic;">QUICK LINKS</h5>
           <ul class="list-unstyled">
-            <li><a href="#">About Us</a></li>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Services</a></li>
-          <li><a href="#">Projects</a></li>
-          <li><a href="#">Contact Us</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="getintouch.html">Contact Us</a></li>
           </ul>
         </div>
 
         <!-- Support -->
-        <div class="col-md-3 mb-4">
+        <div class="col-sm-3 mb-4">
+          <div class="d-flex mb-2">
+           <a href="https://www.google.com/maps/place/BRK+News/@17.4132091,78.4466732,17z/data=!3m1!4b1!4m6!3m5!1s0x3bcb9709de06d0f7:0x10f19c0aed828e66!8m2!3d17.4132091!4d78.4492481!16s%2Fg%2F11v5vyc6n0?entry=ttu&g_ep=EgoyMDI1MDUwNy4wIKXMDSoASAFQAw%3D%3D" ><i style="margin-top: 3vh;" class="fas fa-location-arrow  fa-lg me-2"></i></a>
+           
           <h5>Headquarters:</h5>
-          <ul class="list-unstyled">
-          <p><br>8-2-626/2, Block-B, 3rd Floor, BRK Building,<br>Banjara Hills, Hyderabad, Telangana, India, 500034</p>
-          </ul>
+          </div>
+          <p style="margin-left: 1vw;;">8-2-626/2,Block-B,3rd Floor,BRK Building,Banjara Hills, <br>Hyderabad, Telangana,500034</p>
+         
         </div>
 
         <!-- Stay Connected -->
-        <div class="col-md-3">
+        <div class="col-sm-3">
+           <div class="d-flex mb-2">
+             <a href="getintouch.html" ><i style="margin-top: 3vh;" class="fas fa-long-arrow-right fa-lg me-2"></i></a>
+           
           <h5>Stay Connected</h5>
+           </div>
           <form>
             <div class="mb-2">
               <input style="color: black;"  type="text" class="form-control custom-input" placeholder="Name">
@@ -458,11 +479,13 @@ desktopContainer.style.marginLeft = '5vh'
             </div>
             <button class="btn btn-subscribe w-100" type="submit">Subscribe</button>
           </form>
-          <div class="social-icons mt-3">
-            <a href="#"><i class="fab fa-linkedin fa-lg me-3"></i></a>
-            <a href="#"><i class="fab fa-instagram fa-lg me-3"></i></a>
-            <a href="#"><i class="fab fa-twitter fa-lg"></i></a>
-          </div>
+         <div class="social-icons">
+            <div class="d-flex flex-row justify-content-start align-items-center">
+              <a href="#"><i class="fab fa-linkedin fa-lg me-3"></i></a>
+              <a href="#"><i class="fab fa-instagram fa-lg me-3"></i></a>
+              <a href="#"><i class="fab fa-twitter fa-lg"></i></a>
+            </div>
+         
         </div>
       </div>
     </div>
