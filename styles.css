@@ -21,13 +21,7 @@ html, body {
   font-family: 'Araboto Black 400';
   src: url('animation/Araboto Black 400.ttf');
 }
-.text {
-  color: white;
-  font-family: 'Araboto Black 400';
-  font-size-adjust: 0.545;
-  font-size:xx-large;
- 
-}
+
 
 /* Navigation */
 .nav-link {
@@ -457,15 +451,28 @@ html, body {
   transform: rotate(90deg);
 }
 
+
+
 .choose-us-container {
-  background: url('assets/solarwhychooseus.jpg') no-repeat center center/cover;
+
   height: 70vh;
+  width: 100%;
   display: flex;
   border-radius: 15px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
   margin: 5vh 5% 0 5%;
   overflow: hidden;
 }
+.choose-us-container video {
+  position: absolute;
+  overflow-x: hidden;
+  width: 90%;
+  height: 70vh;
+  object-fit: cover;
+  z-index: 0;
+  opacity: 0.5; /* Optional: add transparency */
+}
+
 
 .choose-box {
   flex: 1;
