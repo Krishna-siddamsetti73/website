@@ -508,6 +508,7 @@ html, body {
   color: white;
   display:inline-flex;
   justify-content: center;
+  text-align: left;
   align-items: center;
   padding: 2%;
   opacity: 0;

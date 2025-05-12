@@ -10,6 +10,9 @@
     <style>
         body {
             font-family: 'Segoe UI', sans-serif;
+                background: linear-gradient(to right, #e6f7ff, #f0fff0);
+      color: #333;
+      overflow-x: hidden;
         }
         .nav-link {
   color: black;
@@ -68,6 +71,101 @@
       border-bottom-right-radius: 30px;
       transition: background-color 0.3s;
        }
+        .container {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      padding: 50px 20px;
+      animation: fadeIn 1.5s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .image-container {
+      flex: 1 1 300px;
+      text-align: center;
+      animation: float 3s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-15px); }
+      100% { transform: translateY(0px); }
+    }
+
+    .image-container img {
+      max-width: 100%;
+      height: auto;
+      /* border-radius: 12px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); */
+      transition: transform 0.5s ease;
+    }
+
+    .image-container:hover img {
+      transform: scale(1.05) rotate3d(1, 1, 0, 5deg);
+    }
+
+    .info-card {
+      flex: 1 1 400px;
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(6px);
+      padding: 30px;
+      margin: 20px;
+      border-radius: 16px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      animation: slideInRight 1.2s ease;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    @keyframes slideInRight {
+      from {
+        opacity: 0;
+        transform: translateX(80px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    .info-card:hover {
+      transform: translateY(-10px) rotateX(5deg);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    }
+
+    .info-card h2 {
+      color: #ffa600;
+      margin-bottom: 20px;
+    }
+
+    .info-row {
+      display: flex;
+      margin-bottom: 14px;
+    }
+
+    .info-label {
+      font-weight: bold;
+      width: 160px;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+      }
+      .info-card {
+        width: 90%;
+      }
+    }
        .impact-section {
   background-color: #ffffff;
   border-top: 1px solid #e0e0e0;
@@ -106,6 +204,7 @@
       background-color: #264653;
       color: white;
     }
+    
     </style>
 </head>
 <body>
@@ -205,44 +304,89 @@
    window.addEventListener('resize', toggleDesktopContainer);
 </script>
 <!-- Projects -->
+<section style="background: #fffaf0; padding: 50px 20px; text-align: center;">
+  <h2 style="color: #28a745; font-size: 32px; margin-bottom: 20px;">🌍 Operational Excellence</h2>
+  <p style="max-width: 800px; margin: 0 auto 30px auto; font-size: 18px; line-height: 1.6; color: #444;">
+    Our 10MW solar project in Hindupur is a step towards a greener future, reducing carbon emissions while ensuring stable power supply using a fixed tilt MMS structure.
+  </p>
 
-    <div class="project-card p-4 bg-light">
-        <div class="row align-items-center">
-            <div class="col-md-5">
-                <img src="assets\hindupurportfolio.png" class="img-fluid rounded" alt="Hukumpet">
-            </div>
-            <div class="col-md-7">
-                <h5 class="text-success">Solar Project – 1</h5>
-                <ul>
-                    <li class="green-bullet">Capacity :  10 MW</li>
-                    <li class="green-bullet">Location : Hindupur </li>
-                    <li class="green-bullet">MMS type :Fixed tilt</li>
-                    <li class="green-bullet">Connectivity & Status : 33KV & Comissioned </li>
-                    <li class="green-bullet">PPA tenure :25 years</li>                   
-                   
-                </ul>
-            </div>
-        </div>
+  <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; margin-top: 40px;">
+    <div style="flex: 1 1 250px; background: #e6ffe6; padding: 20px; border-radius: 12px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+      <h3 style="color: #2e8b57;">🌱 Eco Friendly</h3>
+      <p>Reduces up to 15,000 tons of CO₂ annually.</p>
     </div>
+    <div style="flex: 1 1 250px; background: #f0f9ff; padding: 20px; border-radius: 12px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+      <h3 style="color: #1e90ff;">💡 High Efficiency</h3>
+      <p>Advanced fixed tilt for stable year-round generation.</p>
+    </div>
+    <div style="flex: 1 1 250px; background: #fff0f5; padding: 20px; border-radius: 12px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+      <h3 style="color: #ff69b4;">🔒 Long-term Security</h3>
+      <p>25 years PPA ensures sustainable investment.</p>
+    </div>
+  </div>
 
-    <div class="project-card p-4 bg-light">
-        <div class="row align-items-center">
-            <div class="col-md-5">
-                <img src="assets\koppalportdolio.png" class="img-fluid rounded" alt="Koyyal">
-            </div>
-            <div class="col-md-7">
-                <h5 class="text-success"> Solar Project – 2</h5>
-                
-                <ul>
-                  <li class="green-bullet">Capacity :  4.5 MW</li>
-                  <li class="green-bullet">Location : Koppal </li>
-                  <li class="green-bullet">MMS type :Fixed tilt</li>
-                  <li class="green-bullet">Connectivity & Status : 33KV & Comissioned </li>
-                  <li class="green-bullet">PPA tenure :25 years</li>               
-                </ul>
-            </div>
-        </div>
+  
+</section>
+   <div class="container">
+    <div class="image-container">
+      <img src="assets\hindupurportfolio.png" alt="Solar Project Image">
     </div>
+    <div class="info-card">
+      <h2>🌞 Solar Project – 1</h2>
+      <div class="info-row">
+        <div class="info-label">📍 Location:</div>
+        <div>Hindupur</div>
+      </div>
+      <div class="info-row">
+        <div class="info-label">⚡ Capacity:</div>
+        <div>10 MW</div>
+      </div>
+      <div class="info-row">
+        <div class="info-label">🔩 MMS Type:</div>
+        <div>Fixed Tilt</div>
+      </div>
+      <div class="info-row">
+        <div class="info-label">🔌 Connectivity:</div>
+        <div>33KV & Commissioned</div>
+      </div>
+      <div class="info-row">
+        <div class="info-label">📃 PPA Tenure:</div>
+        <div>25 Years</div>
+      </div>
+    </div>
+    
+  </div>
+
+   <div class="container">
+    <div class="image-container">
+      <img src="assets/koppalportdolio.png" alt="Solar Project Image">
+    </div>
+    <div class="info-card">
+      <h2>🌞 Solar Project – 1</h2>
+      <div class="info-row">
+        <div class="info-label">📍 Location:</div>
+        <div>Koppal</div>
+      </div>
+      <div class="info-row">
+        <div class="info-label">⚡ Capacity:</div>
+        <div>4.5 MW</div>
+      </div>
+      <div class="info-row">
+        <div class="info-label">🔩 MMS Type:</div>
+        <div>Fixed Tilt</div>
+      </div>
+      <div class="info-row">
+        <div class="info-label">🔌 Connectivity:</div>
+        <div>33KV & Commissioned</div>
+      </div>
+      <div class="info-row">
+        <div class="info-label">📃 PPA Tenure:</div>
+        <div>25 Years</div>
+      </div>
+    </div>
+    
+  </div>
+
 </section>
 
 <!-- Ongoing Projects Section -->
@@ -250,12 +394,12 @@
     <div class="container">
       <h2 class="text-success fw-bold mb-4" style="font-family: 'Georgia', serif;">Ongoing Projects</h2>
       <div class="row justify-content-center">
-    <div class="col-sm  position-relative" style="z-index: 0;">
+    <!-- <div class="col-sm  position-relative" style="z-index: 0;">
       <div class="d-flex flex-column align-items-center">
         <img src="animation/wind-turbine-5612447-4672521.gif" alt="Solar Animation" class="img-fluid rounded-4 mb-2" style="opacity: 0.7; z-index: 0; height: 30vh; object-fit: cover; pointer-events: none;">
         <img src="animation\solar_portfolio.gif" alt="Solar Animation" class="img-fluid rounded-4" style="opacity: 0.7; z-index: 0; height: 30vh; object-fit: cover; pointer-events: none;">
       </div>
-    </div>
+    </div> -->
         <div class="col-md-5 mb-4">
           <div class="card h-100 shadow rounded-4">
             <img src="assets\urgent.jpg" class="card-img-top rounded-top-4" alt="Alur Project">
@@ -297,48 +441,71 @@
       </div>
     </div>
   </section>
-  <!-- our impact -->
-  <section class="impact-section py-5">
-    <div class="container text-center">
-      <h3 class="impact-heading mb-5">
-        💡 <strong>Our Impact</strong>
-      </h3>
-      <div class="row row-cols-1 row-cols-md-4 g-4">
-        <!-- Water Saved -->
-        <div class="col-md-3 col-sm-6 mb-4">
-          <div class="impact-card p-3 shadow-sm h-100">
-            <img src="assets/watersaved.png" alt="Water Saved Icon" class="impact-icon" style="width: 40px; height: 40px;">
-            <p class="impact-text"><strong>Water Saved</strong></p>
-          </div>
-        </div>
-        <!-- CO₂ Reduced -->
-        <div class="col-md-3 col-sm-6 mb-4">
-          <div class="impact-card p-3 shadow-sm h-100">
-            <img src="assets\co2rename.png" alt="Water Saved Icon" class="impact-icon" style="width: 40px; height: 40px;">
-           
-            <p class="impact-text"><strong>CO₂ Reduced</strong></p>
-          </div>
-        </div>
-        <!-- Communities Empowered -->
-        <div class="col-md-3 col-sm-6 mb-4">
-          <div class="impact-card p-3 shadow-sm h-100">
-            <img src="assets\communitiesempowered.png" alt="Water Saved Icon" class="impact-icon" style="width: 40px; height: 40px;">
-           
-            <p class="impact-text"><strong>Communities Empowered</strong></p>
-          </div>
-        </div>
-        <!-- Renewable Energy -->
-        <div class="col-md-3 col-sm-6 mb-4">
-          <div class="impact-card p-3 shadow-sm h-100">
-            <img src="assets\renewableenergygene.png" alt="Water Saved Icon" class="impact-icon" style="width: 40px; height: 40px;">
-           
-            <p class="impact-text"><strong>Renewable Energy Generated</strong></p>
+  <section class="py-5 bg-light">
+  <div class="container">
+    <div class="row g-4 align-items-center">
+      
+      <!-- Left Content -->
+      <div class="col-md-5">
+        <div class="p-4 bg-peach rounded-4 shadow-sm">
+          <h6 class="text-uppercase fw-bold small text-secondary">Business Impact</h6>
+          <h2 class="display-6 fw-bold">Energy Today for Their Brighter Tomorrow."</h2>
+          <div class="mt-4 d-inline-block bg-dark text-white p-3 rounded-circle">
+            <i class="bi bi-arrow-up-right fs-4"></i>
           </div>
         </div>
       </div>
+
+      <!-- Right Grid -->
+      <div class="col-md-7">
+        <div class="row g-4">
+          
+          <div class="col-6">
+            <div class="text-center p-3 border rounded-4 bg-white shadow-sm">
+              <img src="https://img.icons8.com/ios/50/000000/eco.png" width="36"/>
+              <h4 class="fw-bold text-orange mt-2">1,219,229 <small class="text-muted fs-6">MT</small></h4>
+              <p class="small text-muted mb-0">Reduction in Carbon Footprint</p>
+            </div>
+          </div>
+
+          <div class="col-6">
+            <div class="text-center p-3 border rounded-4 bg-white shadow-sm">
+              <img src="https://img.icons8.com/ios/50/000000/cloud.png" width="36"/>
+              <h4 class="fw-bold text-orange mt-2">2,242,105 <small class="text-muted fs-6">KL</small></h4>
+              <p class="small text-muted mb-0">Water saved against conventional power plant</p>
+            </div>
+          </div>
+
+          <div class="col-6">
+            <div class="text-center p-3 border rounded-4 bg-white shadow-sm">
+              <img src="https://img.icons8.com/ios/50/000000/robot.png" width="36"/>
+              <h4 class="fw-bold text-orange mt-2">40,697 <small class="text-muted fs-6">KL</small></h4>
+              <p class="small text-muted mb-0">Water saved through robotic cleaning</p>
+            </div>
+          </div>
+
+          <div class="col-6">
+            <div class="text-center p-3 border rounded-4 bg-white shadow-sm">
+              <img src="https://img.icons8.com/ios/50/000000/employee-card.png" width="36"/>
+              <h4 class="fw-bold text-orange mt-2">705 <small class="text-muted fs-6">FTE</small></h4>
+              <p class="small text-muted mb-0">Jobs Sustained</p>
+            </div>
+          </div>
+
+        </div>
+        <p class="text-end small mt-3 text-muted">Above data is for period Jan 2024 to Apr 2025</p>
+      </div>
+      
     </div>
-  </section>
-  
+  </div>
+</section>
+<style>.bg-peach {
+  background-color: #ffe9e1;
+}
+
+.text {
+  color: #256c92;
+}</style>
 <!-- Footer -->
 
 <!-- Updated Footer -->

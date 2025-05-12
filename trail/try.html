@@ -280,3 +280,190 @@ function desvanecer(s){
 
 </body>
 </html>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Solar Project – 1</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #e6f7ff, #f0fff0);
+      color: #333;
+      overflow-x: hidden;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      padding: 50px 20px;
+      animation: fadeIn 1.5s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .image-container {
+      flex: 1 1 300px;
+      text-align: center;
+      animation: float 3s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-15px); }
+      100% { transform: translateY(0px); }
+    }
+
+    .image-container img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+      transition: transform 0.5s ease;
+    }
+
+    .image-container:hover img {
+      transform: scale(1.05) rotate3d(1, 1, 0, 5deg);
+    }
+
+    .info-card {
+      flex: 1 1 400px;
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(6px);
+      padding: 30px;
+      margin: 20px;
+      border-radius: 16px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      animation: slideInRight 1.2s ease;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    @keyframes slideInRight {
+      from {
+        opacity: 0;
+        transform: translateX(80px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    .info-card:hover {
+      transform: translateY(-10px) rotateX(5deg);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    }
+
+    .info-card h2 {
+      color: #ffa600;
+      margin-bottom: 20px;
+    }
+
+    .info-row {
+      display: flex;
+      margin-bottom: 14px;
+    }
+
+    .info-label {
+      font-weight: bold;
+      width: 160px;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+      }
+      .info-card {
+        width: 90%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <section style="background: #fffaf0; padding: 50px 20px; text-align: center;">
+  <h2 style="color: #28a745; font-size: 32px; margin-bottom: 20px;">🌍 Why This Project Matters</h2>
+  <p style="max-width: 800px; margin: 0 auto 30px auto; font-size: 18px; line-height: 1.6; color: #444;">
+    Our 10MW solar project in Hindupur is a step towards a greener future, reducing carbon emissions while ensuring stable power supply using a fixed tilt MMS structure.
+  </p>
+
+  <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; margin-top: 40px;">
+    <div style="flex: 1 1 250px; background: #e6ffe6; padding: 20px; border-radius: 12px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+      <h3 style="color: #2e8b57;">🌱 Eco Friendly</h3>
+      <p>Reduces up to 15,000 tons of CO₂ annually.</p>
+    </div>
+    <div style="flex: 1 1 250px; background: #f0f9ff; padding: 20px; border-radius: 12px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+      <h3 style="color: #1e90ff;">💡 High Efficiency</h3>
+      <p>Advanced fixed tilt for stable year-round generation.</p>
+    </div>
+    <div style="flex: 1 1 250px; background: #fff0f5; padding: 20px; border-radius: 12px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+      <h3 style="color: #ff69b4;">🔒 Long-term Security</h3>
+      <p>25 years PPA ensures sustainable investment.</p>
+    </div>
+  </div>
+
+  <a href="#contact" style="display: inline-block; margin-top: 40px; padding: 15px 30px; background: #ffa600; color: white; font-weight: bold; border-radius: 30px; text-decoration: none; transition: background 0.3s ease;">
+    📞 Get in Touch
+  </a>
+</section>
+
+
+  <div class="container">
+    <div class="image-container">
+      <img src="man-worker-firld-by-solar-panels[1].jpg" alt="Solar Project Image">
+    </div>
+    <div class="info-card">
+      <h2>🌞 Solar Project – 1</h2>
+      <div class="info-row">
+        <div class="info-label">📍 Location:</div>
+        <div>Hindupur</div>
+      </div>
+      <div class="info-row">
+        <div class="info-label">⚡ Capacity:</div>
+        <div>10 MW</div>
+      </div>
+      <div class="info-row">
+        <div class="info-label">🔩 MMS Type:</div>
+        <div>Fixed Tilt</div>
+      </div>
+      <div class="info-row">
+        <div class="info-label">🔌 Connectivity:</div>
+        <div>33KV & Commissioned</div>
+      </div>
+      <div class="info-row">
+        <div class="info-label">📃 PPA Tenure:</div>
+        <div>25 Years</div>
+      </div>
+    </div>
+    
+  </div>
+
+</body>
+</html>
+Solar Project – 2</h5>
+                
+                <ul>
+                  <li class="green-bullet">Capacity :  4.5 MW</li>
+                  <li class="green-bullet">Location : Koppal </li>
+                  <li class="green-bullet">MMS type :Fixed tilt</li>
+                  <li class="green-bullet">Connectivity & Status : 33KV & Comissioned </li>
+                  <li class="green-bullet">PPA tenure :25 years
