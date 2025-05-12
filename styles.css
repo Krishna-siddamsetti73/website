@@ -21,12 +21,7 @@ html, body {
   font-family: 'Araboto Black 400';
   src: url('animation/Araboto Black 400.ttf');
 }
-.nav-item{
-  font-family: 'Araboto Black 400';
-  font-size: 1.2rem;
-  font-weight: bold;
-  color: #183665;
-}
+
 
 /* Navigation */
 .nav-link {
@@ -615,7 +610,9 @@ html, body {
 .text-section h2 {
   font-size: 2.8em;
   margin-bottom: 20px;
-  color: #007f5f;
+  color: #183665   ;
+  font-family:  'InknutAntiqua-Black';
+
 }
 
 .text-section p {
@@ -626,7 +623,7 @@ html, body {
 }
 
 .text-section strong {
-  color: #007f5f;
+  color: #183665   ;
 }
 
 /* Animation classes */

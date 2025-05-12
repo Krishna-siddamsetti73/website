@@ -315,8 +315,8 @@ body {
   top: 50%;
   left: 50%;
   transform-origin: left center;
-  height: 4px; /* Increased for better visibility */
-  width: 30vw; /* Width adjusted */
+  height: 0.2vw; /* Increased for better visibility */
+  width: 15vw; /* Width adjusted */
   background-color: yellow; /* Color for better contrast */
   opacity: 1; /* Make rays fully visible */
   box-shadow: 0 0 15px yellow; /* Glow effect */
@@ -434,3 +434,65 @@ body {
 	height: auto;
 	display: block;
 }
+.vision-mission-section {
+  max-width: 1000px;
+  margin: auto;
+  padding: 60px 20px;
+  background: #f7f9fc;
+  text-align: center;
+}
+
+.vision-mission-section h2 {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.vision-mission-section p {
+  color: #555;
+  font-size: 16px;
+  margin-bottom: 40px;
+}
+
+.vision-mission-section .cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.vision-mission-section .custom-card {
+  background: #fff;
+  border-radius: 15px;
+  padding: 30px 20px;
+  flex: 1 1 300px;
+  max-width: 300px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+.vision-mission-section .custom-card:hover {
+  transform: translateY(-5px);
+  background-color: #ffe5b4; /* Peach hover effect */
+}
+
+.vision-mission-section .custom-card i {
+  font-size: 40px;
+  margin-bottom: 15px;
+  color: #2e86de;
+}
+
+.vision-mission-section .custom-card h3 {
+  margin: 10px 0;
+  font-size: 22px;
+  color: #333;
+}
+
+.vision-mission-section .custom-card p {
+  font-size: 15px;
+  color: #666;
+  line-height: 1.6;
+}
+
+.vision-mission-section .custom-card.mission i { color: #f39c12; }
+.vision-mission-section .custom-card.values i { color: #e74c3c; }
