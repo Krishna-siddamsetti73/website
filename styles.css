@@ -27,6 +27,7 @@ html, body {
 .nav-link {
   color: black;
   transition: all 0.3s ease;
+  font-family: 'Rowdies-Light';
 }
 
 .nav-link:not(.fw-bold):hover {
@@ -34,7 +35,13 @@ html, body {
   background-color: #F8AF18;
   border-radius: 5px;
   padding: 5px 10px;
+  font-family: 'Rowdies-Light';
+  
 }
+  @font-face {
+          font-family: 'Rowdies-Light';
+          src: url('animation/Rowdies-Light.ttf') format('truetype');
+        }
 
 .nav-link.fw-bold {
   border-bottom: 3px solid #F8AF18;
@@ -578,8 +585,9 @@ html, body {
 .who-we-are  {
   background: linear-gradient(to right, #ffffff, #e7bc66);
   padding: 60px 20px;
-  font-family: 'Segoe UI', sans-serif;
+  /* font-family: 'Segoe UI', sans-serif; */
   overflow: hidden;
+  text-align: justify;
 }
 
 .container-who-we-are {
@@ -595,8 +603,8 @@ html, body {
 .image-section img {
   width: 100%;
   max-width: 500px;
-  border-radius: 20px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  /* border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); */
   transition: transform 0.4s ease;
 }
 
