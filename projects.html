@@ -8,6 +8,14 @@
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
+        @font-face {
+          font-family: 'Inknut Antiqua';
+          src: url('animation/InknutAntiqua-ExtraBold.ttf') format('truetype');
+        }
+        @font-face {
+          font-family: 'Inknut AntiquaBold';
+          src: url('animation/InknutAntiqua-Bold.ttf') format('truetype');
+        }
         body {
             font-family: 'Segoe UI', sans-serif;
                 background: linear-gradient(to right, #e6f7ff, #f0fff0);
@@ -17,17 +25,23 @@
         .nav-link {
   color: black;
   transition: all 0.3s ease;
+  font-family:'Rowdies-Light';
 }
-
+ @font-face {
+          font-family: 'Rowdies-Light';
+          src: url('animation/Rowdies-Light.ttf') format('truetype');
+        }
 .nav-link:not(.fw-bold):hover {
   color: black;
   background-color: #F8AF18;
   border-radius: 5px;
   padding: 5px 10px;
+  font-family: 'Rowdies-Light' ;
 }
 
 .nav-link.fw-bold {
   border-bottom: 3px solid #F8AF18;
+  font-family: 'Rowdies-Light' ;
 }
 
 .navbar-nav {
@@ -35,8 +49,11 @@
   border-bottom-right-radius: 15px;
 }
         .section-title {
-            font-weight: bold;
+         
             color: #183665   ;
+          font-family: 'Inknut Antiqua', serif;
+          font-size: 28px;
+           font-weight: 800;
         }
         .green-bullet::before {
             content: '\2022';
@@ -198,7 +215,10 @@
   font-size: 1rem;
   color: #333;
 }
-
+@font-face {
+  font-family: 'Inkut Antiqua';
+  src: url('animation/InknutAntiqua-Regular.ttf');
+}
         /* Footer */
    
     </style>
@@ -244,11 +264,14 @@
 <!-- Hero Banner -->
 <section class="container-fluid "  style="margin-top: -15vh;" id="heroBanner">
     <div class="row align-items-center "  >
-      <div class="col-sm">
-        <h2 class="section-title">Our Renewable Energy Portfolio</h2>
+      <div class="col-sm" style="margin-left: 4vw;">
+        <h4 class="section-title">Our Renewable Energy Portfolio</h4>
         <p>
-          At Sunanda, we're proud to power progress through our impactful renewable energy projects across India. Here's a snapshot of some of our key developments: Our customized solar setups are designed to meet the unique needs of Indian industries, businesses, and communities—maximizing energy efficiency while minimizing environmental impact. With rising power demands and a growing push for sustainability, solar energy is no longer optional—it’s essential.
-        </p>
+          At Sunanda Energy, we are committed to delivering sustainable, reliable, and cost-effective renewable energy solutions to industrial and commercial clients. With over 15 years of experience in the energy sector, we specialize in solar, wind, and battery energy storage systems (BESS) all designed to empower businesses with uninterrupted, clean power.
+    </p>
+    <p>
+Our strength lies in offering end-to-end energy solutions  from planning and installation to long-term maintenance with minimal investment from our clients. We shoulder the technical and financial complexities, allowing businesses to seamlessly transition to green energy without disrupting operations.
+    </p>
       </div>
       <div class="col-sm">
         <img src="WIND_TURBINE[1].png" alt="Renewable" class="img-fluid rounded" style="max-width: 100%; height: auto;">
@@ -270,22 +293,22 @@
 </script>
 <!-- Projects -->
 <section style=" padding: 50px 20px; text-align: center;">
-  <h2 style="color: #28a745; font-size: 32px; margin-bottom: 20px;">🌍 Operational Excellence</h2>
+  <h2 style="color: #183665   ;  margin-bottom: 20px; font-family: 'Inknut Antiqua', serif; font-weight: 800;">Operational Excellence</h2>
   <p style="max-width: 800px; margin: 0 auto 30px auto; font-size: 18px; line-height: 1.6; color: #444;">
     Our 10MW solar project in Hindupur is a step towards a greener future, reducing carbon emissions while ensuring stable power supply using a fixed tilt MMS structure.
   </p>
 
   <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; margin-top: 40px;">
     <div style="flex: 1 1 250px; background: #e6ffe6; padding: 20px; border-radius: 12px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
-      <h3 style="color: #2e8b57;">🌱 Eco Friendly</h3>
+      <h3 style="color: #2e8b57; font-family: 'Inknut AntiquaBold', serif; font-weight: 800;"> Eco Friendly</h3>
       <p>Reduces up to 15,000 tons of CO₂ annually.</p>
     </div>
     <div style="flex: 1 1 250px; background: #f0f9ff; padding: 20px; border-radius: 12px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
-      <h3 style="color: #1e90ff;">💡 High Efficiency</h3>
+      <h3 style="color: #1e90ff; font-family: 'Inknut AntiquaBold', serif; font-weight: 800;"> High Efficiency</h3>
       <p>Advanced fixed tilt for stable year-round generation.</p>
     </div>
     <div style="flex: 1 1 250px; background: #fff0f5; padding: 20px; border-radius: 12px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
-      <h3 style="color: #ff69b4;">🔒 Long-term Security</h3>
+      <h3 style="color: #ff69b4; font-family: 'Inknut AntiquaBold', serif; font-weight: 800;"> Long-term Security</h3>
       <p>25 years PPA ensures sustainable investment.</p>
     </div>
   </div>
@@ -297,7 +320,7 @@
       <img src="assets\hindupurportfolio.png" alt="Solar Project Image">
     </div>
     <div class="info-card">
-      <h2> Solar Project – 1</h2>
+      <h2 style="font-family: Inknut AntiquaBold;"> Solar Project – 1</h2>
       <div class="info-row">
         <div class="info-label">📍 Location:</div>
         <div>Hindupur</div>
@@ -327,7 +350,7 @@
       <img src="assets/koppalportdolio.png" alt="Solar Project Image">
     </div>
     <div class="info-card">
-      <h2> Solar Project – 2</h2>
+      <h2 style="font-family: Inknut AntiquaBold;"> Solar Project – 2</h2>
       <div class="info-row">
         <div class="info-label">📍 Location:</div>
         <div>Koppal</div>
@@ -427,7 +450,7 @@
           
           <div class="col-6">
             <div class="text-center p-3 border rounded-4 bg-white shadow-sm">
-              <img src="https://img.icons8.com/ios/50/000000/eco.png" width="36"/>
+              <img src="co2emisiion.png" width="65" height="65"/>
               <h4 class="fw-bold text-orange mt-2">1,219,229 <small class="text-muted fs-6">MT</small></h4>
               <p class="small text-muted mb-0">Reduction in Carbon Footprint</p>
             </div>

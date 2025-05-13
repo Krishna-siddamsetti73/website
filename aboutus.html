@@ -14,10 +14,11 @@
 <body>
 
 <!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-light px-4" id="mainNavbar" style="height:12vh; border-bottom-left-radius: 3vi; border-bottom-right-radius: 3vi; background-color: transparent; transition: background-color 0.3s; width: 100%">
+
+<nav class="navbar navbar-expand-lg navbar-light px-4" id="mainNavbar" style="height:15vh; border-bottom-left-radius: 3vi; border-bottom-right-radius: 3vi; background-color: transparent; transition: background-color 0.3s; width: 100%">
   <a class="navbar-brand" href="index.html">
-    <img src="WhatsApp_Image_2025-04-28_at_14.34.16_90ad2c9c-removebg-preview.png" alt="Transparent Logo" id="transparentLogo" style="display: block; position: absolute; top: 0.05%; left: 1vw; height: calc(100% - 0.1%); padding: 0 1vw;" />
-    <img src="image-removebg-preview (1).png" alt="Sunanda Logo" style="display: none; position: absolute; top: 0.05%; left: 1vw; height:100%; padding: 0 1vw;"  id="mainLogo" />
+    <img src="WhatsApp_Image_2025-04-28_at_14.34.16_90ad2c9c-removebg-preview.png" alt="Transparent Logo" id="transparentLogo" style="display: block; position: absolute; top: 0.05%; left: 1vw; height:15vh; width: 50vh; padding: 0 1vw;" />
+    <img src="image-removebg-preview (1).png" alt="Sunanda Logo" style="display: none; position: absolute; top: -0.05%; left: 1vw; height:18vh; width: 47vh; padding: 0 1vw;"  id="mainLogo" />
    
   </a>
   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -26,25 +27,25 @@
   <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
     <ul class="navbar-nav">
       <li class="nav-item ms-3">
-        <a class="nav-link " href="index.html" style="position: relative; color: white;" id="homeLink">Home</a>
+        <a class="nav-link fw-bold" href="index.html" style="position: relative; color: white;" id="homeLink">Home</a>
       </li>
       <li class="nav-item ms-3">
-        <a class="nav-link fw-bold" href="aboutus.html" style="position: relative; color: white;" id="aboutLink">About us</a>
+        <a class="nav-link " href="aboutus.html" style="position: relative; color: white;" id="aboutLink">About us</a>
       </li>
       <li class="nav-item ms-3">
-        <a class="nav-link" href="projects.html" style="position: relative; color: white;" id="portfolioLink">Portfolio</a>
+        <a class="nav-link " href="projects.html" style="position: relative; color: white;" id="portfolioLink">Portfolio</a>
       </li>
       <li class="nav-item ms-3">
-        <a class="nav-link" href="services.html" style="position: relative; color: white;" id="servicesLink">Services</a>
+        <a class="nav-link " href="services.html" style="position: relative; color: white;" id="servicesLink">Services</a>
       </li>
       <li class="nav-item ms-3">
-        <a class="nav-link" href="getintouch.html" style="position: relative; color: white;" id="contactLink">Get in touch</a>
+        <a class="nav-link " href="getintouch.html" style="position: relative; color: white;" id="contactLink">Get in touch</a>
       </li>
     </ul>
   </div>
-</nav>
 
-<script>
+</nav>
+ <script>
   window.addEventListener('scroll', function () {
     const navbar = document.getElementById('mainNavbar');
     const homeLink = document.getElementById('homeLink');
@@ -61,6 +62,7 @@
       links.forEach(link => {
         link.style.color = 'black';
         link.style.transition = 'color 0.3s ease-in-out';
+        link.style.fontFamily='Rowdies-Light';
       });
       mainLogo.style.display = 'block';
       transparentLogo.style.display = 'none';
@@ -69,48 +71,99 @@
       links.forEach(link => {
         link.style.color = 'white';
         link.style.transition = 'color 0.3s ease-in-out';
+        link.style.fontFamily='Rowdies-Light';
       });
       mainLogo.style.display = 'none';
       transparentLogo.style.display = 'block';
     }
   });
+  
+  function toggleDesktopContainer() {
+   const mainLogo = document.getElementById('mainLogo');
+    const transparentLogo = document.getElementById('transparentLogo');
+    const footerSunada = document.getElementById('footersunada');
+  if (window.innerWidth <= 400) {
+    mainLogo.style.height ='15vh'
+    mainLogo.style.width = '70vw';
+    mainLogo.style.marginLeft='-8vw';
+    transparentLogo.style.height = '12vh';
+    transparentLogo.style.width = '67vw';
+  
+
+   } else{
+    mainLogo.style.height = '18vh';
+    mainLogo.style.width = '47vh';
+    transparentLogo.style.height = '15vh';
+    transparentLogo.style.width = '50vh'; 
+    transparentLogo.style.marginTop = '0vh';
+    mainLogo.style.top = '-1vh';
+    mainLogo.style.marginLeft = '1vw';  
+  
+  }
+  }
+
+  window.addEventListener('DOMContentLoaded', toggleDesktopContainer);
+  window.addEventListener('resize', toggleDesktopContainer);
+  document.querySelector('.navbar').classList.add('fixed-top', 'shadow-sm');
 </script>
+<style>
+     
+        @font-face {
+          font-family: 'Rowdies-Light';
+          src: url('animation/Rowdies-Light.ttf') format('truetype');
+        }
+        .nav-link {
+  color: black;
+  transition: all 0.3s ease;
+  font-family: 'Rowdies-Light';
+}
 
-<script>
-   // Make the navbar sticky
-   document.querySelector('.navbar').classList.add('fixed-top', 'shadow-sm');
-</script>
+.nav-link:not(.fw-bold):hover {
+  color: white;
+  background-color: #F8AF18;
+  border-radius: 5px;
+  padding: 5px 10px;
+  font-family: 'Rowdies-Light';
+  
+}
+  @font-face {
+          font-family: 'Rowdies-Light';
+          src: url('animation/Rowdies-Light.ttf') format('truetype');
+        }
 
-<!-- Main Content -->
+.nav-link.fw-bold {
+  border-bottom: 3px solid #F8AF18;
+}
 
-  <!-- Banner -->
+.navbar-nav {
+  border-bottom-left-radius: 100px;
+  border-bottom-right-radius: 15px;
+}
+
+</style>
   <!-- Full-Screen Banner -->
  <div class="mb-5 position-relative" style="height: 500px; overflow: hidden;">
-    <img src="abou.jpg" alt="Hero Image" class="img-fluid w-100" style="height: 500px; object-fit: cover; width: 100%; position: absolute; top: 0; left: 0;">
+    <img src="foreman-businessman-solar-energy-station.jpg" alt="Hero Image" class="img-fluid w-100" style="height: 500px; object-fit: cover; width: 100%; position: absolute; top: 0; left: 0;">
     <div class="position-absolute text-white" style="top: 50%; left: 5%; transform: translateY(-50%); z-index: 1;">
-      <h1 style="font-size: 3.5rem; font-weight: bold;">Our Services</h1>
-      <p style="font-size: 0.7rem;">We specialize in cutting-edge renewable energy systems—including advanced BESS <br> and solar power  solutions—driving sustainability forward with reliable,<br> scalable technologies for a greener tomorrow..</p>
+      <h1 style="font-size: 3.5rem; font-weight: bold; margin-top: 20vh;">About Us</h1>
+      <p style="font-style: italic; font-size: 1.5rem; font-weight: 700; ">Engineering India’s Green Future, One Watt at a Time</p>
     </div>
   </div>
 <!-- Creating for Future -->
 
   <div class="row align-items-center" style="margin-left: 3vw; margin-right: 5vw;">
     <div class="col-sm">
-      <h2 class="section-heading" style="color: #183665; font-family: 'InknutAntiqua-Black', serif; font-weight: 800; text-align: center;">Creating for Future</h2>
-      <style>
-        @font-face {
-          font-family: 'Araboto Bold 400';
-          src: url('animation/Araboto Bold 400.ttf') format('truetype');
-        }
-      </style>
+      <h2 class="section-heading" style="color: #183665; font-family: 'Inknut Antiqua', serif; font-weight: 800; text-align: center;">Creating for Future</h2>
+    
       <h5 style="color: #fcaf17;">
         At Sunanda Renewable Energy Pvt. Ltd., we are building the future of power — clean, sustainable, and smart.
       </h5>
-      <p>
-        We specialize in generating electricity through renewable sources like solar and wind energy, delivering it seamlessly to our clients using government-authorized transmission lines.
-        Unlike traditional setups, our process requires no space or infrastructure at the client’s site. We take care of everything — from the initial deal to power generation and transmission — ensuring a hassle-free, reliable energy solution for businesses, industries, and communities.
+      <p style="text-align: justify;">
+       At Sunanda Renewable Energy Pvt. Ltd., we are not just generating electricity — we are building a cleaner, greener, and smarter future. As a forward-thinking renewable energy company, our mission is to revolutionize how power is produced and delivered, enabling industries and communities to transition to sustainable energy effortlessly.
       </p>
-      <style>
+      <p style="text-align: justify;">We specialize in clean energy generation through reliable, high-efficiency solar and wind power systems. What sets us apart is our zero-infrastructure model for clients — there’s no need to install solar panels or windmills on your premises. Through government-authorized transmission lines, we deliver green electricity directly to your site, eliminating the need for land, equipment, or operational hassle on your end.</p>
+      <p style="text-align: justify;">From power purchase agreements (PPAs) and government compliance to generation, storage (BESS), and transmission, we handle the entire process with precision. Our goal is to ensure our clients receive uninterrupted, cost-effective, and environmentally responsible energy solutions, tailored to meet their specific power needs.</p>
+     <style>
         @font-face {
           font-family: 'Inknut Antiqua';
           src: url('animation/InknutAntiqua-ExtraBold.ttf') format('truetype');
@@ -163,7 +216,8 @@ document.addEventListener('mousemove', (e) => {
 
 
 <!-- <div style="text-align: center; margin-top: -20px;">
-      <h1 style="color: #183665; font-family: 'Inknut Antiqua', serif; font-weight: 800;  margin-top: -20px;">Who we are ?</h1>
+      <h1 style="color: #183665; font-family: 'Inknut Antiqua', serif; font-weight: 800;  margin-top: -20px;">Who we are ?</
+        >
       <style>
         @font-face {
           font-family: 'Inknut Antiqua';
