@@ -71,6 +71,36 @@
       transparentLogo.style.display = 'block';
     }
   });
+  
+  function toggleDesktopContainer() {
+   const mainLogo = document.getElementById('mainLogo');
+    const transparentLogo = document.getElementById('transparentLogo');
+    const footerSunada = document.getElementById('footersunada');
+  if (window.innerWidth <= 400) {
+    mainLogo.style.height ='15vh'
+    mainLogo.style.width = '77vw';
+    mainLogo.style.marginLeft='-8vw';
+    transparentLogo.style.height = '12vh';
+    transparentLogo.style.width = '67vw';
+    footerSunada.style.height = '10vh';
+    footerSunada.style.width = '60vw';
+
+   } else{
+    mainLogo.style.height = '18vh';
+    mainLogo.style.width = '47vh';
+    transparentLogo.style.height = '15vh';
+    transparentLogo.style.width = '50vh'; 
+    transparentLogo.style.marginTop = '0vh';
+    mainLogo.style.top = '-1vh';
+    mainLogo.style.marginLeft = '1vw';  
+    footerSunada.style.height = '6vw';
+    footerSunada.style.width = '16vw';
+  }
+  }
+
+  window.addEventListener('DOMContentLoaded', toggleDesktopContainer);
+  window.addEventListener('resize', toggleDesktopContainer);
+
 </script>
 <style>
          /* @font-face {
@@ -401,7 +431,7 @@ desktopContainer.style.marginLeft = '5vh'
       <div class="row">
         <!-- Solutions -->
         <div class="col-sm-3 mb-4">
-          <img src="WhatsApp_Image_2025-04-28_at_14.34.16_90ad2c9c-removebg-preview.png" alt="Sunanda Logo" class="footer-logo" style="height: 6vw; width: 16vw; margin-left: -0.5vw; margin-top: -2vh;">
+          <img src="WhatsApp_Image_2025-04-28_at_14.34.16_90ad2c9c-removebg-preview.png" alt="Sunanda Logo" id="footersunada" class="footer-logo" style="height: 6vw; width: 16vw; margin-left: -0.5vw; margin-top: -2vh;">
           <div class="d-flex mb-2">
             <a href="tel:+919542226777" ><i style="margin-top: 3vh;" class="fas fa-phone fa-lg me-2"></i></a>
             <p class="mb-0 ms-2"><strong>Phone:</strong><br> 040 – 31780099<br> +91 954 222 6777<br></p>
