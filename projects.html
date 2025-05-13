@@ -495,15 +495,6 @@ Our strength lies in offering end-to-end energy solutions  from planning and ins
   color: #256c92;
 }</style>
 <!-- Footer -->
-<footer id="footer-container"></footer>
-    <script>
-    async function loadFooter() {
-      const response = await fetch('footer.html');
-      const html = await response.text();
-      document.getElementById('footer-container').innerHTML = html;
-    }
-    loadFooter();
-    </script>
 
   <script>
     document.addEventListener("DOMContentLoaded", function() {
@@ -553,6 +544,14 @@ Our strength lies in offering end-to-end energy solutions  from planning and ins
   </script>
   </body>
 
-
+<footer id="footer-container" style="left: 0; right: 0%; margin-left: 0%; margin-right: 0%;"></footer>
+    <script>
+    async function loadFooter() {
+      const response = await fetch('footer.html');
+      const html = await response.text();
+      document.getElementById('footer-container').innerHTML = html;
+    }
+    loadFooter();
+    </script>
 
   </html>

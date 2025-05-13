@@ -124,48 +124,6 @@
     border-bottom-right-radius: 30px;
     transition: background-color 0.3s;
   }
-  .image-section {
-      background: url('assets/ba.png') center center/cover no-repeat;
-      color: white;
-      padding: 100px 0;
-      text-align: center;
-    }
-
-    .cta-buttons .btn {
-      margin: 10px;
-      font-weight: bold;
-      letter-spacing: 0.5px;
-    }
-
-    .stats-section {
-      background-color: #0432cd;
-      color: white;
-      padding: 40px 20px;
-      text-align: center;
-    }
-
-    .stat-box {
-      border-right: 1px solid #2f57e7;
-    }
-
-    .stat-box:last-child {
-      border-right: none;
-    }
-
-    .stat-icon {
-      font-size: 2rem;
-      margin-bottom: 10px;
-    }
-
-    .stat-number {
-      font-size: 2rem;
-      font-weight: bold;
-    }
-
-    .stat-label {
-      font-size: 1rem;
-      opacity: 0.8;
-    }
         
         /* Hero Section */
         .hero {
@@ -200,6 +158,11 @@
             margin-bottom: 20px;
         }
         
+        /* What We Offer Section */
+       .what-we-offer {
+  padding: 50px 0;
+  background-color: #f9f9f9;
+}
 
 .section-title {
   text-align: center;
@@ -215,92 +178,6 @@
   display: flex;
   flex-direction: column;
   gap: 30px;
-}
-HEAD
-.service-card {
-  display: flex;
-  flex-direction: row;
-  background-color: white;
-  border-radius: 8px;
-  overflow: hidden;
-  flex-wrap: wrap;
-}
-
-.service-card:nth-child(even) {
-  flex-direction: row-reverse;
-}
-
-.service-image {
-  flex: 0 0 40%;
-  min-height: 200px;
-  background-size: cover;
-  background-position: center;
-}
-
-.service-content {
-  flex: 1;
-  padding: 25px;
-}
-
-.service-title {
-  font-size: 24px;
-  margin-bottom: 15px;
-  color: hsla(212, 97%, 23%, 0.467);
-  display: flex;
-  align-items: center;
-}
-
-.service-title .icon {
-  width: 24px;
-  height: 24px;
-  margin-right: 10px;
-  color: #f9a826;
-}
-
-.service-desc {
-  color: #666;
-  margin-bottom: 20px;
-}
-
-.btn {
-  display: inline-block;
-  padding: 10px 25px;
-  background-color: #f9a826;
-  color: white;
-  text-decoration: none;
-  border-radius: 5px;
-  font-weight: 500;
-  transition: background-color 0.3s ease;
-}
-
-.btn:hover {
-  background-color: #e69015;
-}
-
-/* Mobile Responsive Styles */
-@media (max-width: 768px) {
-  .service-card {
-    flex-direction: column !important;
-  }
-
-  .service-image {
-    flex: 0 0 auto;
-    width: 100%;
-    height: 200px;
-  }
-
-  .service-content {
-    padding: 15px;
-  }
-
-  .service-title {
-    font-size: 20px;
-  }
-
-  .btn {
-    padding: 8px 20px;
-    font-size: 14px;
-  }
 }
 
 .service-card {
@@ -394,7 +271,6 @@ HEAD
     font-size: 14px;
   }
 }
-
     .title-box {
       position: absolute;
       top: 20px;
@@ -477,7 +353,7 @@ HEAD
   <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
     <ul class="navbar-nav">
       <li class="nav-item ms-3">
-        <a class="nav-link fw-bold" href="index.html" style="position: relative; color: white;" id="homeLink">Home</a>
+        <a class="nav-link " href="index.html" style="position: relative; color: white;" id="homeLink">Home</a>
       </li>
       <li class="nav-item ms-3">
         <a class="nav-link " href="aboutus.html" style="position: relative; color: white;" id="aboutLink">About us</a>
@@ -486,7 +362,7 @@ HEAD
         <a class="nav-link " href="projects.html" style="position: relative; color: white;" id="portfolioLink">Portfolio</a>
       </li>
       <li class="nav-item ms-3">
-        <a class="nav-link " href="services.html" style="position: relative; color: white;" id="servicesLink">Services</a>
+        <a class="nav-link fw-bold" href="services.html" style="position: relative; color: white;" id="servicesLink">Services</a>
       </li>
       <li class="nav-item ms-3">
         <a class="nav-link " href="getintouch.html" style="position: relative; color: white;" id="contactLink">Get in touch</a>
@@ -592,7 +468,6 @@ HEAD
 
 </style>
   <div class="mb-5 position-relative" style="height: 500px; overflow: hidden;">
-<<<<<<< HEAD
     <div style="position: absolute; top: 0; left: 0; width: 100%; height: 500px; z-index: 0;">
       <img src="services_banner.jpeg" alt="Hero Image" class="img-fluid w-100" style="height: 500px; object-fit: cover; width: 100%;">
       <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5);"></div>
@@ -600,12 +475,6 @@ HEAD
     <div class="position-absolute text-white" style="top: 50%; left: 5%; transform: translateY(-50%); z-index: 1; margin-top: 10vh;">
       <h1 style="font-size: 3.5rem; font-weight: 800;font-family: 'Inknut Antiqua',sans-serif; ">Our Services</h1>
       <p style="font-style: italic; font-size: 1.5rem; font-weight: 700; ">We specialize in cutting-edge renewable energy systems—including advanced BESS  and solar power  solutions—driving sustainability forward with reliable, scalable technologies for a greener tomorrow..</p>
-=======
-    <img src="assets/wmremove-transformed[1].jpeg" alt="Hero Image" class="img-fluid w-100" style="height: 500px; object-fit: cover; width: 100%; position: absolute; top: 0; left: 0;">
-    <div class="position-absolute text-white" style="top: 50%; left: 5%; transform: translateY(-50%); z-index: 1;">
-      <h1 style="font-size: 3.5rem; font-weight: bold;">Our Services</h1>
-      <p style="font-size: 0.7rem;">We specialize in cutting-edge renewable energy systems—including advanced BESS <br> and solar power  solutions—driving sustainability forward with reliable,<br> scalable technologies for a greener tomorrow..</p>
->>>>>>> 213ace405876815441399e2f8f9e4a826ebc0a6d
     </div>
   </div>
   
@@ -673,7 +542,7 @@ HEAD
                   <div class="service-content">
                       <h3 class="service-title">
                          
-                          Wind Power Generation
+                          ind Power Generation
                       </h3>
                       <p class="service-desc">
                           Maximize the efficiency of your renewable energy setup with our advanced Smart Energy Storage Systems. Our innovative battery technology stores excess energy produced during peak generation times for use when production is low, ensuring continuous power supply regardless of weather conditions.
@@ -687,44 +556,6 @@ HEAD
             </div>
         </div>
     </section>
-
-    <div class="image-section">
-      <h2 class="display-6 fw-bold">24/7 customer support any time of<br>the day or night</h2>
-      <div class="cta-buttons mt-4">
-        <a href="#" class="btn btn-warning text-white">FREE QUOTE ✈</a>
-        <a href="#" class="btn btn-primary">CONTACT US →</a>
-      </div>
-    </div>
-  
-    <!-- Stats Section -->
-    <div class="stats-section">
-      <div class="container">
-        <div class="row text-center">
-          <div class="col-md-3 stat-box">
-            <div class="stat-icon">🌐</div>
-            <div class="stat-number">15k</div>
-            <div class="stat-label">Worldwide Clients</div>
-          </div>
-          <div class="col-md-3 stat-box">
-            <div class="stat-icon">🗺️</div>
-            <div class="stat-number">189+</div>
-            <div class="stat-label">Worldwide Branches</div>
-          </div>
-          <div class="col-md-3 stat-box">
-            <div class="stat-icon">👥</div>
-            <div class="stat-number">950+</div>
-            <div class="stat-label">Expert Company Staffs</div>
-          </div>
-          <div class="col-md-3">
-            <div class="stat-icon">📦</div>
-            <div class="stat-number">15k</div>
-            <div class="stat-label">Successful Delivery</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  
-
     <div class="image-section">
       <h2 class="display-6 fw-bold" style="color: #183665; font-family:'Inknut Antiqua'; font-weight: 800; font-style: italic;">24/7 customer support any time of<br>the day or night</h2>
      <button id="readMoreBtn" class="read-more-btn" onclick="window.location.href='services.html';">
@@ -764,14 +595,8 @@ HEAD
         </div>
       </div>
     </div>
->>>>>>> 31de3de49775271f9664359323b57022719b9e26
 
-<<<<<<< HEAD
-
-    <section class="why-choose-us py-5" style="background-color: #fff;">
-=======
     <section class="why-choose-us py-5" style=" background-color: linear-gradient(to right, #e6f7ff, #f0fff0);;">
->>>>>>> e8218708e76392136e6dedf91f6a3fefda7a28d7
       <div class="container py-5">
         <h2 class="text-center fw-bold mb-5" style="color: #183665; font-family: 'Inknut Antiqua', serif; font-weight: 800;">Why Go Renewable</h2>
       
