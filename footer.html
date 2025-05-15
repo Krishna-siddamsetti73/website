@@ -6,7 +6,7 @@
       <div class="footer-row row">
 
         <!-- Company Info & Contact -->
-        <div class="footer-col col-sm-3 mb-4">
+        <div class="col-sm ">
           <img src="WhatsApp_Image_2025-04-28_at_14.34.16_90ad2c9c-removebg-preview.png" alt="Sunanda Logo" class="footer-logo" id="footersunada">
           
           <div class="d-flex mb-2">
@@ -25,7 +25,7 @@
         </div>
 
         <!-- Quick Links -->
-        <div class="footer-col col-sm-3 mb-4 footer-quick-links">
+        <div class="col-sm footer-quick-links">
           <h5>QUICK LINKS</h5>
           <ul class="list-unstyled">
             <li><a href="aboutus.html">About Us</a></li>
@@ -37,7 +37,7 @@
         </div>
 
         <!-- Address -->
-        <div class="footer-col col-sm-3 mb-4">
+        <div class="col-sm ">
           <div class="d-flex mb-2">
             <a href="https://www.google.com/maps/place/BRK+News/@17.4132091,78.4466732,17z" target="_blank">
               <i class="fas fa-location-arrow fa-lg footer-contact-icon me-2"></i>
@@ -51,49 +51,33 @@
         </div>
 
         <!-- Subscribe & Social -->
-        <div class="footer-col col-sm-3">
-          <div class="d-flex mb-2">
-            <a href="getintouch.html"><i class="fas fa-long-arrow-right fa-lg footer-contact-icon me-2"></i></a>
-            <h5>Stay Connected</h5>
-          </div>
-          <form>
-            <div class="mb-2">
-              <input type="text" class="footer-input form-control" placeholder="Name">
+        <div class="col-sm position-relative">
+          <div class="footer-overlay position-absolute top-0 start-0 w-100 h-100 rounded-3" style="background: rgba(0,0,0,0.15); z-index:0;"></div>
+          <div class="position-relative" style="z-index:1;">
+            <div class="d-flex mb-2">
+              <a href="getintouch.html"><i class="fas fa-long-arrow-right fa-lg footer-contact-icon me-2"></i></a>
+              <h5>Stay Connected</h5>
             </div>
-            <div class="mb-2">
-              <input type="email" class="footer-input form-control" placeholder="Email">
-            </div>
-            <button class="footer-subscribe-btn btn w-100" type="submit">Subscribe</button>
-          </form>
-
-          <div class="footer-social-icons mt-3">
-            <div class="d-flex flex-row justify-content-start align-items-center">
-              <a href="#"><i class="fab fa-linkedin fa-lg me-3"></i></a>
-              <a href="#"><i class="fab fa-instagram fa-lg me-3"></i></a>
-              <a href="#"><i class="fab fa-twitter fa-lg"></i></a>
+            <form>
+              <div class="mb-2">
+                <input type="text" class="footer-input form-control" placeholder="Name">
+              </div>
+              <div class="mb-2">
+                <input type="email" class="footer-input form-control" placeholder="Email">
+              </div>
+              <button class="footer-subscribe-btn btn w-100" type="submit">Send</button>
+            </form>
+            <div class="footer-social-icons ">
+              <div class="d-flex flex-row justify-content-start align-items-center">
+                <a href="#"><i class="fab fa-linkedin fa-lg me-3"></i></a>
+                <a href="#"><i class="fab fa-instagram fa-lg me-3"></i></a>
+                <a href="#"><i class="fab fa-twitter fa-lg"></i></a>
+              </div>
             </div>
           </div>
         </div>
 
       </div>
     </div>
-    <script>
-   function toggleDesktopContainer() {
-  
-    const footerSunada = document.getElementById('footersunada');
-  if (window.innerWidth <= 400) {
-    
-    footerSunada.style.height = '10vh';
-    footerSunada.style.width = '60vw';
-
-   } else{
-    
-    footerSunada.style.height = '6vw';
-    footerSunada.style.width = '16vw';
-  }
-  }
-
-  window.addEventListener('DOMContentLoaded', toggleDesktopContainer);
-  window.addEventListener('resize', toggleDesktopContainer);
-    </script>
+    <script src="footer.js" defer></script>
   </footer>

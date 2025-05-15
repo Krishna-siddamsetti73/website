@@ -161,15 +161,14 @@
           <div class="position-relative">
             <div class="text-center position-absolute w-100 top-50 start-50 translate-middle custom-style" style="z-index: 1; color: white;">
                <h1 class="display" style="font-style: italic;"><strong>What are our core offerings? for  Greener Tomorrow</strong></h1>
-      <button class="btn btn-warning mt-3" style="background-color: #01709E; color: white; border: none; width: 150px;" onclick="window.location.href='aboutus.html';">Learn More</button>
+      <button class="btn btn-warning mt-3" style="background-color: #fcaf17; color: white; border: none; width: 150px;" onclick="window.location.href='aboutus.html';">Learn More</button>
       
             </div>
-            <div class="background-video" style="height: 80vh; width: 100%; overflow: hidden; position: relative; z-index: 0;">
-            <div class="background-image w-100 position-relative" style="background-image: url('whychooseusbg.png'); height:80vh; background-size: cover; background-position: center; z-index: 0; width: 100%;margin-left: -1vw;">
-          
-                <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background:#68674e66;"></div>
+                   <div class="background-image w-100 position-relative" style="background-image: url('WhatsApp Image 2025-05-15 at 15.50.40_40f7736b.jpg'); height:80vh; background-size: cover; background-position: center; z-index: 0; width: 100%;">
+           <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;background:#5a5a4966; margin-left: -0.5vw;"></div>
         
-            </div>  </div>
+              
+            </div>  
           </div>
             </div>
       </div>
@@ -337,8 +336,8 @@
         <h5>GreenCred</h5>
       </div>
       <div class="choose-info" >
-        <div class="info-title">Sustainable credits</div>
-        Earn valuable GreenCred with every step toward sustainability.Our renewable energy solutions help boost your green building certification scores.Build smarter, cleaner,and greener with measurable environmental impact.
+        <div class="info-title">Sustainable Credits</div>
+        Earn valuable Sustainable Credits with every step toward sustainability.Our renewable energy solutions help boost your green building certification scores.Build smarter, cleaner,and greener with measurable environmental impact.
       </div>
     </div>
   </div>
@@ -471,13 +470,124 @@ desktopContainer.style.marginLeft = '5vh'
     });
   </script>
   </body>
-   <footer id="footer-container"></footer>
-    <script>
-    async function loadFooter() {
-      const response = await fetch('footer.html');
-      const html = await response.text();
-      document.getElementById('footer-container').innerHTML = html;
-    }
-    loadFooter();
-    </script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="footerstyle.css">
+ <footer class="footer-sunada text-white">
+    <div class="footer-container container" >
+      <div class="footer-row row">
+
+        <!-- Company Info & Contact -->
+        <div class="col-sm mt-3">
+          <img src="WhatsApp_Image_2025-04-28_at_14.34.16_90ad2c9c-removebg-preview.png" alt="Sunanda Logo" class="footer-logo" id="footersunada" style="margin-top: -2vw;margin-bottom: 3vw;">
+          
+          <div class="d-flex mb-2">
+            <a href="tel:+919542226777"><i class="fas fa-phone fa-lg footer-contact-icon me-2"></i></a>
+            <p class="mb-0 ms-2">
+              <strong>Phone:</strong><br>
+              040 – 31780099<br>
+              +91 954 222 6777
+            </p>
+          </div>
+
+          <div class="d-flex mb-2">
+            <a href="mailto:info@sunandagroups.com"><i class="fas fa-envelope fa-lg footer-contact-icon me-2"></i></a>
+            <p><strong>Email:</strong> info@sunandagroup.com</p>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="col-sm mt-3 footer-quick-links" id="quickLinks">
+          <h5 id="qui">QUICK LINKS</h5>
+          <ul class="list-unstyled" id="quickLinksList">
+            <li><a href="aboutus.html">About Us</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="getintouch.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <!-- Address -->
+        <div class="col-sm mt-3"  id="addresscolumn">
+          <div class="d-flex mb-2" id="dlex" >
+            <a href="https://www.google.com/maps/place/BRK+News/@17.4132091,78.4466732,17z" target="_blank">
+              <i class="fas fa-location-arrow fa-lg footer-contact-icon me-2"></i>
+            </a>
+            <h5>Headquarters:</h5>
+          </div>
+          <p class="footer-location-text"style="margin-left: -3.5vw; " id="ADD">
+            8-2-626/2, Block-B, 3rd Floor,<br> BRK Building, Banjara Hills,<br>
+            Hyderabad, Telangana, 500034
+          </p>
+        </div>
+
+        <!-- Subscribe & Social -->
+        <div class="col-sm mt-3 position-relative">
+          <div class="footer-overlay position-absolute top-0 start-0 w-100 h-100 rounded-3" style="background: rgba(0,0,0,0.15); z-index:0;"></div>
+          <div class="position-relative" style="z-index:1;">
+            <div class="d-flex mb-2">
+              <a href="getintouch.html"><i class="fas fa-long-arrow-right fa-lg footer-contact-icon me-2"></i></a>
+              <h5>Stay Connected</h5>
+            </div>
+            <form>
+              <div class="mb-2">
+                <input type="text" class="footer-input form-control" placeholder="Name">
+              </div>
+              <div class="mb-2">
+                <input type="email" class="footer-input form-control" placeholder="Email">
+              </div>
+              <button class="footer-subscribe-btn btn w-100" type="submit">Send</button>
+            </form>
+           <div class="footer-social-icons w-100 d-flex " >
+        <a href="#" class="me-3"><i class="fab fa-linkedin fa-lg"></i></a>
+        <a href="#" class="me-3"><i class="fab fa-instagram fa-lg"></i></a>
+        <a href="#"><i class="fab fa-twitter fa-lg"></i></a>
+      </div>
+        </div>
+
+      </div>
+      
+    </div>
+    
+  </footer>
+  <script>function toggleDesktopContainer() {
+  
+    const footerSunada = document.getElementById('footersunada');
+    const quickLinks = document.getElementById('quickLinks');
+    const addressColumn = document.getElementById('addresscolumn');
+    const qui = document.getElementById('qui');
+    const quickLinksList = document.getElementById('quickLinksList');
+    const ADD = document.getElementById('ADD');
+    const dlex = document.getElementById('dlex');
+  if (window.innerWidth <= 400) {
+    
+    footerSunada.style.height = '10vh';
+    footerSunada.style.width = '60vw';
+    footerSunada.style.marginLeft = '-33vw';
+    quickLinks.style.marginLeft = '-28vw';
+    addressColumn.style.marginLeft = '0vw';
+    dlex.style.marginLeft = '0vw';
+    ADD.style.textAlign = 'justify';
+    ADD.style.marginLeft = '1vw';
+   
+
+
+
+   } else{
+    
+    footerSunada.style.height = '6vw';
+    footerSunada.style.width = '16vw';
+    footerSunada.style.marginLeft = '0vw';
+    quickLinks.style.marginLeft = '0vw';
+    addressColumn.style.marginLeft = '-4vw';
+    dlex.style.marginLeft = '-4vw';
+     ADD.style.textAlign = 'justify';
+    ADD.style.marginLeft = '-3.5vw';
+  }
+  }
+
+  window.addEventListener('DOMContentLoaded', toggleDesktopContainer);
+  window.addEventListener('resize', toggleDesktopContainer);
+ </script>
 </html>

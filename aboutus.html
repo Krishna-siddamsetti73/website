@@ -14,6 +14,8 @@
 <body>
 
 <!-- Navbar -->
+<!-- Bootstrap Bundle with Popper.js -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 <nav class="navbar navbar-expand-lg navbar-light px-4" id="mainNavbar" style="height:15vh; border-bottom-left-radius: 3vi; border-bottom-right-radius: 3vi; background-color: transparent; transition: background-color 0.3s; width: 100%">
   <a class="navbar-brand" href="index.html">
@@ -144,8 +146,8 @@
   <!-- Full-Screen Banner -->
  <div class="mb-5 position-relative" style="height: 500px; overflow: hidden;">
     <img src="foreman-businessman-solar-energy-station.jpg" alt="Hero Image" class="img-fluid w-100" style="height: 500px; object-fit: cover; width: 100%; position: absolute; top: 0; left: 0;">
-    <div class="position-absolute text-white" style="top: 50%; left: 5%; transform: translateY(-50%); z-index: 1;">
-      <h1 style="font-size: 3.5rem; font-weight: bold; margin-top: 20vh;">About Us</h1>
+    <div class="position-absolute text-white" style="top: 40%; left: 5%; transform: translateY(-50%); z-index: 1;">
+      <h1 style="font-size: 3.5rem; font-weight: 800; margin-top: 15vh; font-style: italic; font-family: 'InknutAntiqua-Bold';">About Us</h1>
       <p style="font-style: italic; font-size: 1.5rem; font-weight: 700; ">Engineering India’s Green Future, One Watt at a Time</p>
     </div>
   </div>
@@ -153,9 +155,9 @@
 
   <div class="row align-items-center" style="margin-left: 3vw; margin-right: 5vw;">
     <div class="col-sm">
-      <h2 class="section-heading" style="color: #183665; font-family: 'Inknut Antiqua', serif; font-weight: 800; text-align: center;">Creating for Future</h2>
+      <h2 class="section-heading" style="color: #183665; font-family: 'Inknut Antiqua', serif; font-weight: 800;">Creating for Future</h2>
     
-      <h5 style="color: #fcaf17;">
+      <h5 style="color: #fcaf17; font-style:italic; font-family:cursive">
         At Sunanda Renewable Energy Pvt. Ltd., we are building the future of power — clean, sustainable, and smart.
       </h5>
       <p style="text-align: justify;">
@@ -246,53 +248,53 @@ We begin every renewable energy project with a detailed requirement evaluation t
       <ul id="card-list" style="--count: 6;">
         <li>
 
-          <div class="card">
-            <a href="">
+          <div class="card" style="background-color: #183665;">
+          
               <span class="model-name">Monitoring & Support</span>
-              <span>Ongoing system monitoring and maintenance support</span>
-            </a>
+              <span style="color: white;">Ongoing system monitoring and maintenance support</span>
+           
           </div>
         </li>
         <li>
-          <div class="card">
-            <a href="">
+          <div class="card"style="background-color: #183665;">
+            
               <span class="model-name">Testing & Commissioning</span>
-              <span>Ensuring systems run efficiently before going live</span>
-            </a>
+              <span style="color: white;">Ensuring systems run efficiently before going live</span>
+      
           </div>
         </li>
         <li>
          <div class="container-fluid">
-          <div class="card">
-            <a href="">
+          <div class="card"style="background-color: #183665;">
+       
               <span class="model-name">Design & Construction</span>
-              <span>Executing the solar or renewable infrastructure setup</span>
-            </a>
+              <span style="color: white;">Executing the solar or renewable infrastructure setup</span>
+        
           </div>
         </div>
         </li>
         <li>
-          <div class="card">
-            <a href="">
+          <div class="card"style="background-color: #183665;">
+           
               <span class="model-name">Government Licensing</span>
-              <span>Obtaining required permits and approvals</span>
-            </a>
+              <span style="color: white;">Obtaining required permits and approvals</span>
+           
           </div>
         </li>
         <li>
-          <div class="card">
-            <a href="">
+          <div class="card"style="background-color: #183665;">
+            
               <span class="model-name">PPA Signing</span>
-              <span>Signing the Power Purchase Agreement to proceed</span>
-            </a>
+              <span style="color: white;">Signing the Power Purchase Agreement to proceed</span>
+        
           </div>
         </li>
         <li>
-          <div class="card">
-            <a href="">
+          <div class="card"style="background-color: #183665;">
+            
               <span class="model-name">Requirement Evaluation</span>
-              <span>Understanding the client's renewable energy needs & goals</span>
-            </a>
+              <span style="color: white;">Understanding the client's renewable energy needs & goals</span>
+        
           </div>
         </li>
       </ul>
@@ -355,15 +357,7 @@ We begin every renewable energy project with a detailed requirement evaluation t
   
 
 <!-- Updated Footer -->
-<footer id="footer-container"></footer>
-    <script>
-    async function loadFooter() {
-      const response = await fetch('footer.html');
-      const html = await response.text();
-      document.getElementById('footer-container').innerHTML = html;
-    }
-    loadFooter();
-    </script>
+
 <script>
   function toggleDesktopContainer() {
    const desktopContainer = document.getElementById('desktop');
@@ -382,6 +376,118 @@ We begin every renewable energy project with a detailed requirement evaluation t
   window.addEventListener('resize', toggleDesktopContainer);
 </script>
 </body>
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="footerstyle.css">
+ <footer class="footer-sunada text-white">
+    <div class="footer-container container" >
+      <div class="footer-row row">
+
+        <!-- Company Info & Contact -->
+        <div class="col-sm mt-3">
+          <img src="WhatsApp_Image_2025-04-28_at_14.34.16_90ad2c9c-removebg-preview.png" alt="Sunanda Logo" class="footer-logo" id="footersunada" style="margin-top: -2vw;margin-bottom: 2vw;">
+          
+          <div class="d-flex mb-2">
+            <a href="tel:+919542226777"><i class="fas fa-phone fa-lg footer-contact-icon me-2"></i></a>
+            <p class="mb-0 ms-2">
+              <strong>Phone:</strong><br>
+              040 – 31780099<br>
+              +91 954 222 6777
+            </p>
+          </div>
+
+          <div class="d-flex mb-2">
+            <a href="mailto:info@sunandagroups.com"><i class="fas fa-envelope fa-lg footer-contact-icon me-2"></i></a>
+            <p><strong>Email:</strong> info@sunandagroup.com</p>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="col-sm mt-3 footer-quick-links" id="quickLinks">
+          <h5 id="qui">QUICK LINKS</h5>
+          <ul class="list-unstyled" id="quickLinksList">
+            <li><a href="aboutus.html">About Us</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="getintouch.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <!-- Address -->
+        <div class="col-sm mt-3"  id="addresscolumn">
+          <div class="d-flex mb-2" id="dlex" >
+            <a href="https://www.google.com/maps/place/BRK+News/@17.4132091,78.4466732,17z" target="_blank">
+              <i class="fas fa-location-arrow fa-lg footer-contact-icon me-2"></i>
+            </a>
+            <h5>Headquarters:</h5>
+          </div>
+          <p class="footer-location-text"style="margin-left: -3.5vw; " id="ADD">
+            8-2-626/2, Block-B, 3rd Floor,<br> BRK Building, Banjara Hills,<br>
+            Hyderabad, Telangana, 500034
+          </p>
+        </div>
+
+        <!-- Subscribe & Social -->
+        <div class="col-sm mt-3 position-relative">
+          <div class="footer-overlay position-absolute top-0 start-0 w-100 h-100 rounded-3" style="background: rgba(0,0,0,0.15); z-index:0;"></div>
+          <div class="position-relative" style="z-index:1;">
+            <div class="d-flex mb-2">
+              <a href="getintouch.html"><i class="fas fa-long-arrow-right fa-lg footer-contact-icon me-2"></i></a>
+              <h5>Stay Connected</h5>
+            </div>
+            <form>
+              <div class="mb-2">
+                <input type="text" class="footer-input form-control" placeholder="Name">
+              </div>
+              <div class="mb-2">
+                <input type="email" class="footer-input form-control" placeholder="Email">
+              </div>
+              <button class="footer-subscribe-btn btn w-100" type="submit">Send</button>
+            </form>
+           <div class="footer-social-icons w-100 d-flex " >
+        <a href="#" class="me-3"><i class="fab fa-linkedin fa-lg"></i></a>
+        <a href="#" class="me-3"><i class="fab fa-instagram fa-lg"></i></a>
+        <a href="#"><i class="fab fa-twitter fa-lg"></i></a>
+      </div>
+        </div>
+
+      </div>
+      
+    </div>
+    
+  </footer>
+  <script>function toggleDesktopContainer() {
+  
+    const footerSunada = document.getElementById('footersunada');
+    const quickLinks = document.getElementById('quickLinks');
+    const addressColumn = document.getElementById('addresscolumn');
+    const qui = document.getElementById('qui');
+    const quickLinksList = document.getElementById('quickLinksList');
+    const ADD = document.getElementById('ADD');
+    const dlex = document.getElementById('dlex');
+  if (window.innerWidth <= 400) {
+    
+    footerSunada.style.height = '10vh';
+    footerSunada.style.width = '60vw';
+    footerSunada.style.marginLeft = '-3vw';
+    addressColumn.style.marginLeft = '0vw';
+    ADD.style.marginLeft = '0vw';
+   } else{
+    
+    footerSunada.style.height = '6vw';
+    footerSunada.style.width = '16vw';
+   footerSunada.style.marginLeft = '0vw';
+    addressColumn.style.marginLeft = '-4vw';
+    dlex.style.marginLeft = '-4vw';
+     ADD.style.textAlign = 'justify';
+    ADD.style.marginLeft = '-3.5vw';
+  }
+  }
+
+  window.addEventListener('DOMContentLoaded', toggleDesktopContainer);
+  window.addEventListener('resize', toggleDesktopContainer);
+ </script>
 </html>
 
 
