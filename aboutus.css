@@ -99,7 +99,7 @@ body {
 	max-width: 1024px;
 	margin: auto;
 	position: relative;
-	height: 600px; /* Adjusted for horizontal orientation */
+	height: 120vh; /* Adjusted for horizontal orientation */
   }
   
   .crop {
@@ -437,7 +437,7 @@ body {
 	display: block;
 }
 .vision-mission-section {
-  max-width: 1000px;
+  max-width: 100vw;
   margin: auto;
   padding: 60px 20px;
   background: #f7f9fc;
@@ -445,15 +445,20 @@ body {
 }
 
 .vision-mission-section h2 {
-  font-size: 32px;
-  font-weight: bold;
+  color: #183665; 
+  font-family: 'Inknut Antiqua', serif; 
+  font-weight: 800;
+  
   margin-bottom: 10px;
 }
 
 .vision-mission-section p {
   color: #555;
-  font-size: 16px;
+  font-size: 20px;
+  font-style: italic;
+  font-weight: 300;
   margin-bottom: 40px;
+   font-family: 'Inknut Antiqua', serif; 
 }
 
 .vision-mission-section .cards {
@@ -486,14 +491,15 @@ body {
 
 .vision-mission-section .custom-card h3 {
   margin: 10px 0;
-  font-size: 22px;
-  color: #333;
+ color: #183665; font-family: 'Inknut Antiqua', serif; font-weight: 500;
 }
 
 .vision-mission-section .custom-card p {
   font-size: 15px;
-  color: #666;
+  color: #000000;
   line-height: 1.6;
+   font-family: 'Inknut Antiqua', serif; 
+   font-weight: lighter;
 }
 
 .vision-mission-section .custom-card.mission i { color: #f39c12; }
