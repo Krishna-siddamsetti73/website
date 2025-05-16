@@ -380,7 +380,7 @@ We begin every renewable energy project with a detailed requirement evaluation t
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
   <link rel="stylesheet" href="footerstyle.css">
  <footer class="footer-sunada text-white">
-    <div class="footer-container container" >
+     <div class="footer-container " style="margin-left: 5vw; margin-right: 5vw;" >
       <div class="footer-row row">
 
         <!-- Company Info & Contact -->
@@ -436,12 +436,12 @@ We begin every renewable energy project with a detailed requirement evaluation t
               <a href="getintouch.html"><i class="fas fa-long-arrow-right fa-lg footer-contact-icon me-2"></i></a>
               <h5>Stay Connected</h5>
             </div>
-            <form>
+            <form id="footerContactForm" >
               <div class="mb-2">
-                <input type="text" class="footer-input form-control" placeholder="Name">
+                <input type="text" class="footer-input form-control" placeholder="Name" id="firstName">
               </div>
               <div class="mb-2">
-                <input type="email" class="footer-input form-control" placeholder="Email">
+                <input type="email" class="footer-input form-control" placeholder="Email" id="email">
               </div>
               <button class="footer-subscribe-btn btn w-100" type="submit">Send</button>
             </form>
@@ -488,6 +488,74 @@ We begin every renewable energy project with a detailed requirement evaluation t
   window.addEventListener('DOMContentLoaded', toggleDesktopContainer);
   window.addEventListener('resize', toggleDesktopContainer);
  </script>
+ <script>
+   
+    
+    document.getElementById('footerContactForm').addEventListener('submit', async (e) => {
+    e.preventDefault();
+    
+    const firstName = document.getElementById('firstName').value.trim();
+   
+    const email = document.getElementById('email').value.trim();
+    const phone='9021'
+    const message='footer form'
+
+    // Create response container (add this before your form in HTML if needed)
+    let responseDiv = document.getElementById('form-response');
+    if (!responseDiv) {
+        responseDiv = document.createElement('div');
+        responseDiv.id = 'form-response';
+        document.querySelector('#footerContactForm').parentNode.insertBefore(responseDiv, document.querySelector('#footerContactForm').nextSibling);
+    }
+
+    // Validate fields
+    if (!firstName || !email ) {
+        responseDiv.innerHTML = `
+            <div class="alert alert-danger alert-dismissible fade show mt-3" role="alert">
+                Please fill in all fields!
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        `;
+        return;
+    }
+
+    try {
+        const response = await fetch('http://localhost:5000/send_email', {  // Full URL for testing
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                name: `${firstName}`,
+                email,
+               phone,
+                message
+              
+            })
+        });
+
+        const data = await response.json();
+
+        if (response.ok) {
+            responseDiv.innerHTML = `
+                <div class="alert alert-success alert-dismissible fade show mt-3" role="alert">
+                    Message sent successfully! we will get back to you soon..
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            `;
+            document.getElementById('footerContactForm').reset();
+        } else {
+            throw new Error(data.error || 'Failed to send message');
+        }
+    } catch (error) {
+        responseDiv.innerHTML = `
+            <div class="alert alert-danger alert-dismissible fade show mt-3" role="alert">
+                Error: ${error.message}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        `;
+    }
+});
+
+  </script>
 </html>
 
 
