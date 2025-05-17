@@ -373,22 +373,37 @@
 
         <!-- Company Info & Contact -->
         <div class="col-sm mt-3">
-          <img src="WhatsApp_Image_2025-04-28_at_14.34.16_90ad2c9c-removebg-preview.png" alt="Sunanda Logo" class="footer-logo" id="footersunada" style="margin-top: -2vw;margin-bottom: 2vw;">
+          <img src="WhatsApp_Image_2025-04-28_at_14.34.16_90ad2c9c-removebg-preview.png" alt="Sunanda Logo" class="footer-logo" id="footersunada" style="margin-top: -2vw;">
           
-          <div class="d-flex mb-2">
-            <a href="tel:+919542226777"><i class="fas fa-phone fa-lg footer-contact-icon me-2"></i></a>
+          <div class="d-flex">
+            <div>
+            <a>    <i class="bi bi-telephone"></i></a>
+          </div>
             <p class="mb-0 ms-2">
-              <strong>Phone:</strong><br>
-              040 – 31780099<br>
-              +91 954 222 6777
+            040 – 31780099
+            </p>
+          </div>
+    <div class="d-flex">
+            <div>
+            <a>    <i class="bi bi-whatsapp"></i></a>
+          </div>
+            <p class="mb-0 ms-2">
+             +91 954 222 6777
             </p>
           </div>
 
-          <div class="d-flex mb-2">
-            <a href="mailto:info@sunandagroups.com"><i class="fas fa-envelope fa-lg footer-contact-icon me-2"></i></a>
-            <p><strong>Email:</strong> info@sunandagroup.com</p>
+          <div class="d-flex">
+            <a href="mailto:info@sunandagroups.com"><i class="bi bi-envelope"></i></a>
+            <p style="margin-left: 0.5vw;"><strong>Email:</strong> info@sunandagroups.com</p>
           </div>
+          <div class="footer-social-icons w-100 d-flex " style="margin-top: -1vh;" >
+        <a href="https://www.linkedin.com/in/sunanda-groups-3479b3351/" class="me-3"><i class="fab fa-linkedin fa-lg"></i></a>
+        <a href="https://www.instagram.com/sunanda_renewableenergies/" class="me-3"><i class="fab fa-instagram fa-lg"></i></a>
+        <a href="https://x.com/Sunanda_Renew"><i class="fab fa-twitter fa-lg"></i></a>
+      </div>
         </div>
+
+
 
         <!-- Quick Links -->
         <div class="col-sm mt-3 footer-quick-links" id="quickLinks">
@@ -403,18 +418,20 @@
         </div>
 
         <!-- Address -->
-        <div class="col-sm mt-3"  id="addresscolumn">
-          <div class="d-flex mb-2" id="dlex" >
-            <a href="https://www.google.com/maps/place/BRK+News/@17.4132091,78.4466732,17z" target="_blank">
-              <i class="fas fa-location-arrow fa-lg footer-contact-icon me-2"></i>
-            </a>
-            <h5>Headquarters:</h5>
-          </div>
-          <p class="footer-location-text"style="margin-left: -3.5vw; " id="ADD">
-            #8-2-626/2, Block-B, 3rd Floor,<br> BRK Building, Banjara Hills,<br>
-            Hyderabad, Telangana, 500034
-          </p>
+         <div class="col-sm"  id="addresscolumn" style="margin-top: 5%;">
+          <div class="d-flex align-items-start contact-item" style="cursor: pointer;" id="dlex"
+              onclick="window.open('https://www.google.com/maps/place/BRK+News/@17.4132142,78.4466732,17z/data=!4m10!1m2!2m1!1sBRK+News+3rd+floor+sunanda+renewables!3m6!1s0x3bcb9709de06d0f7:0x10f19c0aed828e66!8m2!3d17.4132091!4d78.4492481!15sCiVCUksgTmV3cyAzcmQgZmxvb3Igc3VuYW5kYSByZW5ld2FibGVzkgENbWVkaWFfY29tcGFueeABAA!16s%2Fg%2F11v5vyc6n0?entry=ttu','_blank')">
+              <i style="color: #ffff;" class="bi bi-geo-alt-fill contact-icon fs-4 me-3"></i>
+              <div style="margin-left: -0.7vw;">
+                <h6 >Corporate office</h6>
+                <p  >
+                  #8-2-626/2, Block-B, 3rd Floor, Brk Building, Banjara Hills, Hyderabad, Telangana, India, 500034.
+                 
+                </p>
+              </div>
+            </div>
         </div>
+
 
         <!-- Subscribe & Social -->
         <div class="col-sm mt-3 position-relative">
@@ -433,11 +450,7 @@
               </div>
               <button class="footer-subscribe-btn btn w-100" type="submit">Send</button>
             </form>
-           <div class="footer-social-icons w-100 d-flex " >
-        <a href="https://www.linkedin.com/in/sunanda-groups-3479b3351/"><i class="fab fa-linkedin fa-lg me-3"></i></a>
-                <a href="https://www.instagram.com/sunanda_renewableenergies/?hl=en"><i class="fab fa-instagram fa-lg me-3"></i></a>
-                <a href="#"><i class="fab fa-twitter fa-lg"></i></a>
-      </div>
+          
         </div>
 
       </div>
@@ -457,7 +470,7 @@
   if (window.innerWidth <= 500) {
     
     footerSunada.style.height = '10vh';
-    footerSunada.style.width = '60vw';
+    footerSunada.style.width = '50vw';
     footerSunada.style.marginLeft = '-3vw';
     addressColumn.style.marginLeft = '0vw';
     ADD.style.marginLeft = '0vw';
