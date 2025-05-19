@@ -8,6 +8,7 @@ load_dotenv()
 
 app = Flask(__name__)
 CORS(app)
+CORS(app, resources={r"/*": {"origins": "https://sunandagroups.com"}})
 
 # Mail configuration
 app.config['MAIL_SERVER'] = 'smtp.gmail.com'
