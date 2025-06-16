@@ -555,7 +555,7 @@ desktopContainer.style.marginLeft = '5vh'
               <div class="mb-2">
                 <input type="email" class="footer-input form-control" placeholder="Email" id="email">
               </div>
-              <button class="footer-subscribe-btn btn w-100" type="submit">Send</button>
+              <button class="footer-subscribe-btn btn w-100" type="submit" id="footerSubmitBtn">Send</button>
             </form>
            
         </div>
@@ -609,7 +609,9 @@ desktopContainer.style.marginLeft = '5vh'
     
     document.getElementById('footerContactForm').addEventListener('submit', async (e) => {
     e.preventDefault();
-    
+    button= document.getElementById('footerSubmitBtn');
+    button.disabled = true; // Disable the button to prevent multiple submissions
+    button.innerHTML = 'Sending...'; // Change button text to indicate sending
     const firstName = document.getElementById('firstName').value.trim();
    
     const email = document.getElementById('email').value.trim();
@@ -633,6 +635,8 @@ desktopContainer.style.marginLeft = '5vh'
             </div>
         `;
         return;
+         button.disabled = false; // Re-enable the button
+            button.textContent = 'Send Your Query'; // Reset button text
     }
 
     try {
@@ -658,8 +662,12 @@ desktopContainer.style.marginLeft = '5vh'
                 </div>
             `;
             document.getElementById('footerContactForm').reset();
+             button.disabled = false; // Re-enable the button
+            button.textContent = 'Send Your Query'; // Reset button text
         } else {
             throw new Error(data.error || 'Failed to send message');
+             button.disabled = false; // Re-enable the button
+            button.textContent = 'Send Your Query'; // Reset button text
         }
     } catch (error) {
         responseDiv.innerHTML = `
@@ -668,6 +676,8 @@ desktopContainer.style.marginLeft = '5vh'
                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>
         `;
+         button.disabled = false; // Re-enable the button
+            button.textContent = 'Send Your Query'; // Reset button text
     }
 });
 

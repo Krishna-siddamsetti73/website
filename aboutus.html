@@ -460,7 +460,7 @@ We begin every renewable energy project with a detailed requirement evaluation t
               <div class="mb-2">
                 <input type="email" class="footer-input form-control" placeholder="Email" id="email">
               </div>
-              <button class="footer-subscribe-btn btn w-100" type="submit">Send</button>
+              <button class="footer-subscribe-btn btn w-100" type="submit" id="footerSubmitBtn">Send</button>
             </form>
           
         </div>
@@ -506,9 +506,11 @@ We begin every renewable energy project with a detailed requirement evaluation t
     
     document.getElementById('footerContactForm').addEventListener('submit', async (e) => {
     e.preventDefault();
-    
+    const button = document.getElementById('footerSubmitBtn');
+    button.disabled = true; // Disable the button to prevent multiple submissions
+    button.textContent = 'Sending...'; // Change button text to indicate sending
     const firstName = document.getElementById('firstName').value.trim();
-   
+
     const email = document.getElementById('email').value.trim();
     const phone='9021'
     const message='footer form'
@@ -530,6 +532,8 @@ We begin every renewable energy project with a detailed requirement evaluation t
             </div>
         `;
         return;
+         button.disabled = false; // Re-enable the button
+            button.textContent = 'Send Your Query'; // Reset button text
     }
 
     try {
@@ -555,8 +559,12 @@ We begin every renewable energy project with a detailed requirement evaluation t
                 </div>
             `;
             document.getElementById('footerContactForm').reset();
+             button.disabled = false; // Re-enable the button
+            button.textContent = 'Send Your Query'; // Reset button text
         } else {
             throw new Error(data.error || 'Failed to send message');
+             button.disabled = false; // Re-enable the button
+            button.textContent = 'Send Your Query'; // Reset button text
         }
     } catch (error) {
         responseDiv.innerHTML = `
@@ -565,6 +573,8 @@ We begin every renewable energy project with a detailed requirement evaluation t
                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>
         `;
+         button.disabled = false; // Re-enable the button
+            button.textContent = 'Send Your Query'; // Reset button text
     }
 });
 

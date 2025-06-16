@@ -745,7 +745,8 @@ Our strength lies in offering end-to-end energy solutions  from planning and ins
     
     document.getElementById('footerContactForm').addEventListener('submit', async (e) => {
     e.preventDefault();
-    
+    button = document.querySelector('.footer-subscribe-btn');
+    button.disabled = true; // Disable the button to prevent multiple submissions
     const firstName = document.getElementById('firstName').value.trim();
    
     const email = document.getElementById('email').value.trim();
@@ -769,6 +770,8 @@ Our strength lies in offering end-to-end energy solutions  from planning and ins
             </div>
         `;
         return;
+         button.disabled = false; // Re-enable the button
+            button.textContent = 'Send Your Query'; // Reset button text
     }
 
     try {
@@ -794,8 +797,12 @@ Our strength lies in offering end-to-end energy solutions  from planning and ins
                 </div>
             `;
             document.getElementById('footerContactForm').reset();
+             button.disabled = false; // Re-enable the button
+            button.textContent = 'Send Your Query'; // Reset button text
         } else {
             throw new Error(data.error || 'Failed to send message');
+             button.disabled = false; // Re-enable the button
+            button.textContent = 'Send Your Query'; // Reset button text
         }
     } catch (error) {
         responseDiv.innerHTML = `
@@ -804,6 +811,8 @@ Our strength lies in offering end-to-end energy solutions  from planning and ins
                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>
         `;
+         button.disabled = false; // Re-enable the button
+            button.textContent = 'Send Your Query'; // Reset button text
     }
 });
 
